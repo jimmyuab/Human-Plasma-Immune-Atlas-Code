@@ -63,6 +63,21 @@ python src/13_write_manuscript.py          # assembles the .docx
 
 Scripts expect the project root layout (`01_data_raw/`, `02_data_processed/`, `06_genetic_causality/`, `08_figures/`). The pre-computed **result tables are included** under `results/` so figures and the manuscript can be regenerated without re-downloading multi-GB sumstats.
 
+## Training a predictive model (PIRS)
+
+The atlas itself is a **summary-statistics causal resource**, not a per-individual training set. A supervised **Plasma Immune Risk Score (PIRS)** — predicting future disease from a person's Olink profile — requires **individual-level UK Biobank Olink NPX + phenotypes**, which are **controlled-access** and deliberately **not** shipped here.
+
+`src/22_train_pirs.py` is a ready-to-run, honest-by-design scaffold:
+
+- With **no UKB data present** it prints the exact input schema it needs and exits cleanly — it never fabricates data.
+- Once approved UKB data is placed under `01_data_raw/UKB_Olink_NPX/` (`npx_matrix.tsv`, `outcomes.tsv`, optional `covariates.tsv`), one command trains a **cross-validated elastic-net survival model** (scikit-survival Coxnet → lifelines → logistic fallback), restricted to the 1,007 immune proteins, and writes per-protein PIRS weights, a CV C-index/AUROC table, fitted model pickles, and a performance figure.
+
+```bash
+python src/22_train_pirs.py     # prints schema + exits if UKB data absent
+```
+
+To obtain the data, apply via the UK Biobank Access Management System (Olink Field 30900 + disease phenotypes).
+
 ## Data sources (all public)
 
 | Layer | Source | Access |
