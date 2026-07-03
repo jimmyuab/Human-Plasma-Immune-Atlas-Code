@@ -44,7 +44,7 @@ A fifth, **pan-phenome** arc re-runs the same immune instruments across 28 disea
 
 ## Manuscript
 
-- `manuscript/Plasma_Immunome_Phenome_Atlas_Nature.docx` — 15 figures, 8 results sections (incl. the pan-phenome causal map), evidence-tiered Table 1.
+- `manuscript/Plasma_Immunome_Phenome_Atlas_Nature.docx` — **all 119 figures embedded** (15 main figures inline + Extended Data pan-phenome gallery + full Supplementary figure gallery), 8 results sections (incl. the pan-phenome causal map), evidence-tiered Table 1.
 
 ---
 

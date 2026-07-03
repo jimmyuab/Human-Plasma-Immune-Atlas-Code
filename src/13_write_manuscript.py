@@ -454,6 +454,79 @@ P("Tiers: T5 protein-level causal target (concordant pQTL-MR + protein coloc PP.
   "Replication = status in a FinnGen-independent consortium GWAS (OpenGWAS).",
   italic=True, size=8)
 
+# ================= EXTENDED DATA / SUPPLEMENTARY FIGURE GALLERY =================
+SUP = os.path.join(ROOT, "08_figures", "supplementary")
+PHE = os.path.join(ROOT, "08_figures", "phenome")
+
+def gallery_figure(fp, caption, width=5.2):
+    if os.path.exists(fp):
+        doc.add_picture(fp, width=Inches(width))
+        doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
+    c = doc.add_paragraph(); r = c.add_run(caption); r.italic=True; r.font.size=Pt(8)
+
+def _disease_from(stem):
+    return stem.replace("_"," ").strip().rstrip("_").replace("  "," ")
+
+# ---- Pan-phenome extended figures ----
+if HAS_PHEN and os.path.isdir(PHE):
+    doc.add_page_break()
+    H("Extended Data \u00b7 Pan-phenome figures", 1, BLUE)
+    P("Per-category and per-disease views of the 28-disease pan-phenome cis-MR "
+      "(src/24\u201326). Volcano plots show cis-MR effect size vs \u2212log10(FDR) for every "
+      "disease; forest plots summarise the strongest causal targets within each disease "
+      "category.", italic=True, size=9)
+    phe = sorted(os.listdir(PHE))
+    order = [f for f in phe if f.startswith("PFig_hits")] + \
+            [f for f in phe if f.startswith("PFig_forest")] + \
+            [f for f in phe if f.startswith("PFig_volcano")]
+    n = 0
+    for f in order:
+        stem = f[:-4]
+        if f.startswith("PFig_hits"):
+            cap = "Pan-phenome causal hits per disease category."
+        elif f.startswith("PFig_forest"):
+            cat = stem.replace("PFig_forest_","").replace("_"," ")
+            cap = f"Forest plot of causal immune targets \u2014 {cat} diseases (OR \u00b1 95% CI)."
+        else:
+            dis = _disease_from(stem.replace("PFig_volcano_",""))
+            cap = f"Pan-phenome cis-MR volcano \u2014 {dis}."
+        n += 1
+        gallery_figure(os.path.join(PHE,f), f"Extended Data Fig. P{n} | {cap}")
+    print(f"embedded pan-phenome extended figures: {n}")
+
+# ---- Supplementary figures ----
+if os.path.isdir(SUP):
+    doc.add_page_break()
+    H("Supplementary figures", 1, BLUE)
+    P("Quality-control and per-disease supplementary figures for the autoimmune "
+      "discovery arc (src/20): proteome composition and instrument diagnostics; "
+      "per-disease MR volcano, QQ + genomic-inflation \u03bb, and forest plots; per-gene "
+      "INTERVAL cis-pQTL regional association; and discovery-versus-replication panels.",
+      italic=True, size=9)
+    SCAP = {"immune_class_composition":"Immune-class composition of the curated proteome.",
+            "source_cell_lineage":"Blood-cell lineage of origin of immune proteins.",
+            "instrument_strength":"cis-eQTL instrument strength distribution.",
+            "instrument_samplesize":"eQTLGen instrument sample-size distribution.",
+            "tests_per_disease":"MR tests performed per disease.",
+            "hits_per_disease":"FDR<5% MR hits per disease."}
+    def _scap(stem):
+        body = stem.split("_",1)[1] if "_" in stem else stem   # drop SFigSNN_
+        for k,v in SCAP.items():
+            if body==k: return v
+        if body.startswith("volcano_"):  return f"Per-disease cis-MR volcano \u2014 {_disease_from(body[8:])}."
+        if body.startswith("qq_"):       return f"MR QQ plot and genomic-inflation \u03bb \u2014 {_disease_from(body[3:])}."
+        if body.startswith("forest_"):   return f"Per-disease causal-target forest \u2014 {_disease_from(body[7:])}."
+        if body.startswith("pqtl_regional_"): return f"INTERVAL cis-pQTL regional association \u2014 {body[14:]}."
+        if body.startswith("repl_"):     return f"Discovery-versus-independent-replication \u2014 {_disease_from(body[5:])}."
+        return body.replace("_"," ")
+    m = 0
+    for f in sorted(os.listdir(SUP)):
+        if not f.endswith(".png"): continue
+        stem = f[:-4]; m += 1
+        num = stem.split("_")[0].replace("SFigS","S")
+        gallery_figure(os.path.join(SUP,f), f"Supplementary Fig. {num} | {_scap(stem)}")
+    print(f"embedded supplementary figures: {m}")
+
 out = os.path.join(OUT, "Plasma_Immunome_Phenome_Atlas_Nature.docx")
 doc.save(out)
 print("wrote", out)
