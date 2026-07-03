@@ -1,0 +1,18 @@
+gene_symbol	disease	category	final_tier	PP_H4	pQTL_PPH4	pQTL_concordant	rep_status	evidence_score
+SWAP70	Rheumatoid arthritis	NOVEL nomination	5	0.9660752635970076	0.9727555430875652	yes	replicated	4.5
+IFNGR2	Psoriasis	NOVEL nomination	4	0.9737888978727246	0.019616270274652	NO	replicated	2.0
+CA8	Rheumatoid arthritis	NOVEL nomination	4	0.8827742868653535			replicated	2.0
+MYL6B	Rheumatoid arthritis	NOVEL nomination	4	0.8096145801038143			replicated	2.0
+HAVCR1	Coeliac disease	NOVEL nomination	4	0.9123792884754937	0.0229459327791851	yes	not covered	2.0
+SIGLEC7	Guillain-Barre	NOVEL nomination	4	0.947669118664208	0.0595739943633753	yes	not covered	2.0
+SIGLEC9	Guillain-Barre	NOVEL nomination	4	0.947765099372724	0.0251888573298238	yes	not covered	2.0
+PLAU	Sjogren syndrome	NOVEL nomination	4	0.9772632816690164	0.0077410057527805	NO	not covered	1.0
+NUMB	Coeliac disease	NOVEL nomination	4	0.9018358607018012			not covered	1.0
+NUMB	Rheumatoid arthritis	NOVEL nomination	4	0.9025751114062138			concordant (ns)	1.0
+CD226	Sarcoidosis	NOVEL nomination	4	0.8036050546880004	0.010056133201374	NO	concordant (ns)	1.0
+HNMT	Crohn's disease	NOVEL nomination	4	0.925597686868574			not covered	1.0
+TNFSF14	Multiple sclerosis	recovered known axis	5	0.9990245528450764	0.9983486215033294	yes	replicated	4.5
+TNFRSF1A	Ankylosing spondylitis	recovered known axis	4	0.8592172926938795	0.0435977979493565	yes	replicated	3.0
+CTLA4	Autoimmune hyperthyroidism	recovered known axis	4	0.8447370227532178			replicated	2.0
+IL6ST	Rheumatoid arthritis	recovered known axis	4	0.9999999994501394	0.0278578952724264	NO	replicated	2.0
+CTLA4	Rheumatoid arthritis	recovered known axis	4	0.9848967890091272			replicated	2.0

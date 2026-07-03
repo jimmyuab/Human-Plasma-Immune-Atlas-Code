@@ -1,0 +1,221 @@
+gene_symbol	protein_name	immune_class	immune_source_cells	hpa_disease
+XCL1	Lymphotactin	Chemokine axis	NK-cell	
+CCL14	C-C motif chemokine 14	Chemokine axis		Cancer-related genes
+CCL16	C-C motif chemokine 16	Chemokine axis		Cancer-related genes
+CCL17	C-C motif chemokine 17	Chemokine axis		
+CCL18	C-C motif chemokine 18	Chemokine axis		Cancer-related genes
+CCL19	C-C motif chemokine 19	Chemokine axis		Cancer-related genes
+CCL2	C-C motif chemokine 2	Chemokine axis	Myeloid/Monocyte;Granulocyte	Cancer-related genes
+CCL20	C-C motif chemokine 20	Chemokine axis	T-cell	
+CCL21	C-C motif chemokine 21	Chemokine axis		Cancer-related genes
+CCL22	C-C motif chemokine 22	Chemokine axis		
+CCL13	C-C motif chemokine 13	Chemokine axis		Cancer-related genes
+CCL23	C-C motif chemokine 23	Chemokine axis	Granulocyte	Cancer-related genes
+CCL25	C-C motif chemokine 25	Chemokine axis	NK-cell	
+CCL26	C-C motif chemokine 26	Chemokine axis		
+CCL27	C-C motif chemokine 27	Chemokine axis		
+CCL28	C-C motif chemokine 28	Chemokine axis		
+CCL3	C-C motif chemokine 3	Chemokine axis	T-cell	Cancer-related genes
+CCL4	C-C motif chemokine 4	Chemokine axis	T-cell	Cancer-related genes
+CCL5	C-C motif chemokine 5	Chemokine axis	T-cell	Cancer-related genes
+CCL7	C-C motif chemokine 7	Chemokine axis		Cancer-related genes
+CCL8	C-C motif chemokine 8	Chemokine axis	Myeloid/Monocyte	Cancer-related genes
+CCL24	C-C motif chemokine 24	Chemokine axis		
+CCL11	Eotaxin	Chemokine axis		Cancer-related genes
+CCL15	C-C motif chemokine 15	Chemokine axis		
+CXCL14	C-X-C motif chemokine 14	Chemokine axis		
+CXCL5	C-X-C motif chemokine 5	Chemokine axis		Cancer-related genes
+CXCL3	C-X-C motif chemokine 3	Chemokine axis		
+CXCL17	C-X-C motif chemokine 17	Chemokine axis		
+CXCL16	C-X-C motif chemokine 16	Chemokine axis	Myeloid/Monocyte;Granulocyte;Dendritic	
+CXCL9	C-X-C motif chemokine 9	Chemokine axis		Cancer-related genes
+CXCL13	C-X-C motif chemokine 13	Chemokine axis		Cancer-related genes
+CXCL12	Stromal cell-derived factor 1	Chemokine axis		
+CXCL11	C-X-C motif chemokine 11	Chemokine axis		
+CXCL6	C-X-C motif chemokine 6	Chemokine axis	Granulocyte	
+CXCL10	C-X-C motif chemokine 10	Chemokine axis	Myeloid/Monocyte	Cancer-related genes
+CX3CL1	Fractalkine	Chemokine axis		
+PF4	Platelet factor 4	Chemokine axis	Granulocyte	Cancer-related genes
+PPBP	Platelet basic protein	Chemokine axis	Granulocyte	
+CXCL1	Growth-regulated alpha protein	Chemokine axis	Granulocyte	Cancer-related genes
+CXCL8	Interleukin-8	Chemokine axis	Granulocyte	Cancer-related genes
+CFHR5	Complement factor H-related protein 5	Complement/Coagulation		Disease variant, Hemolytic uremic syndrome
+CFHR4	Complement factor H-related protein 4	Complement/Coagulation		
+CFHR2	Complement factor H-related protein 2	Complement/Coagulation		
+CFH	Complement factor H	Complement/Coagulation	T-cell	Age-related macular degeneration, Cancer-related genes, Disease variant, Hemolytic uremic syndrome
+CFD	Complement factor D	Complement/Coagulation	Granulocyte	Disease variant
+CFP	Properdin	Complement/Coagulation	Myeloid/Monocyte;Granulocyte;Dendritic	Disease variant
+MASP1	Mannan-binding lectin serine protease 1	Complement/Coagulation		Disease variant
+MBL2	Mannose-binding protein C	Complement/Coagulation		
+SERPING1	Plasma protease C1 inhibitor	Complement/Coagulation	Myeloid/Monocyte;Granulocyte;Dendritic	Disease variant
+CFB	Complement factor B	Complement/Coagulation		Age-related macular degeneration, Disease variant, Hemolytic uremic syndrome
+CR2	Complement receptor type 2	Complement/Coagulation	B-cell	Systemic lupus erythematosus
+CFI	Complement factor I	Complement/Coagulation		Age-related macular degeneration, Disease variant, Hemolytic uremic syndrome
+CD59	CD59 glycoprotein	Complement/Coagulation		Cancer-related genes, Disease variant, Hereditary hemolytic anemia
+CR1	Complement receptor type 1	Complement/Coagulation	Granulocyte	
+C1RL	Complement C1r subcomponent-like protein	Complement/Coagulation	Granulocyte	
+C1QA	Complement C1q subcomponent subunit A	Complement/Coagulation	Myeloid/Monocyte	
+C1QBP	Complement component 1 Q subcomponent-binding protein, mitochondrial	Complement/Coagulation		Cancer-related genes, Disease variant, Primary mitochondrial disease
+C1QL2	Complement C1q-like protein 2	Complement/Coagulation		
+C1QTNF1	Complement C1q tumor necrosis factor-related protein 1	Complement/Coagulation		
+C1QTNF5	Complement C1q tumor necrosis factor-related protein 5	Complement/Coagulation		Disease variant
+C1QTNF6	Complement C1q tumor necrosis factor-related protein 6	Complement/Coagulation		
+C1QTNF9	Complement C1q and tumor necrosis factor-related protein 9A	Complement/Coagulation		
+C1R	Complement C1r subcomponent	Complement/Coagulation		
+C1S	Complement C1s subcomponent	Complement/Coagulation		Disease variant, Ehlers-Danlos syndrome, FDA approved drug targets
+C2	Complement C2	Complement/Coagulation	Myeloid/Monocyte	Age-related macular degeneration, Disease variant
+C2CD2L	Phospholipid transfer protein C2CD2L	Complement/Coagulation		
+C2orf69	UPF0565 protein C2orf69	Complement/Coagulation		Primary mitochondrial disease
+CD55	Complement decay-accelerating factor	Complement/Coagulation	Granulocyte	Disease variant
+C3	Complement C3	Complement/Coagulation	Myeloid/Monocyte	Age-related macular degeneration, Disease variant, FDA approved drug targets, Hemolytic uremic syndrome
+C1GALT1C1	C1GALT1-specific chaperone 1	Complement/Coagulation		Disease variant, Hemolytic uremic syndrome
+C4BPB	C4b-binding protein beta chain	Complement/Coagulation	Myeloid/Monocyte;Dendritic	
+C9orf40	Uncharacterized protein C9orf40	Complement/Coagulation	Granulocyte	
+C5	Complement C5	Complement/Coagulation		Disease variant, FDA approved drug targets
+C7	Complement component C7	Complement/Coagulation		Cancer-related genes, Disease variant
+C7orf50	Uncharacterized protein C7orf50	Complement/Coagulation		
+C8B	Complement component C8 beta chain	Complement/Coagulation	Granulocyte	
+C9	Complement component C9	Complement/Coagulation		Age-related macular degeneration, Disease variant
+CD46	Membrane cofactor protein	Complement/Coagulation	Granulocyte	Cancer-related genes, Disease variant, Hemolytic uremic syndrome
+IL3RA	Interleukin-3 receptor subunit alpha	Cytokine/Interleukin	Granulocyte	FDA approved drug targets
+IL36G	Interleukin-36 gamma	Cytokine/Interleukin		
+IL36A	Interleukin-36 alpha	Cytokine/Interleukin		
+IL34	Interleukin-34	Cytokine/Interleukin	Granulocyte	
+IL31	Interleukin-31	Cytokine/Interleukin		
+IL32	Interleukin-32	Cytokine/Interleukin	T-cell	
+IL3	Interleukin-3	Cytokine/Interleukin		
+IL2RG	Cytokine receptor common subunit gamma	Cytokine/Interleukin		Cancer-related genes, Disease variant, FDA approved drug targets, SCID
+IL31RA	Interleukin-31 receptor subunit alpha	Cytokine/Interleukin		Amyloidosis, Disease variant
+IL33	Interleukin-33	Cytokine/Interleukin		
+IL2RB	Interleukin-2 receptor subunit beta	Cytokine/Interleukin	T-cell;NK-cell	Cancer-related genes, Disease variant, FDA approved drug targets
+TGFB2	Transforming growth factor beta-2 proprotein	Cytokine/Interleukin		Aortic aneurysm, Cancer-related genes, Disease variant
+IL4	Interleukin-4	Cytokine/Interleukin	Granulocyte	Cancer-related genes, FDA approved drug targets
+IL25	Interleukin-25	Cytokine/Interleukin		
+IL24	Interleukin-24	Cytokine/Interleukin		Cancer-related genes
+IL22RA1	Interleukin-22 receptor subunit alpha-1	Cytokine/Interleukin		
+IL22	Interleukin-22	Cytokine/Interleukin		
+IL21R	Interleukin-21 receptor	Cytokine/Interleukin		Cancer-related genes, Disease variant
+IL20RB	Interleukin-20 receptor subunit beta	Cytokine/Interleukin		
+IL20RA	Interleukin-20 receptor subunit alpha	Cytokine/Interleukin		
+IL20	Interleukin-20	Cytokine/Interleukin		
+IL2	Interleukin-2	Cytokine/Interleukin		Cancer-related genes, Proto-oncogene
+IL1RN	Interleukin-1 receptor antagonist protein	Cytokine/Interleukin	Myeloid/Monocyte;Granulocyte;Dendritic	Cancer-related genes
+IL2RA	Interleukin-2 receptor subunit alpha	Cytokine/Interleukin	Granulocyte;T-cell	Cancer-related genes, Diabetes mellitus, Disease variant, FDA approved drug targets
+IL4R	Interleukin-4 receptor subunit alpha	Cytokine/Interleukin	B-cell	Cancer-related genes, FDA approved drug targets
+LTA4H	Leukotriene A-4 hydrolase	Cytokine/Interleukin		Cancer-related genes
+IL5RA	Interleukin-5 receptor subunit alpha	Cytokine/Interleukin	Granulocyte	FDA approved drug targets
+TGFB1	Transforming growth factor beta-1 proprotein	Cytokine/Interleukin	Granulocyte	
+TGFBI	Transforming growth factor-beta-induced protein ig-h3	Cytokine/Interleukin	Myeloid/Monocyte;Dendritic	Amyloidosis, Corneal dystrophy, Disease variant
+TGFBR1	TGF-beta receptor type-1	Cytokine/Interleukin		Aortic aneurysm, Craniosynostosis, Disease variant
+TGFBR2	TGF-beta receptor type-2	Cytokine/Interleukin		Aortic aneurysm, Cancer-related genes, Craniosynostosis, Disease variant, FDA approved drug targets, Hereditary nonpolyposis colorectal cancer
+TGFBR3	Transforming growth factor beta receptor type 3	Cytokine/Interleukin	T-cell;NK-cell	Cancer-related genes
+TSLP	Thymic stromal lymphopoietin	Cytokine/Interleukin		FDA approved drug targets
+IL1RL2	Interleukin-1 receptor-like 2	Cytokine/Interleukin		FDA approved drug targets
+OSMR	Oncostatin-M-specific receptor subunit beta	Cytokine/Interleukin		Amyloidosis, Disease variant
+OSM	Oncostatin-M	Cytokine/Interleukin	Granulocyte	Cancer-related genes
+LTBR	Tumor necrosis factor receptor superfamily member 3	Cytokine/Interleukin	Myeloid/Monocyte;Granulocyte;Dendritic	Cancer-related genes
+IL5	Interleukin-5	Cytokine/Interleukin	B-cell	Cancer-related genes, FDA approved drug targets
+LTBP3	Latent-transforming growth factor beta-binding protein 3	Cytokine/Interleukin	B-cell	Amelogenesis imperfecta, Disease variant, Dwarfism
+LTB	Lymphotoxin-beta	Cytokine/Interleukin		Cancer-related genes
+LTA	Lymphotoxin-alpha	Cytokine/Interleukin		Cancer-related genes, FDA approved drug targets
+LIFR	Leukemia inhibitory factor receptor	Cytokine/Interleukin		Cancer-related genes, Disease variant
+LIF	Leukemia inhibitory factor	Cytokine/Interleukin		Cancer-related genes
+IL9	Interleukin-9	Cytokine/Interleukin		Cancer-related genes
+IL7R	Interleukin-7 receptor subunit alpha	Cytokine/Interleukin	T-cell;NK-cell	Cancer-related genes, Disease variant, SCID
+IL7	Interleukin-7	Cytokine/Interleukin	B-cell	Cancer-related genes, Disease variant
+IL6ST	Interleukin-6 receptor subunit beta	Cytokine/Interleukin	T-cell	Cancer-related genes, Disease variant
+IL6R	Interleukin-6 receptor subunit alpha	Cytokine/Interleukin	Granulocyte	Cancer-related genes, FDA approved drug targets
+IL6	Interleukin-6	Cytokine/Interleukin	B-cell	Cancer-related genes, FDA approved drug targets
+LTBP2	Latent-transforming growth factor beta-binding protein 2	Cytokine/Interleukin		Disease variant, Dwarfism, Glaucoma
+IL1RL1	Interleukin-1 receptor-like 1	Cytokine/Interleukin	Granulocyte	
+IL13RA2	Interleukin-13 receptor subunit alpha-2	Cytokine/Interleukin		Cancer-related genes
+IL1R2	Interleukin-1 receptor type 2	Cytokine/Interleukin	Granulocyte	Cancer-related genes
+IL12RB2	Interleukin-12 receptor subunit beta-2	Cytokine/Interleukin	T-cell;NK-cell	
+IL12RB1	Interleukin-12 receptor subunit beta-1	Cytokine/Interleukin		Disease variant
+IL12B	Interleukin-12 subunit beta	Cytokine/Interleukin		FDA approved drug targets
+IL12A_IL12B	Interleukin-12	Cytokine/Interleukin		
+IL11	Interleukin-11	Cytokine/Interleukin		Cancer-related genes
+IL10RB	Interleukin-10 receptor subunit beta	Cytokine/Interleukin		
+IL10RA	Interleukin-10 receptor subunit alpha	Cytokine/Interleukin		Disease variant
+IL13	Interleukin-13	Cytokine/Interleukin		Cancer-related genes, FDA approved drug targets
+IL10	Interleukin-10	Cytokine/Interleukin	Myeloid/Monocyte	Cancer-related genes
+CSF3R	Granulocyte colony-stimulating factor receptor	Cytokine/Interleukin	Granulocyte	Cancer-related genes, Disease variant, FDA approved drug targets
+CSF3	Granulocyte colony-stimulating factor	Cytokine/Interleukin		Cancer-related genes
+IL1RAP	Interleukin-1 receptor accessory protein	Cytokine/Interleukin	Granulocyte	
+CSF2RA	Granulocyte-macrophage colony-stimulating factor receptor subunit alpha	Cytokine/Interleukin	Granulocyte	Cancer-related genes, Disease variant, FDA approved drug targets
+CSF2	Granulocyte-macrophage colony-stimulating factor	Cytokine/Interleukin	NK-cell	Cancer-related genes
+CSF1R	Macrophage colony-stimulating factor 1 receptor	Cytokine/Interleukin	Myeloid/Monocyte	Cancer-related genes, Disease variant, FDA approved drug targets, Neurodegeneration, Proto-oncogene
+CSF1	Macrophage colony-stimulating factor 1	Cytokine/Interleukin	Granulocyte	Cancer-related genes
+EBI3_IL27	Interleukin-27	Cytokine/Interleukin		
+IL13RA1	Interleukin-13 receptor subunit alpha-1	Cytokine/Interleukin	Myeloid/Monocyte;Granulocyte;Dendritic	
+CSF2RB	Cytokine receptor common subunit beta	Cytokine/Interleukin	Granulocyte	FDA approved drug targets
+IL15	Interleukin-15	Cytokine/Interleukin		Cancer-related genes
+IL18RAP	Interleukin-18 receptor accessory protein	Cytokine/Interleukin	NK-cell	
+IL18R1	Interleukin-18 receptor 1	Cytokine/Interleukin	NK-cell	
+IL18BP	Interleukin-18-binding protein	Cytokine/Interleukin		
+IL1B	Interleukin-1 beta	Cytokine/Interleukin	Granulocyte	Cancer-related genes, FDA approved drug targets
+IL18	Interleukin-18	Cytokine/Interleukin	Myeloid/Monocyte;Dendritic	Cancer-related genes
+IL1R1	Interleukin-1 receptor type 1	Cytokine/Interleukin	Granulocyte	Cancer-related genes, Disease variant, FDA approved drug targets
+IL19	Interleukin-19	Cytokine/Interleukin		
+IL1A	Interleukin-1 alpha	Cytokine/Interleukin		Cancer-related genes
+IL15RA	Interleukin-15 receptor subunit alpha	Cytokine/Interleukin		
+IL16	Pro-interleukin-16	Cytokine/Interleukin		Cancer-related genes
+IL17A	Interleukin-17A	Cytokine/Interleukin		Cancer-related genes, FDA approved drug targets
+IL17RA	Interleukin-17 receptor A	Cytokine/Interleukin	Granulocyte	
+IL17C	Interleukin-17C	Cytokine/Interleukin		
+IL17D	Interleukin-17D	Cytokine/Interleukin		
+IL17F	Interleukin-17F	Cytokine/Interleukin		Disease variant, FDA approved drug targets
+IL17RB	Interleukin-17 receptor B	Cytokine/Interleukin	Granulocyte	
+CD274	Programmed cell death 1 ligand 1	Immune checkpoint	Granulocyte	Cancer-related genes, FDA approved drug targets
+CD80	T-lymphocyte activation antigen CD80	Immune checkpoint	T-cell;B-cell	FDA approved drug targets
+CD40LG	CD40 ligand	Immune checkpoint	T-cell	Cancer-related genes, Disease variant
+VSIR	V-type immunoglobulin domain-containing suppressor of T-cell activation	Immune checkpoint	Granulocyte	
+CD28	T-cell-specific surface glycoprotein CD28	Immune checkpoint	T-cell	Disease variant
+TIGIT	T-cell immunoreceptor with Ig and ITIM domains	Immune checkpoint	T-cell	
+TNFRSF4	Tumor necrosis factor receptor superfamily member 4	Immune checkpoint	T-cell	Cancer-related genes, Disease variant
+TNFRSF9	Tumor necrosis factor receptor superfamily member 9	Immune checkpoint	Granulocyte;T-cell;NK-cell	Cancer-related genes
+CD86	T-lymphocyte activation antigen CD86	Immune checkpoint	Myeloid/Monocyte;B-cell;Dendritic	FDA approved drug targets
+CD276	CD276 antigen	Immune checkpoint		
+CD40	Tumor necrosis factor receptor superfamily member 5	Immune checkpoint	B-cell	Cancer-related genes, Disease variant
+PDCD1	Programmed cell death protein 1	Immune checkpoint	T-cell	FDA approved drug targets
+PDCD1LG2	Programmed cell death 1 ligand 2	Immune checkpoint		Cancer-related genes
+LAG3	Lymphocyte activation gene 3 protein	Immune checkpoint	T-cell	FDA approved drug targets
+BTLA	B- and T-lymphocyte attenuator	Immune checkpoint	Myeloid/Monocyte;B-cell;Dendritic	
+HAVCR2	Hepatitis A virus cellular receptor 2	Immune checkpoint	Myeloid/Monocyte;NK-cell;Dendritic	Disease variant
+ICOSLG	ICOS ligand	Immune checkpoint		
+CTLA4	Cytotoxic T-lymphocyte protein 4	Immune checkpoint	T-cell	Diabetes mellitus, Disease variant, FDA approved drug targets, Systemic lupus erythematosus
+IFNAR1	Interferon alpha/beta receptor 1	Interferon axis		Cancer-related genes, Disease variant, FDA approved drug targets
+IFNG	Interferon gamma	Interferon axis	T-cell	Cancer-related genes, FDA approved drug targets
+IFNGR1	Interferon gamma receptor 1	Interferon axis		Disease variant, FDA approved drug targets
+IFNGR2	Interferon gamma receptor 2	Interferon axis	Granulocyte	Disease variant, FDA approved drug targets
+IFNL1	Interferon lambda-1	Interferon axis	Myeloid/Monocyte;T-cell;NK-cell;Dendritic	
+IFNW1	Interferon omega-1	Interferon axis		
+IFNL2	Interferon lambda-2	Interferon axis		
+IFNLR1	Interferon lambda receptor 1	Interferon axis	Myeloid/Monocyte;B-cell;Dendritic	
+TNFRSF6B	Tumor necrosis factor receptor superfamily member 6B	TNF superfamily	Myeloid/Monocyte;Dendritic	
+TNFRSF8	Tumor necrosis factor receptor superfamily member 8	TNF superfamily	Myeloid/Monocyte	Cancer-related genes, FDA approved drug targets
+TNFSF13	Tumor necrosis factor ligand superfamily member 13	TNF superfamily	Myeloid/Monocyte	Cancer-related genes
+TNFSF11	Tumor necrosis factor ligand superfamily member 11	TNF superfamily	NK-cell	Cancer-related genes, Disease variant, FDA approved drug targets, Osteopetrosis
+TNFSF12	Tumor necrosis factor ligand superfamily member 12	TNF superfamily		
+TNFRSF21	Tumor necrosis factor receptor superfamily member 21	TNF superfamily	Myeloid/Monocyte;Dendritic	
+TNFSF13B	Tumor necrosis factor ligand superfamily member 13B	TNF superfamily	Granulocyte	Cancer-related genes, FDA approved drug targets
+TNFSF14	Tumor necrosis factor ligand superfamily member 14	TNF superfamily	Granulocyte	
+TNFSF8	Tumor necrosis factor ligand superfamily member 8	TNF superfamily		Cancer-related genes
+TNFSF10	Tumor necrosis factor ligand superfamily member 10	TNF superfamily	Myeloid/Monocyte;Granulocyte	Cancer-related genes
+TNFRSF1B	Tumor necrosis factor receptor superfamily member 1B	TNF superfamily	Myeloid/Monocyte	Cancer-related genes
+TNFRSF14	Tumor necrosis factor receptor superfamily member 14	TNF superfamily		Cancer-related genes
+TNFRSF19	Tumor necrosis factor receptor superfamily member 19	TNF superfamily	T-cell	
+TNFRSF17	Tumor necrosis factor receptor superfamily member 17	TNF superfamily	Myeloid/Monocyte;B-cell;Dendritic	Cancer-related genes, FDA approved drug targets, Proto-oncogene
+TNFRSF13C	Tumor necrosis factor receptor superfamily member 13C	TNF superfamily	B-cell	Disease variant
+TNFRSF12A	Tumor necrosis factor receptor superfamily member 12A	TNF superfamily	Granulocyte	Cancer-related genes
+TNFRSF11B	Tumor necrosis factor receptor superfamily member 11B	TNF superfamily	Myeloid/Monocyte;Dendritic	Cancer-related genes, Disease variant
+TNFRSF11A	Tumor necrosis factor receptor superfamily member 11A	TNF superfamily	NK-cell	Deafness, Disease variant, Osteopetrosis
+TNFRSF10C	Tumor necrosis factor receptor superfamily member 10C	TNF superfamily	Granulocyte	Cancer-related genes
+TNFRSF10B	Tumor necrosis factor receptor superfamily member 10B	TNF superfamily		Cancer-related genes
+TNFRSF10A	Tumor necrosis factor receptor superfamily member 10A	TNF superfamily		Cancer-related genes
+TNFAIP8L2	Tumor necrosis factor alpha-induced protein 8-like protein 2	TNF superfamily		
+TNFAIP8	Tumor necrosis factor alpha-induced protein 8	TNF superfamily		
+TNFAIP2	Tumor necrosis factor alpha-induced protein 2	TNF superfamily	Granulocyte	Cancer-related genes
+TNF	Tumor necrosis factor	TNF superfamily	Myeloid/Monocyte	Cancer-related genes, FDA approved drug targets
+TNFRSF1A	Tumor necrosis factor receptor superfamily member 1A	TNF superfamily	Granulocyte	Amyloidosis, Cancer-related genes, Disease variant, FDA approved drug targets
+TNFRSF13B	Tumor necrosis factor receptor superfamily member 13B	TNF superfamily	B-cell	Disease variant

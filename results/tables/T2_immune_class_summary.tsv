@@ -1,0 +1,12 @@
+immune_class	n_proteins	pct_drug_target	pct_secreted	pct_immune_cell_enriched
+Immune-cell-enriched	723	21.2	31.1	100.0
+Cytokine/Interleukin	89	30.3	64.0	44.9
+Chemokine axis	40	0.0	100.0	40.0
+Complement/Coagulation	38	23.7	76.3	39.5
+CD/Leukocyte surface	35	28.6	8.6	88.6
+TNF superfamily	27	22.2	40.7	74.1
+Immune checkpoint	18	33.3	27.8	83.3
+Ig/B-cell/Fc	13	38.5	38.5	100.0
+HLA/Antigen presentation	11	27.3	45.5	63.6
+Interferon axis	8	50.0	50.0	50.0
+Acute-phase	5	40.0	80.0	60.0

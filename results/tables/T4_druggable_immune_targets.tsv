@@ -1,0 +1,73 @@
+gene_symbol	protein_name	immune_class	immune_source_cells	secreted_to_blood	hpa_disease
+FGA	Fibrinogen alpha chain	Acute-phase		1	Amyloidosis, Cancer-related genes, Disease variant, FDA approved drug targets
+ORM1	Alpha-1-acid glycoprotein 1	Acute-phase	Granulocyte	1	Cancer-related genes, FDA approved drug targets
+CD2	T-cell surface antigen CD2	CD/Leukocyte surface	T-cell;NK-cell	0	FDA approved drug targets
+CD22	B-cell receptor CD22	CD/Leukocyte surface	B-cell	0	FDA approved drug targets
+CD2AP	CD2-associated protein	CD/Leukocyte surface	Myeloid/Monocyte;Dendritic	0	
+CD33	Myeloid cell surface antigen CD33	CD/Leukocyte surface	Myeloid/Monocyte;Dendritic	0	FDA approved drug targets
+CD36	Platelet glycoprotein 4	CD/Leukocyte surface	Myeloid/Monocyte;Dendritic	0	Cancer-related genes, Disease variant
+CD3D	T-cell surface glycoprotein CD3 delta chain	CD/Leukocyte surface	T-cell	0	FDA approved drug targets, SCID
+CD3E	T-cell surface glycoprotein CD3 epsilon chain	CD/Leukocyte surface	T-cell;NK-cell	0	FDA approved drug targets
+CD3G	T-cell surface glycoprotein CD3 gamma chain	CD/Leukocyte surface	T-cell	0	FDA approved drug targets
+CD4	T-cell surface glycoprotein CD4	CD/Leukocyte surface	Myeloid/Monocyte;T-cell;Dendritic	0	FDA approved drug targets
+CD74	HLA class II histocompatibility antigen gamma chain	CD/Leukocyte surface	Myeloid/Monocyte;B-cell;Dendritic	1	Cancer-related genes
+C1QBP	Complement component 1 Q subcomponent-binding protein, mitochondrial	Complement/Coagulation		1	Cancer-related genes, Disease variant, Primary mitochondrial disease
+C1S	Complement C1s subcomponent	Complement/Coagulation		1	Disease variant, Ehlers-Danlos syndrome, FDA approved drug targets
+C2	Complement C2	Complement/Coagulation	Myeloid/Monocyte	1	Age-related macular degeneration, Disease variant
+C3	Complement C3	Complement/Coagulation	Myeloid/Monocyte	1	Age-related macular degeneration, Disease variant, FDA approved drug targets, Hemolytic uremic syndrome
+C5	Complement C5	Complement/Coagulation		1	Disease variant, FDA approved drug targets
+CFB	Complement factor B	Complement/Coagulation		1	Age-related macular degeneration, Disease variant, Hemolytic uremic syndrome
+CFD	Complement factor D	Complement/Coagulation	Granulocyte	1	Disease variant
+CFI	Complement factor I	Complement/Coagulation		1	Age-related macular degeneration, Disease variant, Hemolytic uremic syndrome
+MASP1	Mannan-binding lectin serine protease 1	Complement/Coagulation		1	Disease variant
+CSF1R	Macrophage colony-stimulating factor 1 receptor	Cytokine/Interleukin	Myeloid/Monocyte	0	Cancer-related genes, Disease variant, FDA approved drug targets, Neurodegeneration, Proto-oncogene
+CSF2RA	Granulocyte-macrophage colony-stimulating factor receptor subunit alpha	Cytokine/Interleukin	Granulocyte	1	Cancer-related genes, Disease variant, FDA approved drug targets
+CSF2RB	Cytokine receptor common subunit beta	Cytokine/Interleukin	Granulocyte	0	FDA approved drug targets
+CSF3R	Granulocyte colony-stimulating factor receptor	Cytokine/Interleukin	Granulocyte	0	Cancer-related genes, Disease variant, FDA approved drug targets
+IL10RA	Interleukin-10 receptor subunit alpha	Cytokine/Interleukin		0	Disease variant
+IL10RB	Interleukin-10 receptor subunit beta	Cytokine/Interleukin		0	
+IL12B	Interleukin-12 subunit beta	Cytokine/Interleukin		1	FDA approved drug targets
+IL13	Interleukin-13	Cytokine/Interleukin		1	Cancer-related genes, FDA approved drug targets
+IL17A	Interleukin-17A	Cytokine/Interleukin		1	Cancer-related genes, FDA approved drug targets
+IL17F	Interleukin-17F	Cytokine/Interleukin		1	Disease variant, FDA approved drug targets
+IL1B	Interleukin-1 beta	Cytokine/Interleukin	Granulocyte	1	Cancer-related genes, FDA approved drug targets
+IL1R1	Interleukin-1 receptor type 1	Cytokine/Interleukin	Granulocyte	1	Cancer-related genes, Disease variant, FDA approved drug targets
+IL1RL2	Interleukin-1 receptor-like 2	Cytokine/Interleukin		0	FDA approved drug targets
+IL2RA	Interleukin-2 receptor subunit alpha	Cytokine/Interleukin	Granulocyte;T-cell	0	Cancer-related genes, Diabetes mellitus, Disease variant, FDA approved drug targets
+IL2RB	Interleukin-2 receptor subunit beta	Cytokine/Interleukin	T-cell;NK-cell	0	Cancer-related genes, Disease variant, FDA approved drug targets
+IL2RG	Cytokine receptor common subunit gamma	Cytokine/Interleukin		0	Cancer-related genes, Disease variant, FDA approved drug targets, SCID
+IL3RA	Interleukin-3 receptor subunit alpha	Cytokine/Interleukin	Granulocyte	0	FDA approved drug targets
+IL4	Interleukin-4	Cytokine/Interleukin	Granulocyte	1	Cancer-related genes, FDA approved drug targets
+IL4R	Interleukin-4 receptor subunit alpha	Cytokine/Interleukin	B-cell	1	Cancer-related genes, FDA approved drug targets
+IL5	Interleukin-5	Cytokine/Interleukin	B-cell	1	Cancer-related genes, FDA approved drug targets
+IL5RA	Interleukin-5 receptor subunit alpha	Cytokine/Interleukin	Granulocyte	0	FDA approved drug targets
+IL6	Interleukin-6	Cytokine/Interleukin	B-cell	1	Cancer-related genes, FDA approved drug targets
+IL6R	Interleukin-6 receptor subunit alpha	Cytokine/Interleukin	Granulocyte	1	Cancer-related genes, FDA approved drug targets
+LTA	Lymphotoxin-alpha	Cytokine/Interleukin		1	Cancer-related genes, FDA approved drug targets
+TGFBR1	TGF-beta receptor type-1	Cytokine/Interleukin		0	Aortic aneurysm, Craniosynostosis, Disease variant
+TGFBR2	TGF-beta receptor type-2	Cytokine/Interleukin		1	Aortic aneurysm, Cancer-related genes, Craniosynostosis, Disease variant, FDA approved drug targets, Hereditary nonpolyposis colorectal cancer
+TSLP	Thymic stromal lymphopoietin	Cytokine/Interleukin		1	FDA approved drug targets
+B2M	Beta-2-microglobulin	HLA/Antigen presentation		1	Amyloidosis, Cancer-related genes, Disease variant
+HLA-A	HLA class I histocompatibility antigen, A alpha chain	HLA/Antigen presentation		0	Cancer-related genes
+TAP1	Antigen peptide transporter 1	HLA/Antigen presentation		0	Cancer-related genes
+CD79B	B-cell antigen receptor complex-associated protein beta chain	Ig/B-cell/Fc	B-cell	0	Cancer-related genes, Disease variant, FDA approved drug targets
+FCER1A	High affinity immunoglobulin epsilon receptor subunit alpha	Ig/B-cell/Fc	Granulocyte	0	FDA approved drug targets
+FCGR2A	Low affinity immunoglobulin gamma Fc region receptor II-a	Ig/B-cell/Fc	Granulocyte	0	FDA approved drug targets
+FCGR2B	Low affinity immunoglobulin gamma Fc region receptor II-b	Ig/B-cell/Fc	Granulocyte;B-cell	0	Cancer-related genes, FDA approved drug targets, Proto-oncogene, Systemic lupus erythematosus
+FCGR3B	Low affinity immunoglobulin gamma Fc region receptor III-B	Ig/B-cell/Fc	Granulocyte	1	FDA approved drug targets
+CD274	Programmed cell death 1 ligand 1	Immune checkpoint	Granulocyte	1	Cancer-related genes, FDA approved drug targets
+CD80	T-lymphocyte activation antigen CD80	Immune checkpoint	T-cell;B-cell	0	FDA approved drug targets
+CD86	T-lymphocyte activation antigen CD86	Immune checkpoint	Myeloid/Monocyte;B-cell;Dendritic	0	FDA approved drug targets
+CTLA4	Cytotoxic T-lymphocyte protein 4	Immune checkpoint	T-cell	0	Diabetes mellitus, Disease variant, FDA approved drug targets, Systemic lupus erythematosus
+LAG3	Lymphocyte activation gene 3 protein	Immune checkpoint	T-cell	0	FDA approved drug targets
+PDCD1	Programmed cell death protein 1	Immune checkpoint	T-cell	0	FDA approved drug targets
+IFNAR1	Interferon alpha/beta receptor 1	Interferon axis		0	Cancer-related genes, Disease variant, FDA approved drug targets
+IFNG	Interferon gamma	Interferon axis	T-cell	1	Cancer-related genes, FDA approved drug targets
+IFNGR1	Interferon gamma receptor 1	Interferon axis		0	Disease variant, FDA approved drug targets
+IFNGR2	Interferon gamma receptor 2	Interferon axis	Granulocyte	0	Disease variant, FDA approved drug targets
+TNF	Tumor necrosis factor	TNF superfamily	Myeloid/Monocyte	1	Cancer-related genes, FDA approved drug targets
+TNFRSF17	Tumor necrosis factor receptor superfamily member 17	TNF superfamily	Myeloid/Monocyte;B-cell;Dendritic	0	Cancer-related genes, FDA approved drug targets, Proto-oncogene
+TNFRSF1A	Tumor necrosis factor receptor superfamily member 1A	TNF superfamily	Granulocyte	1	Amyloidosis, Cancer-related genes, Disease variant, FDA approved drug targets
+TNFRSF8	Tumor necrosis factor receptor superfamily member 8	TNF superfamily	Myeloid/Monocyte	0	Cancer-related genes, FDA approved drug targets
+TNFSF11	Tumor necrosis factor ligand superfamily member 11	TNF superfamily	NK-cell	1	Cancer-related genes, Disease variant, FDA approved drug targets, Osteopetrosis
+TNFSF13B	Tumor necrosis factor ligand superfamily member 13B	TNF superfamily	Granulocyte	1	Cancer-related genes, FDA approved drug targets

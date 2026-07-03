@@ -1,0 +1,20 @@
+accession	trait	soma_target	gene_token	full_pvalue
+GCST90240639	CD226 antigen levels (CD226.5721.1.3)	CD226.5721.1.3	CD226	True
+GCST90240640	CD226 antigen levels (CD226.5062.60.3)	CD226.5062.60.3	CD226	True
+GCST90240986	Dyslexia-associated protein KIAA0319 levels (KIAA0319.10013.34.3)	KIAA0319.10013.34.3	KIAA0319	True
+GCST90243298	Urokinase-type plasminogen activator levels (PLAU.4158.54.2)	PLAU.4158.54.2	PLAU	True
+GCST90242599	Receptor tyrosine-protein kinase erbB-3 levels (ERBB3.2617.56.35)	ERBB3.2617.56.35	ERBB3	True
+GCST90242811	Sialic acid-binding Ig-like lectin 7 levels (SIGLEC7.2742.68.2)	SIGLEC7.2742.68.2	SIGLEC7	True
+GCST90242813	Sialic acid-binding Ig-like lectin 9 levels (SIGLEC9.3007.7.2)	SIGLEC9.3007.7.2	SIGLEC9	True
+GCST90242931	Switch-associated protein 70 levels (SWAP70.13552.7.3)	SWAP70.13552.7.3	SWAP70	True
+GCST90241394	Hepatitis A virus cellular receptor 1 levels (HAVCR1.9021.1.3)	HAVCR1.9021.1.3	HAVCR1	True
+GCST90241556	Interferon gamma receptor 2 levels (IFNGR2.9180.6.3)	IFNGR2.9180.6.3	IFNGR2	True
+GCST90241557	Interferon gamma receptor 2 levels (IFNGR2.8818.13.3)	IFNGR2.8818.13.3	IFNGR2	True
+GCST90241558	Interferon gamma receptor 2 levels (IFNGR2.9305.89.3)	IFNGR2.9305.89.3	IFNGR2	True
+GCST90243143	Tumor necrosis factor ligand superfamily member 14 levels (TNFSF14.5355.69.3)	TNFSF14.5355.69.3	TNFSF14	True
+GCST90243150	Tumor necrosis factor ligand superfamily member 8 levels (TNFSF8.3421.54.2)	TNFSF8.3421.54.2	TNFSF8	True
+GCST90243162	Tumor necrosis factor receptor superfamily member 14 levels (TNFRSF14.5352.11.3)	TNFRSF14.5352.11.3	TNFRSF14	True
+GCST90243170	Tumor necrosis factor receptor superfamily member 1A levels (TNFRSF1A.2654.19.1)	TNFRSF1A.2654.19.1	TNFRSF1A	True
+GCST90243176	Tumor necrosis factor receptor superfamily member 3 levels (LTBR.2636.10.2)	LTBR.2636.10.2	LTBR	True
+GCST90241639	Interleukin-4 levels (IL4.2906.55.3)	IL4.2906.55.3	IL4	True
+GCST90241649	Interleukin-6 receptor subunit beta levels (IL6ST.2620.4.2)	IL6ST.2620.4.2	IL6ST	True

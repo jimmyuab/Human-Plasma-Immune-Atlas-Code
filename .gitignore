@@ -1,0 +1,23 @@
+# secrets / tokens — never commit
+.secrets/
+*.token
+opengwas_token.txt
+
+# large raw / intermediate data (regenerate via pipeline)
+01_data_raw/
+*.h.tsv.gz
+*.txt.gz
+*.pkl
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# os / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

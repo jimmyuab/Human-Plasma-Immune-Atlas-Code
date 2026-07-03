@@ -1,0 +1,26 @@
+gene_symbol	disease	OR	genetic_direction	known_drug	drug_direction	concordance	final_tier	rep_status
+TNFSF14	Multiple sclerosis	0.498	agonise	LIGHT axis (experimental)	block	informative-discordance	5	replicated
+SWAP70	Rheumatoid arthritis	0.829	agonise	(no approved immune drug)	-	novel	5	replicated
+CTLA4	Autoimmune hyperthyroidism	0.154	agonise	abatacept (CTLA4-Ig, co-stim agonist)	agonise	match	4	replicated
+IL6ST	Rheumatoid arthritis	2.632	block	tocilizumab / sarilumab (IL-6R axis)	block	match	4	replicated
+CTLA4	Rheumatoid arthritis	0.511	agonise	abatacept (CTLA4-Ig, co-stim agonist)	agonise	match	4	replicated
+IFNGR2	Psoriasis	0.876	agonise	(no approved immune drug)	-	novel	4	replicated
+CA8	Rheumatoid arthritis	0.746	agonise	(no approved immune drug)	-	novel	4	replicated
+PLAU	Sjogren syndrome	1.656	block	(no approved immune drug)	-	novel	4	not covered
+MYL6B	Rheumatoid arthritis	1.396	block	(no approved immune drug)	-	novel	4	replicated
+NUMB	Coeliac disease	0.565	agonise	(no approved immune drug)	-	novel	4	not covered
+HAVCR1	Coeliac disease	2.414	block	(no approved immune drug)	-	novel	4	not covered
+NUMB	Rheumatoid arthritis	0.719	agonise	(no approved immune drug)	-	novel	4	concordant (ns)
+TNFRSF1A	Ankylosing spondylitis	1.46	block	etanercept / anti-TNF	block	match	4	replicated
+CD226	Sarcoidosis	0.806	agonise	(no approved immune drug)	-	novel	4	concordant (ns)
+SIGLEC7	Guillain-Barre	3.053	block	(no approved immune drug)	-	novel	4	not covered
+SIGLEC9	Guillain-Barre	2.943	block	(no approved immune drug)	-	novel	4	not covered
+HNMT	Crohn's disease	0.642	agonise	(no approved immune drug)	-	novel	4	not covered
+IL4	Psoriasis	1.796	block	dupilumab (IL-4Ra)	block	match	3	replicated
+ANXA11	Sarcoidosis	0.725	agonise	(no approved immune drug)	-	novel	3	not covered
+TNFRSF14	Multiple sclerosis	0.73	agonise	HVEM/LIGHT axis (experimental)	block	informative-discordance	3	replicated
+LTBR	Sarcoidosis	1.391	block	(no approved immune drug)	-	novel	3	replicated
+TNFRSF14	Rheumatoid arthritis	0.874	agonise	HVEM/LIGHT axis (experimental)	block	informative-discordance	3	replicated
+ERBB3	Psoriasis	0.739	agonise	(oncology, not immune-approved)	na	na	3	replicated
+ERBB3	Rheumatoid arthritis	1.314	block	(oncology, not immune-approved)	na	na	3	replicated
+TNFSF8	Coeliac disease	0.76	agonise	(no approved immune drug)	-	novel	3	not covered

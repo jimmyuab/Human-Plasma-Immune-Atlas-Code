@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this atlas or its code, please cite it as below."
+title: "An open, genetics-anchored plasma immunome atlas"
+abstract: >-
+  A fully reproducible, public-data plasma immunome atlas that maps the Olink
+  plasma immune proteome to disease through a four-layer causal-evidence arc
+  (cis-eQTL Mendelian randomization, transcript colocalization, protein-level
+  INTERVAL pQTL validation, and independent OpenGWAS replication), recovering
+  established therapeutic immune axes and nominating colocalized, replicated
+  autoimmune targets.
+authors:
+  - family-names: Zhao
+    given-names: Jianli
+    email: jianlizhao@uab.edu
+version: 1.0.0
+date-released: 2026-07-02
+license: MIT
+keywords:
+  - plasma proteome
+  - immunome
+  - Mendelian randomization
+  - colocalization
+  - pQTL
+  - autoimmune disease
+  - drug target
