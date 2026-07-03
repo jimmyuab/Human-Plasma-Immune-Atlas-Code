@@ -17,6 +17,7 @@ It maps the Olink plasma immune proteome to disease through a calibrated, four-l
 - **Protein-level pQTL** validation (INTERVAL plasma cis-pQTLs): **2 tier-5 protein-level causal targets** — TNFSF14→multiple sclerosis and SWAP70→rheumatoid arthritis (colocalized at both transcript and protein).
 - **Independent replication** (OpenGWAS, non-FinnGen consortium GWAS): 19/19 covered hits directionally concordant, **17 replicated** (P < 0.05), incl. TNFSF14→MS P=1.5×10⁻¹².
 - **Novelty layer**: immune-class enrichment, cross-disease pleiotropy map, genetic support for therapeutic direction, and a novel-vs-known target prioritization.
+- **Pan-phenome expansion** (28 FinnGen R12 diseases across 5 categories — autoimmune, cardiovascular, metabolic, renal, neuro/aging): the same immune instruments yield **176 causal gene–disease pairs**, **52 pan-phenome loci colocalized** (PP.H4 ≥ 0.8), and a cross-category pleiotropy map exposing shared immune axes (IFNGR2, SWAP70, MERTK, PM20D1). An integrated **novelty-priority engine** ranks **45 novel colocalized targets** (e.g. ACE→dementia, IFNGR2→hypertension/psoriasis, ERBB3→type-1 diabetes, PLAUR→coronary heart disease) while down-weighting known-drug and MHC axes.
 
 Every claim is bound to an explicit **evidence tier** (T2 MHC-caution → T5 protein-level causal); MHC signals are held at nomination.
 
@@ -31,14 +32,19 @@ cis-eQTL MR    ─►      colocalization  ─►    pQTL (INTERVAL)  ─►    
  FinnGen R12)           PP.H4 ≥ 0.8)                                non-FinnGen)          & prioritization
 ```
 
+A fifth, **pan-phenome** arc re-runs the same immune instruments across 28 diseases in 5 categories, adds cross-category pleiotropy + cell-source mapping, and an integrated novelty-priority engine (`src/24`–`src/29`).
+
 ## Figures
 
-- `figures/main/` — 9 multi-panel main figures (Figure1–9).
+- `figures/main/` — 15 multi-panel main figures (Figure1–16): the calibrated autoimmune arc (1–9) plus the pan-phenome layer (11–16: pan-disease volcano, pleiotropy heatmap, cell-source map, direction map, novelty ranking, novelty evidence).
+- `figures/phenome/` — 34 per-disease / per-category pan-phenome figures.
 - `figures/supplementary/` — 70 Extended Data / Supplementary figures (per-disease MR volcano, QQ + genomic inflation λ, forest plots, per-gene INTERVAL cis-pQTL regional plots, discovery-vs-replication).
+
+**119 figures total.**
 
 ## Manuscript
 
-- `manuscript/Plasma_Immunome_Phenome_Atlas_Nature.docx` — 9 figures, 7 results sections, evidence-tiered Table 1.
+- `manuscript/Plasma_Immunome_Phenome_Atlas_Nature.docx` — 15 figures, 8 results sections (incl. the pan-phenome causal map), evidence-tiered Table 1.
 
 ---
 
@@ -58,6 +64,14 @@ python src/18_opengwas_replication.py      # needs a free OpenGWAS JWT (see belo
 python src/19_integrate_replication.py
 python src/20_supplementary_figures.py     # 70 supplementary figures
 python src/21_novelty_analysis.py          # novelty layer + Figure 9
+# --- pan-phenome expansion (5 disease categories, 28 GWAS) ---
+python src/23_download_finngen_phenome.py  # 15 extra FinnGen R12 endpoints
+python src/24_run_mr_phenome.py            # immune cis-MR across the full phenome
+python src/25_phenome_analysis.py          # pleiotropy + cell-source + direction map
+python src/27_coloc_phenome.py             # coloc on new pan-phenome hits
+python src/28_novelty_engine.py            # integrated novelty-priority score
+python src/26_phenome_figures.py           # Figures 11–14 + per-disease phenome figs
+python src/29_novelty_engine_figures.py    # Figures 15–16
 python src/13_write_manuscript.py          # assembles the .docx
 ```
 

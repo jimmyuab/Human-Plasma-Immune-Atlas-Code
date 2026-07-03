@@ -1,0 +1,61 @@
+gene_symbol	n_categories	categories	disease	disease_category	OR	direction	FDR
+PM20D1	3	Cardiovascular;Metabolic;Neuro/Aging	Type 1 diabetes	Metabolic	0.758	protective (agonise)	0.0029875916748453
+PM20D1	3	Cardiovascular;Metabolic;Neuro/Aging	Epilepsy	Neuro/Aging	0.869	protective (agonise)	0.0071016825880177
+PM20D1	3	Cardiovascular;Metabolic;Neuro/Aging	Obesity	Metabolic	1.097	risk (block)	0.023121290091953
+PM20D1	3	Cardiovascular;Metabolic;Neuro/Aging	Atrial fibrillation	Cardiovascular	1.098	risk (block)	0.0305225001002795
+PM20D1	3	Cardiovascular;Metabolic;Neuro/Aging	Type 2 diabetes	Metabolic	1.064	risk (block)	0.0402253282954766
+PM20D1	3	Cardiovascular;Metabolic;Neuro/Aging	Dementia	Neuro/Aging	0.898	protective (agonise)	0.0409863144737823
+AAMDC	2	Cardiovascular;Renal	Hypertension	Cardiovascular	0.947	protective (agonise)	0.0079503976381341
+AAMDC	2	Cardiovascular;Renal	Venous thromboembolism	Cardiovascular	0.909	protective (agonise)	0.0115798177497776
+AAMDC	2	Cardiovascular;Renal	Chronic kidney disease	Renal	0.885	protective (agonise)	0.0408992724181256
+ACE	2	Cardiovascular;Neuro/Aging	Hypertension	Cardiovascular	1.611	risk (block)	7.261655342004011e-09
+ACE	2	Cardiovascular;Neuro/Aging	Dementia	Neuro/Aging	0.44	protective (agonise)	3.3625736169060997e-06
+ACE	2	Cardiovascular;Neuro/Aging	Atrial fibrillation	Cardiovascular	1.724	risk (block)	0.0012627610870002
+ACE	2	Cardiovascular;Neuro/Aging	Alzheimer's disease	Neuro/Aging	0.43	protective (agonise)	0.0060501015014594
+ANPEP	2	Cardiovascular;Metabolic	Type 2 diabetes	Metabolic	1.048	risk (block)	2.3806320706054373e-06
+ANPEP	2	Cardiovascular;Metabolic	Coronary heart disease	Cardiovascular	1.041	risk (block)	0.0065151867679505
+ANXA11	2	Autoimmune;Neuro/Aging	Glaucoma	Neuro/Aging	1.192	risk (block)	6.545828178554407e-05
+ANXA11	2	Autoimmune;Neuro/Aging	Sarcoidosis	Autoimmune	0.725	protective (agonise)	0.0009651095797988
+C2	2	Autoimmune;Metabolic	Type 1 diabetes	Metabolic	25.667	risk (block)	1.3235340248547082e-37
+C2	2	Autoimmune;Metabolic	Rheumatoid arthritis	Autoimmune	4.412	risk (block)	1.042320866837852e-34
+C2	2	Autoimmune;Metabolic	Coeliac disease	Autoimmune	3.676	risk (block)	1.7169434259454512e-08
+C2	2	Autoimmune;Metabolic	Ankylosing spondylitis	Autoimmune	3.348	risk (block)	2.6988395901181023e-05
+C2	2	Autoimmune;Metabolic	Psoriasis	Autoimmune	1.62	risk (block)	0.0059591516846031
+C2	2	Autoimmune;Metabolic	Sjogren syndrome	Autoimmune	2.615	risk (block)	0.0066215761611703
+C2	2	Autoimmune;Metabolic	Systemic lupus erythematosus	Autoimmune	4.064	risk (block)	0.0275275844220724
+CD226	2	Autoimmune;Metabolic	Sarcoidosis	Autoimmune	0.806	protective (agonise)	0.0154414805075911
+CD226	2	Autoimmune;Metabolic	Type 1 diabetes	Metabolic	0.802	protective (agonise)	0.0409863144737823
+CRIM1	2	Cardiovascular;Neuro/Aging	Venous thromboembolism	Cardiovascular	0.795	protective (agonise)	0.0154414805075911
+CRIM1	2	Cardiovascular;Neuro/Aging	Alzheimer's disease	Neuro/Aging	1.451	risk (block)	0.0154414805075911
+CRIM1	2	Cardiovascular;Neuro/Aging	Dementia	Neuro/Aging	1.277	risk (block)	0.0315021171172835
+CTLA4	2	Autoimmune;Metabolic	Autoimmune hyperthyroidism	Autoimmune	0.154	protective (agonise)	7.2798274240076e-16
+CTLA4	2	Autoimmune;Metabolic	Rheumatoid arthritis	Autoimmune	0.511	protective (agonise)	2.3234833167925524e-12
+CTLA4	2	Autoimmune;Metabolic	Type 1 diabetes	Metabolic	0.389	protective (agonise)	1.0439306159685276e-06
+ERBB3	2	Autoimmune;Metabolic	Type 1 diabetes	Metabolic	0.424	protective (agonise)	5.021886163506477e-08
+ERBB3	2	Autoimmune;Metabolic	Psoriasis	Autoimmune	0.739	protective (agonise)	0.0150069051666599
+ERBB3	2	Autoimmune;Metabolic	Rheumatoid arthritis	Autoimmune	1.314	risk (block)	0.0181029165869503
+IFNGR2	2	Autoimmune;Cardiovascular	Hypertension	Cardiovascular	1.066	risk (block)	3.70299009302803e-06
+IFNGR2	2	Autoimmune;Cardiovascular	Psoriasis	Autoimmune	0.876	protective (agonise)	0.0011422823584206
+IL4	2	Autoimmune;Cardiovascular	Psoriasis	Autoimmune	1.796	risk (block)	1.6181736097945674e-06
+IL4	2	Autoimmune;Cardiovascular	Coronary heart disease	Cardiovascular	1.247	risk (block)	0.0071016825880177
+LTBP2	2	Cardiovascular;Neuro/Aging	Glaucoma	Neuro/Aging	0.667	protective (agonise)	2.281108233734189e-07
+LTBP2	2	Cardiovascular;Neuro/Aging	Hypertension	Cardiovascular	0.868	protective (agonise)	0.0100239646098155
+MAPRE3	2	Cardiovascular;Metabolic	Hypertension	Cardiovascular	0.838	protective (agonise)	5.537486089312875e-05
+MAPRE3	2	Cardiovascular;Metabolic	Obesity	Metabolic	0.768	protective (agonise)	0.0006819829828028
+MERTK	2	Cardiovascular;Metabolic	Hypertension	Cardiovascular	1.062	risk (block)	5.031927448444981e-06
+MERTK	2	Cardiovascular;Metabolic	Type 2 diabetes	Metabolic	1.044	risk (block)	0.0466114470223556
+MPO	2	Cardiovascular;Metabolic	Hypertension	Cardiovascular	1.072	risk (block)	0.0124510329798526
+MPO	2	Cardiovascular;Metabolic	Type 2 diabetes	Metabolic	1.075	risk (block)	0.0432695410517407
+PIK3IP1	2	Cardiovascular;Metabolic	Hypertension	Cardiovascular	1.048	risk (block)	0.0036287801965646
+PIK3IP1	2	Cardiovascular;Metabolic	Type 2 diabetes	Metabolic	1.056	risk (block)	0.0040013774922742
+RAB44	2	Autoimmune;Cardiovascular	Ankylosing spondylitis	Autoimmune	0.812	protective (agonise)	0.0019703888083313
+RAB44	2	Autoimmune;Cardiovascular	Heart failure	Cardiovascular	0.939	protective (agonise)	0.0174336532880649
+SERPING1	2	Cardiovascular;Metabolic	Obesity	Metabolic	1.155	risk (block)	0.0011461126632473
+SERPING1	2	Cardiovascular;Metabolic	Venous thromboembolism	Cardiovascular	1.137	risk (block)	0.0215460538051828
+SPINK8	2	Cardiovascular;Metabolic	Hypertension	Cardiovascular	0.848	protective (agonise)	1.6181736097945674e-06
+SPINK8	2	Cardiovascular;Metabolic	Type 2 diabetes	Metabolic	0.834	protective (agonise)	8.440102664676625e-06
+SWAP70	2	Autoimmune;Cardiovascular	Hypertension	Cardiovascular	0.898	protective (agonise)	5.031927448444981e-06
+SWAP70	2	Autoimmune;Cardiovascular	Rheumatoid arthritis	Autoimmune	0.829	protective (agonise)	0.0041256713681346
+TNFRSF14	2	Autoimmune;Metabolic	Multiple sclerosis	Autoimmune	0.73	protective (agonise)	0.0026384172873563
+TNFRSF14	2	Autoimmune;Metabolic	Rheumatoid arthritis	Autoimmune	0.874	protective (agonise)	0.0046759749953051
+TNFRSF14	2	Autoimmune;Metabolic	Obesity	Metabolic	1.093	risk (block)	0.013161553730333

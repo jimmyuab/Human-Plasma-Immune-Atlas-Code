@@ -66,6 +66,26 @@ else:
     N_DIRMATCH=N_NOVELNOM=0
 N_RCON = int(final.rep_status.isin(["replicated","concordant (ns)"]).sum()) if HAS_REP else 0
 
+# ---- pan-phenome layer (src/24-29) ----
+def _pl(f):
+    p=os.path.join(GEN,f); return pd.read_csv(p,sep="\t") if os.path.exists(p) else None
+ph_hits = _pl("phenome_hits.tsv")
+ph_pleio= _pl("phenome_pleiotropy_axes.tsv")
+ph_col  = _pl("coloc_phenome_results.tsv")
+nov_rank= _pl("novelty_engine_ranked.tsv")
+HAS_PHEN = ph_hits is not None and nov_rank is not None
+if HAS_PHEN:
+    PH_HITS = int(len(ph_hits))
+    PH_DIS  = int(ph_hits.disease.nunique())
+    PH_GENE = int(ph_hits.gene_symbol.nunique())
+    PH_NCAT = int(ph_hits.disease_category.nunique())
+    PH_CATCOUNTS = ph_hits.disease_category.value_counts().to_dict()
+    PH_PLEIO = int(ph_pleio.gene_symbol.nunique()) if ph_pleio is not None else 0
+    PH_COLOC = int((ph_col.PP_H4>=0.8).sum()) if ph_col is not None else 0
+    PH_NOVCOL= int((nov_rank.category_label=="NOVEL colocalized").sum())
+    PH_NOVNOM= int((nov_rank.category_label=="novel nomination").sum())
+    PH_TOTAL = int(N_DIS + PH_DIS)  # combined disease breadth is described in text
+
 # ---- doc styling ----
 doc = Document()
 st = doc.styles["Normal"]; st.font.name = "Calibri"; st.font.size = Pt(10.5)
@@ -292,6 +312,67 @@ figure("Figure9_novelty.png",
        "agonism). (c) Genetics recover the DIRECTION of approved drugs, with mechanistically "
        "informative discordances. (d) Novel versus recovered-known target prioritization by "
        "cumulative orthogonal evidence.")
+
+# ================= PAN-PHENOME EXPANSION =================
+if HAS_PHEN:
+    H("Extending the atlas to a pan-phenome causal map exposes shared immune axes beyond autoimmunity", 2)
+    _cc = ", ".join(f"{k} ({v})" for k,v in sorted(PH_CATCOUNTS.items(), key=lambda x:-x[1]))
+    P(f"To test whether the immune proteome acts causally beyond classical autoimmunity, we "
+      f"re-instrumented the same {N_INST} immune genes against an expanded {PH_DIS}-disease "
+      f"phenome spanning five categories\u2014autoimmune, cardiovascular, metabolic, renal and "
+      f"neurodegenerative/aging\u2014assembled from FinnGen R12 (cardiometabolic, dementia, "
+      f"Alzheimer's disease, epilepsy, glaucoma, chronic kidney disease, osteoporosis and "
+      f"others). The identical cis-MR and colocalization machinery, held to the same FDR<5% "
+      f"gate, yields {PH_HITS} significant gene\u2013disease pairs over {PH_GENE} genes and "
+      f"{PH_NCAT} disease categories ({_cc}), materially broadening the atlas from an "
+      f"autoimmune resource into a multi-system causal map (Fig. 11). Colocalization promotes "
+      f"{PH_COLOC} of these pan-phenome loci to a shared causal variant (PP.H4\u22650.8), "
+      f"including cardiometabolic and neurodegenerative signals that were invisible to the "
+      f"autoimmune-only analysis: ACE and IFNGR2 in hypertension, PSRC1 and PLAUR in coronary "
+      f"heart disease, PROCR in venous thromboembolism, and ACE colocalizing with dementia and "
+      f"Alzheimer's disease (PP.H4>0.97).")
+    P(f"The pan-phenome view makes the atlas's central novelty engine possible: {PH_PLEIO} "
+      f"immune genes are causal across two or more disease CATEGORIES, resolving pleiotropic "
+      f"control points that link immune and cardiometabolic disease. IFNGR2 (autoimmune + "
+      f"cardiovascular), SWAP70 (autoimmune + cardiovascular), MERTK, MPO, SPINK8 and PIK3IP1 "
+      f"(cardiovascular + metabolic) act on multiple systems with internally consistent "
+      f"direction, and PM20D1 spans three categories (Fig. 12). Mapping causal targets back to "
+      f"their blood-cell lineage of origin shows granulocyte-sourced immune proteins carry the "
+      f"strongest causal enrichment across the phenome (Fig. 13), and a direction-aware "
+      f"therapeutic map partitions all {PH_HITS} signals into block-versus-agonise strategies "
+      f"with MHC/LD-confounded loci held separately (Fig. 14).")
+    P(f"Integrating every real-data evidence layer\u2014causal strength, transcript "
+      f"colocalization, cross-category pleiotropy, HPA-derived druggability and cell-source "
+      f"specificity, minus explicit penalties for known-drug axes and MHC LD\u2014into a single "
+      f"auditable novelty-priority score ranks the phenome-wide targets and separates "
+      f"{PH_NOVCOL} novel colocalized targets and {PH_NOVNOM} further novel nominations from "
+      f"recovered positive controls (Figs. 15, 16). The top novel colocalized nominations "
+      f"lacking an approved drug for their indication\u2014ACE\u2192dementia, IFNGR2\u2192hypertension "
+      f"and psoriasis, ERBB3\u2192type-1 diabetes, PLAUR\u2192coronary heart disease and SPINK8\u2192"
+      f"type-2 diabetes\u2014are each supported by colocalization (PP.H4\u22650.9) and, for the "
+      f"pleiotropic ones, by causal action in more than one disease category. As throughout, "
+      f"the engine down-weights internal positive controls (CTLA4, IL6ST, IL2RA) so that the "
+      f"ranking surfaces genuinely new biology rather than re-discovering approved drugs.")
+    figure("Figure11_phenome_volcano.png",
+           f"Figure 11 | Pan-phenome cis-MR across {PH_DIS} diseases in five categories: "
+           f"effect-size volcano coloured by disease category, with {PH_HITS} FDR<5% causal "
+           f"gene\u2013disease pairs.")
+    figure("Figure12_pleiotropy_heatmap.png",
+           "Figure 12 | Cross-category pleiotropic immune axes. Genes causal in \u22652 disease "
+           "categories (e.g. IFNGR2, SWAP70, MERTK, PM20D1), with direction of effect per disease.")
+    figure("Figure13_cellsource_map.png",
+           "Figure 13 | Causal-target enrichment by blood-cell source of origin across the "
+           "phenome (granulocyte-sourced proteins carry the strongest causal signal).")
+    figure("Figure14_direction_map.png",
+           "Figure 14 | Direction-aware therapeutic map of all pan-phenome causal signals, "
+           "partitioned into block/neutralise versus agonise/replace with MHC-caution loci flagged.")
+    figure("Figure15_novelty_ranking.png",
+           "Figure 15 | Integrated novelty-priority ranking of causal immune targets across the "
+           "phenome, showing the stacked evidence components and known-drug/MHC penalties per target.")
+    figure("Figure16_novelty_evidence.png",
+           "Figure 16 | Evidence composition and novel-versus-known separation: (a) the coloc\u2013"
+           "causal evidence landscape sized by druggability, and (b) priority scores separating "
+           "novel colocalized targets from recovered controls and MHC-caution loci.")
 
 # ================= DISCUSSION =================
 H("Discussion", 1, BLUE)

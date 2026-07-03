@@ -1,0 +1,177 @@
+gene_symbol	disease	disease_category	OR	direction	FDR	mhc	genetic_strategy	known_drug_dir	status
+C2	Rheumatoid arthritis	Autoimmune	4.411784661989173	risk (block)	1.042320866837852e-34	True	block/neutralise	-	MHC-caution (LD)
+CTLA4	Autoimmune hyperthyroidism	Autoimmune	0.1541189153607358	protective (agonise)	7.2798274240076e-16	False	agonise/replace	agonise	recovers known axis
+IL6ST	Rheumatoid arthritis	Autoimmune	2.632384596643061	risk (block)	1.747727882469251e-14	False	block/neutralise	block	recovers known axis
+CTLA4	Rheumatoid arthritis	Autoimmune	0.5105947113703064	protective (agonise)	2.3234833167925524e-12	False	agonise/replace	agonise	recovers known axis
+C2	Coeliac disease	Autoimmune	3.676316273878641	risk (block)	1.7169434259454512e-08	True	block/neutralise	-	MHC-caution (LD)
+IL4	Psoriasis	Autoimmune	1.7955955190555564	risk (block)	1.6181736097945674e-06	False	block/neutralise	block	recovers known axis
+TNFSF14	Multiple sclerosis	Autoimmune	0.4980323826686125	protective (agonise)	1.7344106899583085e-06	False	agonise/replace	block	recovers known axis
+KIAA0319	Ankylosing spondylitis	Autoimmune	0.6475203748690394	protective (agonise)	7.818706114387967e-06	False	agonise/replace	-	novel nomination
+C2	Ankylosing spondylitis	Autoimmune	3.3482720524801994	risk (block)	2.6988395901181023e-05	True	block/neutralise	-	MHC-caution (LD)
+ANXA11	Sarcoidosis	Autoimmune	0.7251670635232493	protective (agonise)	0.0009651095797988	False	agonise/replace	-	novel nomination
+IFNGR2	Psoriasis	Autoimmune	0.8757486654865103	protective (agonise)	0.0011422823584206	False	agonise/replace	-	novel nomination
+CA8	Rheumatoid arthritis	Autoimmune	0.746217049064143	protective (agonise)	0.001181574898891	False	agonise/replace	-	novel nomination
+RAB44	Ankylosing spondylitis	Autoimmune	0.8122566172256516	protective (agonise)	0.0019703888083313	False	agonise/replace	-	novel nomination
+PLAU	Sjogren syndrome	Autoimmune	1.6562031611902714	risk (block)	0.002226241048356	False	block/neutralise	-	novel nomination
+TNFRSF14	Multiple sclerosis	Autoimmune	0.7302166192022661	protective (agonise)	0.0026384172873563	False	agonise/replace	block	recovers known axis
+LTBR	Sarcoidosis	Autoimmune	1.391202658282484	risk (block)	0.00378619611444	False	block/neutralise	-	novel nomination
+SWAP70	Rheumatoid arthritis	Autoimmune	0.8293131115972837	protective (agonise)	0.0041256713681346	False	agonise/replace	-	novel nomination
+TNFRSF14	Rheumatoid arthritis	Autoimmune	0.8739742552963211	protective (agonise)	0.0046759749953051	False	agonise/replace	block	recovers known axis
+MYL6B	Rheumatoid arthritis	Autoimmune	1.396184655655942	risk (block)	0.0055229402576664	False	block/neutralise	-	novel nomination
+NUMB	Coeliac disease	Autoimmune	0.5647687861390079	protective (agonise)	0.0055373746945546	False	agonise/replace	-	novel nomination
+HAVCR1	Coeliac disease	Autoimmune	2.414271024768988	risk (block)	0.0058800869391012	False	block/neutralise	-	novel nomination
+C2	Psoriasis	Autoimmune	1.6201595163871174	risk (block)	0.0059591516846031	True	block/neutralise	-	MHC-caution (LD)
+C2	Sjogren syndrome	Autoimmune	2.6145118762831148	risk (block)	0.0066215761611703	True	block/neutralise	-	MHC-caution (LD)
+NUMB	Rheumatoid arthritis	Autoimmune	0.7193194403952133	protective (agonise)	0.0066459572647418	False	agonise/replace	-	novel nomination
+TNFRSF1A	Ankylosing spondylitis	Autoimmune	1.4604796934690565	risk (block)	0.0093220785064288	False	block/neutralise	block	recovers known axis
+ERBB3	Psoriasis	Autoimmune	0.7391027180989734	protective (agonise)	0.0150069051666599	False	agonise/replace	-	novel nomination
+CD226	Sarcoidosis	Autoimmune	0.8056068854711766	protective (agonise)	0.0154414805075911	False	agonise/replace	-	novel nomination
+SIGLEC7	Guillain-Barre	Autoimmune	3.0533665432002017	risk (block)	0.0154601815515017	False	block/neutralise	-	novel nomination
+SIGLEC9	Guillain-Barre	Autoimmune	2.9426871908214847	risk (block)	0.0154601815515017	False	block/neutralise	-	novel nomination
+HNMT	Crohn's disease	Autoimmune	0.6415181114658792	protective (agonise)	0.0168879963903021	False	agonise/replace	-	novel nomination
+ERBB3	Rheumatoid arthritis	Autoimmune	1.3135853777167552	risk (block)	0.0181029165869503	False	block/neutralise	-	novel nomination
+TNFSF8	Coeliac disease	Autoimmune	0.7603789611279782	protective (agonise)	0.0183618964692358	False	agonise/replace	-	novel nomination
+IL6ST	Psoriasis	Autoimmune	1.578291354919277	risk (block)	0.0252279586907883	False	block/neutralise	block	recovers known axis
+BCL7A	Crohn's disease	Autoimmune	0.5728053077443792	protective (agonise)	0.0275275844220724	False	agonise/replace	-	novel nomination
+C2	Systemic lupus erythematosus	Autoimmune	4.063588070051411	risk (block)	0.0275275844220724	True	block/neutralise	-	MHC-caution (LD)
+SNX2	Psoriasis	Autoimmune	0.6132116720854147	protective (agonise)	0.0315021171172835	False	agonise/replace	-	novel nomination
+TGFA	Coeliac disease	Autoimmune	0.6354901322318747	protective (agonise)	0.0328195830058625	False	agonise/replace	-	novel nomination
+EDN1	Ankylosing spondylitis	Autoimmune	2.024271739274989	risk (block)	0.0336766945926516	False	block/neutralise	-	novel nomination
+IL12RB2	Autoimmune hyperthyroidism	Autoimmune	1.3241705859078028	risk (block)	0.0404101809893762	False	block/neutralise	-	novel nomination
+PRKCQ	Rheumatoid arthritis	Autoimmune	1.3345586596586652	risk (block)	0.0431753205286493	False	block/neutralise	-	novel nomination
+PVALB	Sarcoidosis	Autoimmune	0.8824007148858183	protective (agonise)	0.0432695410517407	False	agonise/replace	-	novel nomination
+IL1RL1	Coeliac disease	Autoimmune	0.7121080698308815	protective (agonise)	0.0443392728593514	False	agonise/replace	-	novel nomination
+FES	Hypertension	Cardiovascular	0.8468839990603911	protective (agonise)	1.4824127620138616e-29	False	agonise/replace	-	novel nomination
+PROCR	Venous thromboembolism	Cardiovascular	0.5472792876050901	protective (agonise)	6.2893731265111856e-18	False	agonise/replace	-	novel nomination
+PSRC1	Coronary heart disease	Cardiovascular	0.8503219654685883	protective (agonise)	2.2447716911302464e-16	False	agonise/replace	-	novel nomination
+CDKN1A	Heart failure	Cardiovascular	1.4800683450158931	risk (block)	3.3346146686789313e-14	False	block/neutralise	-	novel nomination
+ACE	Hypertension	Cardiovascular	1.6114209191709736	risk (block)	7.261655342004011e-09	False	block/neutralise	-	novel nomination
+TSPAN15	Venous thromboembolism	Cardiovascular	0.7318646631299554	protective (agonise)	5.469846078904368e-08	False	agonise/replace	-	novel nomination
+PLAUR	Coronary heart disease	Cardiovascular	1.5867849949293351	risk (block)	8.119212459425118e-07	False	block/neutralise	-	novel nomination
+FES	Coronary heart disease	Cardiovascular	0.8904816949537475	protective (agonise)	1.5862140255712516e-06	False	agonise/replace	-	novel nomination
+SPINK8	Hypertension	Cardiovascular	0.8476635987428299	protective (agonise)	1.6181736097945674e-06	False	agonise/replace	-	novel nomination
+CDKN1A	Atrial fibrillation	Cardiovascular	1.3317000490958273	risk (block)	2.1480269213038847e-06	False	block/neutralise	-	novel nomination
+IFNGR2	Hypertension	Cardiovascular	1.0664311640761612	risk (block)	3.70299009302803e-06	False	block/neutralise	-	novel nomination
+SWAP70	Hypertension	Cardiovascular	0.8981950163318115	protective (agonise)	5.031927448444981e-06	False	agonise/replace	-	novel nomination
+MERTK	Hypertension	Cardiovascular	1.062439129279221	risk (block)	5.031927448444981e-06	False	block/neutralise	-	novel nomination
+TNFSF12	Hypertension	Cardiovascular	1.059272096895342	risk (block)	9.45764429027128e-06	False	block/neutralise	-	novel nomination
+NGFR	Hypertension	Cardiovascular	0.6333947538585684	protective (agonise)	1.0035657120076827e-05	False	agonise/replace	-	novel nomination
+FES	Atrial fibrillation	Cardiovascular	0.878125773021931	protective (agonise)	2.194601009134281e-05	False	agonise/replace	-	novel nomination
+JMJD1C	Hypertension	Cardiovascular	1.6671465461882875	risk (block)	5.178939659045666e-05	False	block/neutralise	-	novel nomination
+MAPRE3	Hypertension	Cardiovascular	0.8382669413697186	protective (agonise)	5.537486089312875e-05	False	agonise/replace	-	novel nomination
+ANXA2	Hypertension	Cardiovascular	1.1095830136652372	risk (block)	0.0002750662942252	False	block/neutralise	-	novel nomination
+PFKFB2	Atrial fibrillation	Cardiovascular	0.5606971049270295	protective (agonise)	0.0006512810502508	False	agonise/replace	-	novel nomination
+CLINT1	Hypertension	Cardiovascular	1.4368403263327851	risk (block)	0.0009005485913327	False	block/neutralise	-	novel nomination
+ADAM15	Atrial fibrillation	Cardiovascular	0.9299855235794624	protective (agonise)	0.0009651095797988	False	agonise/replace	-	novel nomination
+MAPT	Hypertension	Cardiovascular	1.5741270163303778	risk (block)	0.0010268261551648	False	block/neutralise	-	novel nomination
+SLC16A1	Hypertension	Cardiovascular	0.8276151343209475	protective (agonise)	0.0010533075436071	False	agonise/replace	-	novel nomination
+MYL4	Hypertension	Cardiovascular	1.6566342513940038	risk (block)	0.0010548098707932	False	block/neutralise	-	novel nomination
+ACE	Atrial fibrillation	Cardiovascular	1.7242700415098282	risk (block)	0.0012627610870002	False	block/neutralise	-	novel nomination
+PFKFB2	Hypertension	Cardiovascular	0.7249380606905292	protective (agonise)	0.0015827278390193	False	agonise/replace	-	novel nomination
+ADM	Hypertension	Cardiovascular	1.0699589450331417	risk (block)	0.0017384306889075	False	block/neutralise	-	novel nomination
+DENR	Atrial fibrillation	Cardiovascular	1.2341789500838978	risk (block)	0.002255868825721	False	block/neutralise	-	novel nomination
+LPL	Coronary heart disease	Cardiovascular	0.9316830096525952	protective (agonise)	0.0023056521538664	False	agonise/replace	-	novel nomination
+VNN2	Coronary heart disease	Cardiovascular	1.0454011597851285	risk (block)	0.0029875916748453	False	block/neutralise	-	novel nomination
+PIK3IP1	Hypertension	Cardiovascular	1.0484890304176304	risk (block)	0.0036287801965646	False	block/neutralise	-	novel nomination
+SCARB1	Coronary heart disease	Cardiovascular	0.9072242638039276	protective (agonise)	0.0037890983792303	False	agonise/replace	-	novel nomination
+ADM	Atrial fibrillation	Cardiovascular	1.1149083465239968	risk (block)	0.004782442730421	False	block/neutralise	-	novel nomination
+PDLIM7	Venous thromboembolism	Cardiovascular	0.7184121014283523	protective (agonise)	0.0048180997702861	False	agonise/replace	-	novel nomination
+IL1RN	Hypertension	Cardiovascular	0.8305428779673497	protective (agonise)	0.0055373746945546	False	agonise/replace	-	novel nomination
+ANPEP	Coronary heart disease	Cardiovascular	1.0406550991706236	risk (block)	0.0065151867679505	False	block/neutralise	-	novel nomination
+IL4	Coronary heart disease	Cardiovascular	1.2473590950313898	risk (block)	0.0071016825880177	False	block/neutralise	block	recovers known axis
+AAMDC	Hypertension	Cardiovascular	0.9468317704952888	protective (agonise)	0.0079503976381341	False	agonise/replace	-	novel nomination
+HIP1R	Atrial fibrillation	Cardiovascular	1.4647311240006111	risk (block)	0.008565631038483	False	block/neutralise	-	novel nomination
+LDLR	Hypertension	Cardiovascular	0.7132227918364444	protective (agonise)	0.0090356114494124	False	agonise/replace	-	novel nomination
+KRT18	Hypertension	Cardiovascular	1.2352797991689988	risk (block)	0.0090841805644236	False	block/neutralise	-	novel nomination
+LTBP2	Hypertension	Cardiovascular	0.86835959147363	protective (agonise)	0.0100239646098155	False	agonise/replace	-	novel nomination
+TGFB2	Atrial fibrillation	Cardiovascular	1.853451991987692	risk (block)	0.0100492198756967	False	block/neutralise	-	novel nomination
+ADAMTSL4	Hypertension	Cardiovascular	1.064719000626806	risk (block)	0.010182537594924	False	block/neutralise	-	novel nomination
+SCPEP1	Venous thromboembolism	Cardiovascular	1.2766681509025382	risk (block)	0.010182537594924	False	block/neutralise	-	novel nomination
+AAMDC	Venous thromboembolism	Cardiovascular	0.908892842795595	protective (agonise)	0.0115798177497776	False	agonise/replace	-	novel nomination
+TGFB2	Venous thromboembolism	Cardiovascular	1.900106039681458	risk (block)	0.0115886799288324	False	block/neutralise	-	novel nomination
+MPO	Hypertension	Cardiovascular	1.071594531946834	risk (block)	0.0124510329798526	False	block/neutralise	-	novel nomination
+SORT1	Coronary heart disease	Cardiovascular	0.7139935677466863	protective (agonise)	0.0129360834268435	False	agonise/replace	-	novel nomination
+STK11	Coronary heart disease	Cardiovascular	1.1093549553793438	risk (block)	0.0136424038425075	False	block/neutralise	-	novel nomination
+CRIM1	Venous thromboembolism	Cardiovascular	0.7945175334649279	protective (agonise)	0.0154414805075911	False	agonise/replace	-	novel nomination
+TMEM106A	Hypertension	Cardiovascular	1.1129202440874162	risk (block)	0.0156175229077421	False	block/neutralise	-	novel nomination
+VAT1	Hypertension	Cardiovascular	1.0693810397620036	risk (block)	0.0168879963903021	False	block/neutralise	-	novel nomination
+RAB44	Heart failure	Cardiovascular	0.9389576078792043	protective (agonise)	0.0174336532880649	False	agonise/replace	-	novel nomination
+ERBB2	Atrial fibrillation	Cardiovascular	1.6536516909796315	risk (block)	0.0187891603626897	False	block/neutralise	-	novel nomination
+LDLR	Coronary heart disease	Cardiovascular	0.6425092545955702	protective (agonise)	0.0206417010702856	False	agonise/replace	-	novel nomination
+SERPING1	Venous thromboembolism	Cardiovascular	1.136976592701742	risk (block)	0.0215460538051828	False	block/neutralise	-	novel nomination
+PM20D1	Atrial fibrillation	Cardiovascular	1.0976354247760896	risk (block)	0.0305225001002795	False	block/neutralise	-	novel nomination
+PSAP	Coronary heart disease	Cardiovascular	0.8174569294129628	protective (agonise)	0.0336766945926516	False	agonise/replace	-	novel nomination
+PHOSPHO1	Coronary heart disease	Cardiovascular	0.8505198613697235	protective (agonise)	0.0368286582055251	False	agonise/replace	-	novel nomination
+PINLYP	Coronary heart disease	Cardiovascular	1.1791695035372822	risk (block)	0.0423195031735599	False	block/neutralise	-	novel nomination
+PFKFB2	Heart failure	Cardiovascular	0.6648552824020466	protective (agonise)	0.0423195031735599	False	agonise/replace	-	novel nomination
+CD14	Atrial fibrillation	Cardiovascular	0.8999090916998057	protective (agonise)	0.0432695410517407	False	agonise/replace	-	novel nomination
+GSTM4	Heart failure	Cardiovascular	1.0438119594405235	risk (block)	0.0442080241076727	False	block/neutralise	-	novel nomination
+SLC12A2	Hypertension	Cardiovascular	1.1212092156400697	risk (block)	0.045551128494679	False	block/neutralise	-	novel nomination
+TPPP3	Coronary heart disease	Cardiovascular	0.8232975362902791	protective (agonise)	0.0476434773090409	False	agonise/replace	-	novel nomination
+C2	Type 1 diabetes	Metabolic	25.666559507748048	risk (block)	1.3235340248547082e-37	True	block/neutralise	-	MHC-caution (LD)
+ARG1	Type 2 diabetes	Metabolic	0.922169312756154	protective (agonise)	3.247529686596671e-09	False	agonise/replace	-	novel nomination
+ERBB3	Type 1 diabetes	Metabolic	0.4243341111823029	protective (agonise)	5.021886163506477e-08	False	agonise/replace	-	novel nomination
+LIF	Type 1 diabetes	Metabolic	53.92530987716778	risk (block)	5.1040312723006485e-08	False	block/neutralise	-	novel nomination
+IL2RA	Type 1 diabetes	Metabolic	0.3016186946935759	protective (agonise)	2.080910072955154e-07	False	agonise/replace	-	novel nomination
+SPRY2	Type 2 diabetes	Metabolic	1.3349625036172446	risk (block)	8.88067752141048e-07	False	block/neutralise	-	novel nomination
+CTLA4	Type 1 diabetes	Metabolic	0.3894445301487476	protective (agonise)	1.0439306159685276e-06	False	agonise/replace	agonise	recovers known axis
+ANPEP	Type 2 diabetes	Metabolic	1.048103391096572	risk (block)	2.3806320706054373e-06	False	block/neutralise	-	novel nomination
+SPINK8	Type 2 diabetes	Metabolic	0.8340418525474392	protective (agonise)	8.440102664676625e-06	False	agonise/replace	-	novel nomination
+NPDC1	Type 2 diabetes	Metabolic	1.084949738906209	risk (block)	4.209410607881306e-05	False	block/neutralise	-	novel nomination
+CTSH	Type 1 diabetes	Metabolic	1.2279126557902569	risk (block)	0.0001205251959873	False	block/neutralise	-	novel nomination
+NOMO1	Type 2 diabetes	Metabolic	1.0969062500032989	risk (block)	0.0002382796778016	False	block/neutralise	-	novel nomination
+EVI2B	Type 2 diabetes	Metabolic	0.774322451553972	protective (agonise)	0.0005284088001027	False	agonise/replace	-	novel nomination
+MAPRE3	Obesity	Metabolic	0.7675585525647268	protective (agonise)	0.0006819829828028	False	agonise/replace	-	novel nomination
+LTBP3	Obesity	Metabolic	1.127322097167107	risk (block)	0.0010268261551648	False	block/neutralise	-	novel nomination
+SERPING1	Obesity	Metabolic	1.154874680022266	risk (block)	0.0011461126632473	False	block/neutralise	-	novel nomination
+CD2	Type 1 diabetes	Metabolic	4.075781345026908	risk (block)	0.002226241048356	False	block/neutralise	-	novel nomination
+CASP3	Type 2 diabetes	Metabolic	1.0847426735314722	risk (block)	0.0024651895370177	False	block/neutralise	-	novel nomination
+PM20D1	Type 1 diabetes	Metabolic	0.7583369269397326	protective (agonise)	0.0029875916748453	False	agonise/replace	-	novel nomination
+PIK3IP1	Type 2 diabetes	Metabolic	1.0561174416647163	risk (block)	0.0040013774922742	False	block/neutralise	-	novel nomination
+F12	Obesity	Metabolic	1.4764441467768443	risk (block)	0.0068069385875538	False	block/neutralise	-	novel nomination
+CLEC4A	Type 2 diabetes	Metabolic	0.905845101185168	protective (agonise)	0.010182537594924	False	agonise/replace	-	novel nomination
+LTBP3	Type 2 diabetes	Metabolic	1.0757284166045944	risk (block)	0.010182537594924	False	block/neutralise	-	novel nomination
+BMP6	Type 2 diabetes	Metabolic	0.825530025367144	protective (agonise)	0.0124510329798526	False	agonise/replace	-	novel nomination
+TNFRSF14	Obesity	Metabolic	1.0928516730640638	risk (block)	0.013161553730333	False	block/neutralise	block	recovers known axis
+GDF15	Obesity	Metabolic	0.841960417511216	protective (agonise)	0.0179577741912377	False	agonise/replace	-	novel nomination
+PM20D1	Obesity	Metabolic	1.0965950066155064	risk (block)	0.023121290091953	False	block/neutralise	-	novel nomination
+CD79B	Type 2 diabetes	Metabolic	0.813433330115456	protective (agonise)	0.0250542143483569	False	agonise/replace	-	novel nomination
+PACS2	Type 2 diabetes	Metabolic	1.387487383466108	risk (block)	0.038510778045853	False	block/neutralise	-	novel nomination
+PF4	Type 2 diabetes	Metabolic	0.7140693785147311	protective (agonise)	0.0402253282954766	False	agonise/replace	-	novel nomination
+PM20D1	Type 2 diabetes	Metabolic	1.0635449479173618	risk (block)	0.0402253282954766	False	block/neutralise	-	novel nomination
+CD226	Type 1 diabetes	Metabolic	0.8017598821443859	protective (agonise)	0.0409863144737823	False	agonise/replace	-	novel nomination
+NRN1	Type 2 diabetes	Metabolic	1.0884674475658291	risk (block)	0.0427806795784465	False	block/neutralise	-	novel nomination
+MPO	Type 2 diabetes	Metabolic	1.0745197237685855	risk (block)	0.0432695410517407	False	block/neutralise	-	novel nomination
+MERTK	Type 2 diabetes	Metabolic	1.0440200592823037	risk (block)	0.0466114470223556	False	block/neutralise	-	novel nomination
+LYPD3	Dementia	Neuro/Aging	0.3549918138470115	protective (agonise)	6.2893731265111856e-18	False	agonise/replace	-	novel nomination
+LYPD3	Alzheimer's disease	Neuro/Aging	0.2404317489141367	protective (agonise)	1.5967895998916502e-16	False	agonise/replace	-	novel nomination
+LTBP2	Glaucoma	Neuro/Aging	0.6674232931893709	protective (agonise)	2.281108233734189e-07	False	agonise/replace	-	novel nomination
+PVR	Dementia	Neuro/Aging	0.5883559376868374	protective (agonise)	2.288849461903128e-07	False	agonise/replace	-	novel nomination
+ACE	Dementia	Neuro/Aging	0.4395453890280715	protective (agonise)	3.3625736169060997e-06	False	agonise/replace	-	novel nomination
+TEX101	Dementia	Neuro/Aging	1.334027282151228	risk (block)	3.70299009302803e-06	False	block/neutralise	-	novel nomination
+TEX101	Alzheimer's disease	Neuro/Aging	1.4732948698958162	risk (block)	1.90303760042823e-05	False	block/neutralise	-	novel nomination
+ANXA11	Glaucoma	Neuro/Aging	1.1922062043746104	risk (block)	6.545828178554407e-05	False	block/neutralise	-	novel nomination
+RELB	Dementia	Neuro/Aging	0.3709450450168854	protective (agonise)	0.0004974764306812	False	agonise/replace	-	novel nomination
+CRISP3	Glaucoma	Neuro/Aging	1.320205869625204	risk (block)	0.0037918629307705	False	block/neutralise	-	novel nomination
+SPON2	Glaucoma	Neuro/Aging	1.272214258130565	risk (block)	0.0046759749953051	False	block/neutralise	-	novel nomination
+ACE	Alzheimer's disease	Neuro/Aging	0.429980367299715	protective (agonise)	0.0060501015014594	False	agonise/replace	-	novel nomination
+RAPGEF2	Dementia	Neuro/Aging	1.1085152246160994	risk (block)	0.0065151867679505	False	block/neutralise	-	novel nomination
+PM20D1	Epilepsy	Neuro/Aging	0.8688247894944074	protective (agonise)	0.0071016825880177	False	agonise/replace	-	novel nomination
+PVR	Alzheimer's disease	Neuro/Aging	0.6131208119857751	protective (agonise)	0.0086754434117129	False	agonise/replace	-	novel nomination
+SEZ6	Osteoporosis	Neuro/Aging	0.1941459348771198	protective (agonise)	0.0086754434117129	False	agonise/replace	-	novel nomination
+RAPGEF2	Alzheimer's disease	Neuro/Aging	1.1525479017124547	risk (block)	0.0103893231597417	False	block/neutralise	-	novel nomination
+HAVCR2	Dementia	Neuro/Aging	0.8140496555749581	protective (agonise)	0.01236132727695	False	agonise/replace	-	novel nomination
+CRIM1	Alzheimer's disease	Neuro/Aging	1.4507399690392742	risk (block)	0.0154414805075911	False	block/neutralise	-	novel nomination
+PILRA	Dementia	Neuro/Aging	1.55180149240283	risk (block)	0.0168879963903021	False	block/neutralise	-	novel nomination
+SCARF1	Dementia	Neuro/Aging	1.9892701904588983	risk (block)	0.0170296491530536	False	block/neutralise	-	novel nomination
+TNFSF13	Glaucoma	Neuro/Aging	0.8996304613374326	protective (agonise)	0.0185452998335878	False	agonise/replace	-	novel nomination
+PILRB	Dementia	Neuro/Aging	1.0492520068472584	risk (block)	0.022614420078291	False	block/neutralise	-	novel nomination
+HAVCR2	Alzheimer's disease	Neuro/Aging	0.7565394926828077	protective (agonise)	0.0244394305289586	False	agonise/replace	-	novel nomination
+EPHB4	Dementia	Neuro/Aging	1.067878096390665	risk (block)	0.0275275844220724	False	block/neutralise	-	novel nomination
+CRIM1	Dementia	Neuro/Aging	1.2773466170308592	risk (block)	0.0315021171172835	False	block/neutralise	-	novel nomination
+DPEP2	Osteoporosis	Neuro/Aging	0.8037253365658946	protective (agonise)	0.0315021171172835	False	agonise/replace	-	novel nomination
+SCARF1	Alzheimer's disease	Neuro/Aging	2.557846857173077	risk (block)	0.0320904681951792	False	block/neutralise	-	novel nomination
+LILRB2	Dementia	Neuro/Aging	0.8281129908821212	protective (agonise)	0.0397098379009748	False	agonise/replace	-	novel nomination
+PM20D1	Dementia	Neuro/Aging	0.8981727785173355	protective (agonise)	0.0409863144737823	False	agonise/replace	-	novel nomination
+RELB	Alzheimer's disease	Neuro/Aging	0.3568883843979301	protective (agonise)	0.0476434773090409	False	agonise/replace	-	novel nomination
+AAMDC	Chronic kidney disease	Renal	0.8847875172798205	protective (agonise)	0.0408992724181256	False	agonise/replace	-	novel nomination
