@@ -63,20 +63,32 @@ python src/13_write_manuscript.py          # assembles the .docx
 
 Scripts expect the project root layout (`01_data_raw/`, `02_data_processed/`, `06_genetic_causality/`, `08_figures/`). The pre-computed **result tables are included** under `results/` so figures and the manuscript can be regenerated without re-downloading multi-GB sumstats.
 
-## Training a predictive model (PIRS)
+## Train your own model (PIRS) — bring your own data
 
-The atlas itself is a **summary-statistics causal resource**, not a per-individual training set. A supervised **Plasma Immune Risk Score (PIRS)** — predicting future disease from a person's Olink profile — requires **individual-level UK Biobank Olink NPX + phenotypes**, which are **controlled-access** and deliberately **not** shipped here.
-
-`src/22_train_pirs.py` is a ready-to-run, honest-by-design scaffold:
-
-- With **no UKB data present** it prints the exact input schema it needs and exits cleanly — it never fabricates data.
-- Once approved UKB data is placed under `01_data_raw/UKB_Olink_NPX/` (`npx_matrix.tsv`, `outcomes.tsv`, optional `covariates.tsv`), one command trains a **cross-validated elastic-net survival model** (scikit-survival Coxnet → lifelines → logistic fallback), restricted to the 1,007 immune proteins, and writes per-protein PIRS weights, a CV C-index/AUROC table, fitted model pickles, and a performance figure.
+The atlas is a **summary-statistics causal resource**, but you can also train a supervised
+**Plasma Immune Risk Score (PIRS)** on **any cohort you are authorised to use** (UK Biobank,
+a clinical cohort, your own Olink/other proteomic run). `src/22_train_pirs.py` ships **no
+individual-level data** and never fabricates any.
 
 ```bash
-python src/22_train_pirs.py     # prints schema + exits if UKB data absent
+pip install -r requirements.txt
+python src/22_train_pirs.py --write-templates           # blank input templates
+python src/22_train_pirs.py --npx npx.tsv --outcomes outcomes.tsv
 ```
 
-To obtain the data, apply via the UK Biobank Access Management System (Olink Field 30900 + disease phenotypes).
+You provide three simple tables — `npx` (participant × protein, columns named by Olink ID or
+gene symbol), `outcomes` (`id, disease, event, time_years`), and optional `covariates`. The
+trainer restricts features to the 1,007 curated immune proteins, runs **cross-validated
+elastic-net survival** (scikit-survival Coxnet → lifelines → logistic fallback, auto-selected),
+and writes per-protein PIRS weights, a CV C-index/AUROC table, model pickles, and a
+performance figure.
+
+**➡ Full step-by-step guide: [`docs/TRAINING.md`](docs/TRAINING.md)** — input schema, options,
+how to score new individuals, and validation notes.
+
+> UK Biobank Olink NPX + phenotypes are controlled-access (apply via the UKB Access Management
+> System, Olink Field 30900). PIRS is not shipped pre-trained because doing so would require
+> individual-level data.
 
 ## Data sources (all public)
 
