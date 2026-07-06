@@ -170,13 +170,94 @@ P("A guiding principle runs through the entire pipeline and through this documen
   "therefore reported at an explicit evidence tier, and the language used for it is bound to that tier. "
   "This document explains not only how each number was produced but why each number is allowed to carry "
   "only a certain weight.")
-P("The document is organised as a narrative arc. Part A describes the data. Part B describes how the "
+P("The document is organised as a narrative arc. Section 2 defines the model\u2019s scope, its layers and "
+  "which parts are plasma-derived. Part A describes the data. Part B describes how the "
   "immune proteome was defined. Part C\u2013F describe the causal-inference engine (instruments, Mendelian "
   "randomization, colocalization, protein-level validation, replication). Part G describes the "
   "pan-phenome expansion and the novelty-priority engine. Part H is the PIRS model in full: data \u2192 "
   "features \u2192 algorithm \u2192 training \u2192 scoring. Part I explains why one would train with the model, what "
   "questions it answers, and how a research programme benefits. Part J covers limitations, "
   "reproducibility, a glossary and references.")
+
+# ================= 2. SCOPE AND FOCUS =================
+H1("2.  What this model focuses on (scope, layers and data provenance)")
+P("Because the resource joins several kinds of data, it is important to state plainly what it is about, "
+  "what it is not about, and \u2014 since the word \u201cplasma\u201d appears throughout \u2014 exactly which parts are "
+  "plasma-derived and which are not. This section is written for readers who want to understand the "
+  "resource before the technical detail.")
+
+H2("2.1  The core object: circulating plasma immune proteins")
+P("The subject of the model is molecular, and specifically it is the plasma (blood-circulating) immune "
+  "proteome \u2014 the set of immune-related proteins that are measurable in blood. Concretely this is the "
+  "1,007-protein plasma immunome curated from the Olink Explore panel. This is what the model measures, "
+  "what the Plasma Immune Risk Score (PIRS) is trained on, and what is ultimately nominated as a "
+  "therapeutic target. The model is NOT about the whole proteome, and it is NOT about other molecular "
+  "layers such as metabolites, lipids or intracellular/tissue proteins; it is deliberately restricted to "
+  "the circulating, secreted immune protein subset.")
+
+H2("2.2  The layers the model connects")
+P("Around that molecular core, the resource deliberately links five further layers, so that a plasma "
+  "protein is never viewed in isolation but always in relation to its cause, its cellular origin, and "
+  "its disease consequence. The model\u2019s focus is best understood as a bridge from molecule to disease:")
+TABLE(["Focus / layer","Level","What it contributes to the model"],
+      [["Plasma immune protein","molecular \u2014 protein","the CORE: measured features, PIRS inputs, nominated targets"],
+       ["Blood gene expression","molecular \u2014 transcript (eQTL)","the causal instrument (why a protein moves disease risk)"],
+       ["Germline genetics","molecular \u2014 DNA variants (GWAS)","the anchor that makes findings causal, not merely correlational"],
+       ["Cell of origin","cellular","maps each protein to its blood-cell lineage (granulocyte/T/B/NK/myeloid)"],
+       ["Disease phenome","phenotypic \u2014 28 diseases","the outcome: what the proteins causally act upon"],
+       ["Direction & druggability","translational","turns a target into block-vs-agonise, modality and novelty rank"]])
+P("In one sentence: the model focuses on plasma immune proteins (molecular), causally linked through "
+  "genetics (transcript and DNA) to disease (phenotypic), mapped to their cell of origin (cellular), and "
+  "scored for therapeutic direction and novelty (translational). It is a molecular-to-disease bridge, "
+  "not a single-source molecular catalogue.")
+
+H2("2.3  Which parts are plasma, and which are not")
+P("The protein and prediction layers are genuinely plasma-derived; the causal-anchor layers are not, and "
+  "this is by design \u2014 causal inference needs a genetic anchor, which cannot come from a plasma protein "
+  "measurement alone. Stating this honestly prevents the resource from being mistaken for a pure-plasma "
+  "dataset.")
+TABLE(["Layer","Source","Plasma-derived?","Molecular type"],
+      [["Protein universe / PIRS features","Olink Explore","Yes (plasma)","protein"],
+       ["Protein-level validation","INTERVAL cis-pQTL","Yes (plasma)","protein"],
+       ["Causal instrument","eQTLGen cis-eQTL","No (whole-blood cells)","transcript / RNA"],
+       ["Annotation","Human Protein Atlas","No (cells / tissue)","RNA / secretome"],
+       ["Disease outcome","FinnGen / OpenGWAS","No (germline DNA + clinical diagnosis)","DNA \u2192 phenotype"]])
+P("So the resource is a plasma-immunome model in the sense that its object and its risk score are plasma "
+  "proteins, but its causal spine is multi-omic (plasma protein + blood transcript + germline DNA + "
+  "clinical phenotype). The transcript-to-protein step exists precisely because the discovery instrument "
+  "is transcript rather than plasma protein, and it exposes real discordances (for example IL6ST, whose "
+  "effect reverses sign between transcript and plasma protein).")
+
+H2("2.4  What the trained model can answer, in plain terms")
+P("A reader deciding whether the resource is useful to them should know the concrete questions it can "
+  "answer. At the level of the causal atlas:")
+BUL("i.e. which plasma immune proteins causally influence a given "
+    "disease, and in which direction (raising or lowering risk).", bold_lead="Which proteins matter for a disease? \u2014 ")
+BUL("i.e. is the disease association driven by the same "
+    "causal variant as the protein (colocalization), or is it linkage-disequilibrium coincidence?",
+    bold_lead="Is the link real or an artefact? \u2014 ")
+BUL("i.e. does the signal hold at the protein level (pQTL) and in an "
+    "independent, non-Finnish cohort (replication)?", bold_lead="Does it survive validation? \u2014 ")
+BUL("i.e. should a drug block/neutralise the protein (it raises risk) or "
+    "agonise/replace it (it is protective)?", bold_lead="Which way should a drug push it? \u2014 ")
+BUL("i.e. which proteins act across several disease systems, and which "
+    "are novel and druggable rather than already-drugged?", bold_lead="Which targets are new and shared? \u2014 ")
+P("And at the level of the trained PIRS, on any cohort the user is authorised to analyse:")
+BUL("given a person\u2019s measured plasma immune proteome today, what is "
+    "their relative future risk of disease X over follow-up?", bold_lead="What is this individual\u2019s risk? \u2014 ")
+BUL("which immune proteins carry the predictive signal for disease X in "
+    "this cohort, and with what sign?", bold_lead="What drives the prediction? \u2014 ")
+BUL("do the proteins the predictor relies on match the proteins the "
+    "causal atlas nominates \u2014 i.e. is prediction being driven by mechanism?",
+    bold_lead="Is prediction mechanistic? \u2014 ")
+BUL("does the immune-protein score add discrimination beyond age, sex "
+    "and standard clinical predictors?", bold_lead="Does it add clinical value? \u2014 ")
+BUL("does a score trained in one population transfer to another?",
+    bold_lead="Does it transport? \u2014 ")
+P("Equally important is what it does NOT answer: it is not a diagnostic, it does not establish mechanism "
+  "on its own (genetic triangulation nominates, functional experiments prove), it does not cover "
+  "non-immune or intracellular proteins, and \u2014 unless the user trains it on their own individual-level "
+  "cohort \u2014 the shipped resource is a causal/summary map rather than a per-patient predictor.")
 
 # ================= PART A: DATA =================
 H1("PART A \u00b7 DATA: sources, acquisition and provenance")
