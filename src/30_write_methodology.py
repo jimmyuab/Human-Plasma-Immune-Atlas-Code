@@ -271,6 +271,10 @@ P("Equally important is what it does NOT answer: it is not a diagnostic, it does
 
 # ================= PART A: DATA =================
 H1("PART A \u00b7 DATA: sources, acquisition and provenance")
+IMG("08_figures/nature/Figure1_design_curation.png", width_in=6.6,
+    caption="Figure 1. Study design and curation at a glance \u2014 how the plasma Olink immune "
+            "proteome is annotated and joined to disease genetics. Read this first to see the "
+            "whole pipeline on one page.")
 P("The atlas is built exclusively from public, citable resources. No individual-level, credentialed or "
   "gated dataset was used at any point, and no data were fabricated or imputed to stand in for gated "
   "resources. Where a desirable resource is access-controlled (for example UK Biobank individual-level "
@@ -379,6 +383,10 @@ TABLE(["Layer","Source","Role","Access"],
 
 # ================= PART B: CURATION =================
 H1("PART B \u00b7 Defining the plasma immunome")
+IMG("08_figures/nature/Figure2_druggability_architecture.png", width_in=6.6,
+    caption="Figure 2. What the 1,007 plasma immune proteins are made of \u2014 immune classes, "
+            "blood-cell sources and how druggable each class is. Shows why the panel is enriched "
+            "for tractable, secreted targets.")
 P("The purpose of Part B is to convert the 2,923 raw Olink assays into a defensible, biologically "
   "coherent set of plasma-detectable immune proteins \u2014 the feature space shared by every downstream "
   "analysis and by the PIRS.")
@@ -442,6 +450,10 @@ P("Exposure and outcome are harmonised to a common effect allele before any rati
 
 # ================= PART D: MR =================
 H1("PART D \u00b7 Causal inference by Mendelian randomization")
+IMG("08_figures/nature/Figure3_MR_design_global.png", width_in=6.6,
+    caption="Figure 3. The causal test in one picture \u2014 a gene\u2019s DNA variant moves its plasma "
+            "protein level, and we ask whether the same variant moves disease risk. If yes, the "
+            "protein is nominated as causal (not just correlated).")
 
 H2("D.1  The Wald ratio")
 P("With a single instrument, the causal effect of the exposure (protein/transcript abundance) on the "
@@ -482,6 +494,10 @@ P("Two additional guards are built in. First, the MHC region on chromosome 6 (an
   "spondylitis, with the correct direction, is calibrated to be believed when it points somewhere new.")
 
 H2("D.4  Directionality, sensitivity and statistical power")
+IMG("08_figures/nature/Figure4_positive_controls.png", width_in=6.6,
+    caption="Figure 4. Positive controls \u2014 the model re-finds known drug-target axes (e.g. IL6ST, "
+            "CTLA4, TNFRSF1A) from genetics alone, confirming the causal test is calibrated before "
+            "any novel claim is made.")
 P("Three further considerations govern whether a Wald-ratio estimate deserves attention. First, "
   "directionality: because both the exposure (expression) and the outcome (disease) are associated with "
   "the same variant, one must be satisfied that the variant acts on expression first and disease second, "
@@ -560,6 +576,10 @@ P("The posterior depends on the priors p1, p2 and p12. The atlas uses the commun
 
 # ================= PART F: PQTL =================
 H1("PART F \u00b7 Protein-level validation and eQTL\u2013pQTL concordance")
+IMG("08_figures/nature/Figure7_pqtl_confirmation.png", width_in=6.6,
+    caption="Figure 7. Protein-level confirmation \u2014 for a subset of targets an independent plasma "
+            "pQTL (INTERVAL) agrees in direction and colocalizes, upgrading them from "
+            "transcript-level to protein-level causal targets (the strongest tier).")
 P("A cis-eQTL tells you about messenger RNA; a therapeutic acts on protein. The atlas therefore repeats "
   "the entire MR-plus-colocalization logic using the INTERVAL plasma cis-pQTL as a protein-level "
   "instrument for every significant gene that has a matched aptamer.")
@@ -585,6 +605,10 @@ P("A gene\u2013disease pair is promoted to a protein-level causal target (the hi
 H1("PART G \u00b7 Pan-phenome expansion and the novelty-priority engine")
 
 H2("G.1  From autoimmunity to a five-category phenome")
+IMG("08_figures/nature/Figure11_phenome_volcano.png", width_in=6.6,
+    caption="Figure 11. Pan-phenome causal map \u2014 every immune protein tested against 28 diseases "
+            "in 5 categories; each dot is a gene\u2013disease test, height = significance. The spread "
+            "shows the atlas reaches far beyond autoimmunity.")
 P("The same 812 immune instruments are re-run against all 28 diseases, annotated by category "
   "(autoimmune, cardiovascular, metabolic, renal, neuro/aging). This yields 176 FDR-significant causal "
   "gene\u2013disease pairs \u2014 cardiovascular 67, autoimmune 42, metabolic 35, neuro/aging 31, renal 1 \u2014 "
@@ -594,6 +618,18 @@ P("The same 812 immune instruments are re-run against all 28 diseases, annotated
   "0.97).")
 
 H2("G.2  Cross-category pleiotropy, cell-source and direction mapping")
+IMG("08_figures/nature/Figure12_pleiotropy_heatmap.png", width_in=6.4,
+    caption="Figure 12. Shared immune axes \u2014 proteins causal in more than one disease category "
+            "(e.g. IFNGR2, SWAP70, MERTK), i.e. where one immune target could matter across "
+            "several diseases at once.")
+IMG("08_figures/nature/Figure13_cellsource_map.png", width_in=6.4,
+    caption="Figure 13. Which blood cells make the causal proteins \u2014 mapping each target back to "
+            "its immune-cell source (e.g. granulocyte, T-cell), pointing to the cell type to study "
+            "or perturb.")
+IMG("08_figures/nature/Figure14_direction_map.png", width_in=6.4,
+    caption="Figure 14. Block or boost? \u2014 for each causal target, whether higher protein raises "
+            "risk (red = block it) or is protective (green = agonize/replace it). This is the "
+            "therapeutic-direction readout.")
 P("Three analyses exploit the breadth. (i) Pleiotropy: genes causal in \u2265 2 disease categories are "
   "extracted, exposing shared immune control points that link immune and cardiometabolic disease "
   "(IFNGR2, SWAP70, MERTK, MPO, SPINK8, PIK3IP1; PM20D1 spans three categories). (ii) Cell-source "
@@ -604,6 +640,14 @@ P("Three analyses exploit the breadth. (i) Pleiotropy: genes causal in \u2265 2 
   "MHC/LD-confounded loci held separately.")
 
 H2("G.3  The integrated novelty-priority engine")
+IMG("08_figures/nature/Figure15_novelty_ranking.png", width_in=6.6,
+    caption="Figure 15. Ranked novel targets \u2014 the engine scores every target by stacked "
+            "evidence while penalising known-drug and MHC signals, so the top of the list is "
+            "genuinely new, druggable immune targets (e.g. ACE, IFNGR2, ERBB3, PLAUR).")
+IMG("08_figures/nature/Figure16_novelty_evidence.png", width_in=6.6,
+    caption="Figure 16. Evidence behind the ranking \u2014 for the leading targets, the individual "
+            "layers (causal strength, colocalization, pleiotropy, druggability) that add up to the "
+            "novelty score.")
 P("All real evidence layers are combined into a single, auditable priority score per gene\u2013disease pair, "
   "designed to surface genuinely new biology rather than re-discover approved drugs:")
 EQ("NoveltyPriority = s_causal + s_coloc + s_pleio + s_drug + s_cell \u2212 p_known \u2212 p_mhc")
@@ -617,6 +661,10 @@ P("with components: s_causal = min(\u2212log10 FDR / 5, 2) rewards causal streng
 
 # ================= PART H: PIRS MODEL =================
 H1("PART H \u00b7 The Plasma Immune Risk Score (PIRS): from data to trained algorithm")
+IMG("08_figures/intelligence_layer/IL_panelA_workflow.png", width_in=6.7,
+    caption="Figure H1. From plasma sample to decision \u2014 the predictive PIRS answers WHO is at "
+            "risk and WHICH proteins carry the signal; the causal atlas answers WHETHER a protein "
+            "is causal and druggable. The intelligence layer fuses both.")
 P("Everything above is a summary-statistics causal resource. The PIRS is its predictive counterpart: a "
   "supervised model that takes an individual\u2019s measured plasma immune proteome and returns a calibrated, "
   "disease-specific future-risk estimate. Part H documents the model in full \u2014 inputs, feature space, "
@@ -805,6 +853,14 @@ BUL("because everything is built from public data with released code, "
 
 # ================= PART J: LIMITS / REPRO =================
 H1("PART J \u00b7 Evidence tiers, limitations, reproducibility")
+IMG("08_figures/nature/Figure8_replication.png", width_in=6.6,
+    caption="Figure 8. Independent replication \u2014 nominated targets are re-tested in separate, "
+            "non-FinnGen disease GWAS (e.g. IMSGC, Okada). Points on the diagonal replicate in "
+            "direction, showing the findings are not a single-cohort artefact.")
+IMG("08_figures/nature/Figure6_validation_roadmap.png", width_in=6.6,
+    caption="Figure 6. Validation roadmap \u2014 the ladder every target climbs: MR \u2192 colocalization "
+            "\u2192 protein pQTL \u2192 replication \u2192 perturbation. A target\u2019s evidence tier is simply how "
+            "far up this ladder its data carry it.")
 
 H2("J.1  The evidence ladder")
 P("Every finding is bound to a tier, and language is bound to the tier. T2: nomination held for MHC/LD "
@@ -864,6 +920,10 @@ def DIS(name, n, hits, predict, benefit):
     q3.paragraph_format.space_after = Pt(9)
 
 H2("K.1  Autoimmune diseases")
+IMG("08_figures/phenome/PFig_forest_Autoimmune.png", width_in=6.5,
+    caption="Figure K1. Autoimmune targets \u2014 forest plot of causal effects; left of the line = "
+            "protective, right = risk. Each row is a plasma immune protein with its odds ratio and "
+            "confidence interval.")
 P("The autoimmune core is where the pipeline is best calibrated, because several hits are the targets of "
   "approved drugs and act as internal positive controls.")
 DIS("Rheumatoid arthritis", 10,
@@ -934,6 +994,10 @@ DIS("Autoimmune hyperthyroidism / Systemic lupus / Vitiligo", 3,
     "autoimmune diseases is explicitly flagged as LD-confounded and withheld from causal claims.")
 
 H2("K.2  Cardiovascular diseases")
+IMG("08_figures/phenome/PFig_forest_Cardiovascular.png", width_in=6.5,
+    caption="Figure K2. Cardiovascular targets \u2014 forest plot including ACE (the ACE-inhibitor "
+            "target), PLAUR and SCARB1. Right of the line = raises risk (block); left = protective "
+            "(agonize/replace).")
 P("The pan-phenome expansion reveals that immune proteins act causally well beyond autoimmunity, most "
   "densely in cardiovascular disease (67 hits).")
 DIS("Hypertension", 28,
@@ -970,6 +1034,9 @@ DIS("Heart failure", 4,
     "hypothesis that dovetails with the neuro/aging category.")
 
 H2("K.3  Metabolic diseases")
+IMG("08_figures/phenome/PFig_forest_Metabolic.png", width_in=6.5,
+    caption="Figure K3. Metabolic targets \u2014 forest plot for type-1/2 diabetes, obesity and "
+            "related endpoints (e.g. ERBB3, IL2RA, SPINK8).")
 DIS("Type-2 diabetes", 19,
     "SPINK8 DOWN (OR 0.83) [coloc]; ARG1 DOWN; ANPEP UP; SPRY2 UP; NOMO1 UP.",
     "A T2D-PIRS integrates the protease-inhibitor SPINK8 (protective) with aminopeptidase and "
@@ -989,6 +1056,9 @@ DIS("Type-1 diabetes (metabolic view)", 9,
     "axes.")
 
 H2("K.4  Neurodegenerative and aging diseases")
+IMG("08_figures/phenome/PFig_forest_Neuro_Aging.png", width_in=6.5,
+    caption="Figure K4. Neuro/aging targets \u2014 forest plot for dementia, Alzheimer\u2019s, epilepsy "
+            "and glaucoma (e.g. ACE, LYPD3, PVR).")
 DIS("Dementia (all-cause)", 14,
     "ACE DOWN (OR 0.44) [coloc]; RAPGEF2 UP [coloc]; LYPD3 DOWN; PVR DOWN; RELB DOWN; TEX101 UP.",
     "A dementia-PIRS is anchored by ACE (here protective, opposite to its hypertension direction), with "
@@ -1015,6 +1085,8 @@ DIS("Epilepsy / Osteoporosis", 3,
     "genuinely multi-system immune-metabolic axis surfaced by the pan-phenome view.")
 
 H2("K.5  Renal disease")
+IMG("08_figures/phenome/PFig_forest_Renal.png", width_in=6.5,
+    caption="Figure K5. Renal targets \u2014 forest plot for chronic kidney disease.")
 DIS("Chronic kidney disease", 1,
     "AAMDC DOWN (OR 0.88).",
     "A CKD immune signal is sparse; AAMDC provides the single causal nomination.",
@@ -1124,6 +1196,10 @@ P("The final component of the resource is an intelligence layer that sits on top
   "score or an unannotated protein list.")
 
 H2("M.1  Inputs and mode")
+IMG("08_figures/intelligence_layer/IL_panelB_performance.png", width_in=6.3,
+    caption="Panel B. Disease-specific strength \u2014 when a PIRS is trained this shows its "
+            "prediction accuracy per disease; with no cohort supplied (the shipped state) it shows "
+            "the causal-signal strength instead, and never invents accuracy numbers.")
 P("The layer reads six real tables \u2014 the curated plasma-immune annotation, the pan-phenome cis-MR "
   "results, the pan-phenome colocalization posteriors, the integrated novelty-engine ranking, the final "
   "evidence-tier table with protein-level pQTL and replication status, and the protein-level pQTL MR "
@@ -1136,6 +1212,10 @@ P("The layer reads six real tables \u2014 the curated plasma-immune annotation, 
   "project.")
 
 H2("M.2  Causal\u2013predictive concordance")
+IMG("08_figures/intelligence_layer/IL_panelD_concordance.png", width_in=6.3,
+    caption="Panel D. Concordance ladder \u2014 how many gene\u2013disease pairs survive each added layer "
+            "of evidence: MR \u2192 colocalization \u2192 protein pQTL \u2192 replication. Fewer but stronger "
+            "targets remain at each step.")
 P("For each gene\u2013disease pair the layer classifies the agreement between the predictive signal (the sign "
   "of the PIRS weight) and the causal signal (the MR odds ratio). A PIRS weight and an MR effect that "
   "point the same way, backed by colocalization or a concordant plasma pQTL, is the strongest form of "
@@ -1144,6 +1224,10 @@ P("For each gene\u2013disease pair the layer classifies the agreement between th
   "model.")
 
 H2("M.3  The Plasma Immune Novelty Score and tiers")
+IMG("08_figures/intelligence_layer/IL_panelE_novelty_map.png", width_in=6.3,
+    caption="Panel E. Novelty-priority map \u2014 each target plotted by colocalization strength "
+            "(x) versus novelty score (y), coloured by tier. Top-right = strongly colocalized and "
+            "highly novel: the priority corner.")
 P("The layer computes a bounded Plasma Immune Novelty Score (PINS) that rewards causal strength "
   "(\u2212log10 FDR), colocalization posterior, a protein-level pQTL bonus, druggability and cross-disease "
   "pleiotropy, while penalising the approved-drug and MHC axes, and then assigns a novelty tier:")
@@ -1173,6 +1257,12 @@ P("No pair currently occupies Tier 5, and this is a truthful data-coverage bound
   "Tier-5 ceiling.")
 
 H2("M.5  Therapeutic direction and the Final Required Output Table")
+IMG("08_figures/intelligence_layer/IL_panelC_signature.png", width_in=6.3,
+    caption="Panel C. Plasma immune signature \u2014 the high-novelty targets coloured by direction "
+            "(red = block a risk protein, green = agonize/replace a protective one).")
+IMG("08_figures/intelligence_layer/IL_panelF_validation.png", width_in=6.3,
+    caption="Panel F. Validation plan \u2014 for the leading novel targets, the single best next "
+            "experiment to run, so the report ends with actionable steps, not just a list.")
 P("Every causal target is assigned a therapeutic modality from its effect direction and localisation: a "
   "risk-raising protein (OR>1) is a blockade target (antagonist, neutralising antibody or small "
   "molecule); a protective protein (OR<1) is an agonism or replacement target, with soluble receptors "
