@@ -19,6 +19,8 @@ It maps the Olink plasma immune proteome to disease through a calibrated, four-l
 - **Novelty layer**: immune-class enrichment, cross-disease pleiotropy map, genetic support for therapeutic direction, and a novel-vs-known target prioritization.
 - **Pan-phenome expansion** (28 FinnGen R12 diseases across 5 categories — autoimmune, cardiovascular, metabolic, renal, neuro/aging): the same immune instruments yield **176 causal gene–disease pairs**, **52 pan-phenome loci colocalized** (PP.H4 ≥ 0.8), and a cross-category pleiotropy map exposing shared immune axes (IFNGR2, SWAP70, MERTK, PM20D1). An integrated **novelty-priority engine** ranks **45 novel colocalized targets** (e.g. ACE→dementia, IFNGR2→hypertension/psoriasis, ERBB3→type-1 diabetes, PLAUR→coronary heart disease) while down-weighting known-drug and MHC axes.
 
+- **Disease intelligence layer** (`src/31`): fuses the trained PIRS with the causal atlas into a single ranked discovery report — a **Final Required Output Table** (176 gene–disease pairs × 33 columns: plasma detectability, PIRS coefficient, MR/coloc/pQTL/replication support, a **Plasma Immune Novelty Score**, a 1–5 **novelty tier**, therapeutic direction, and the best next validation experiment), **6 figure panels**, and a manuscript-style narrative. Runs in **causal-atlas-only mode** with no fabrication when no PIRS is trained (predictive columns marked `NA (train PIRS)`): **45 Tier-4 prioritized targets**, **12 Tier-1 known-drug positive controls**, **6 protein-level causal pairs**.
+
 Every claim is bound to an explicit **evidence tier** (T2 MHC-caution → T5 protein-level causal); MHC signals are held at nomination.
 
 ---
@@ -72,6 +74,7 @@ python src/27_coloc_phenome.py             # coloc on new pan-phenome hits
 python src/28_novelty_engine.py            # integrated novelty-priority score
 python src/26_phenome_figures.py           # Figures 11–14 + per-disease phenome figs
 python src/29_novelty_engine_figures.py    # Figures 15–16
+python src/31_disease_intelligence_layer.py # PIRS+causal intelligence layer: Final Table + 6 panels + report
 python src/13_write_manuscript.py          # assembles the .docx
 ```
 
