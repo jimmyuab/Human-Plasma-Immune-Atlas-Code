@@ -1,0 +1,135 @@
+accession	trait	soma_target	gene_token	full_pvalue	gene_token_u
+GCST90240213	Adrenomedullin levels (ADM.14115.34.3)	ADM.14115.34.3	ADM	True	ADM
+GCST90240267	Amphoterin-induced protein 1 levels (AMIGO1.9979.13.3)	AMIGO1.9979.13.3	AMIGO1	True	AMIGO1
+GCST90240298	Annexin A2 levels (ANXA2.13700.10.3)	ANXA2.13700.10.3	ANXA2	True	ANXA2
+GCST90240299	Annexin A2 levels (ANXA2.4961.17.1)	ANXA2.4961.17.1	ANXA2	True	ANXA2
+GCST90240343	Asialoglycoprotein receptor 1 levels (ASGR1.5452.71.3)	ASGR1.5452.71.3	ASGR1	True	ASGR1
+GCST90240376	BAG family molecular chaperone regulator 3 levels (BAG3.10078.5.3)	BAG3.10078.5.3	BAG3	True	BAG3
+GCST90240457	Bone morphogenetic protein 6 levels (BMP6.8459.10.3)	BMP6.8459.10.3	BMP6	True	BMP6
+GCST90240458	Bone morphogenetic protein 6 levels (BMP6.3736.60.3)	BMP6.3736.60.3	BMP6	True	BMP6
+GCST90240587	Carbonic anhydrase 4 levels (CA4.3177.49.2)	CA4.3177.49.2	CA4	True	CA4
+GCST90240543	Calbindin levels (CALB1.9918.23.3)	CALB1.9918.23.3	CALB1	True	CALB1
+GCST90240616	Caspase-3 levels (CASP3.3593.72.3)	CASP3.3593.72.3	CASP3	True	CASP3
+GCST90240502	C-C motif chemokine 8 levels (CCL8.2785.15.2)	CCL8.2785.15.2	CCL8	True	CCL8
+GCST90242957	T-cell surface antigen CD2 levels (CD2.7100.31.3)	CD2.7100.31.3	CD2	True	CD2
+GCST90240639	CD226 antigen levels (CD226.5721.1.3)	CD226.5721.1.3	CD226	True	CD226
+GCST90240640	CD226 antigen levels (CD226.5062.60.3)	CD226.5062.60.3	CD226	True	CD226
+GCST90242383	Programmed cell death 1 ligand 1 levels (CD274.5060.62.3)	CD274.5060.62.3	CD274	True	CD274
+GCST90242961	T-cell surface glycoprotein CD5 levels (CD5.14065.11.3)	CD5.14065.11.3	CD5	True	CD5
+GCST90240777	Complement decay-accelerating factor levels (CD55.5069.9.3)	CD55.5069.9.3	CD55	True	CD55
+GCST90240646	CD70 antigen levels (CD70.5807.77.3)	CD70.5807.77.3	CD70	True	CD70
+GCST90240647	CD70 antigen levels (CD70.8762.38.3)	CD70.8762.38.3	CD70	True	CD70
+GCST90240368	B-cell antigen receptor complex-associated protein beta chain levels (CD79B.6351.55.3)	CD79B.6351.55.3	CD79B	True	CD79B
+GCST90242829	SLAM family member 5 levels (CD84.8770.136.3)	CD84.8770.136.3	CD84	True	CD84
+GCST90242830	SLAM family member 5 levels (CD84.3642.4.1)	CD84.3642.4.1	CD84	True	CD84
+GCST90240535	Cadherin-2 levels (CDH2.3797.1.1)	CDH2.3797.1.1	CDH2	True	CDH2
+GCST90240600	Carcinoembryonic antigen-related cell adhesion molecule 1 levels (CEACAM1.8031.11.3)	CEACAM1.8031.11.3	CEACAM1	True	CEACAM1
+GCST90240633	CCAAT/enhancer-binding protein beta levels (CEBPB.10337.83.3)	CEBPB.10337.83.3	CEBPB	True	CEBPB
+GCST90240779	Complement factor H levels (CFH.4159.130.1)	CFH.4159.130.1	CFH	True	CFH
+GCST90240504	C-type lectin domain family 10 member A levels (CLEC10A.10955.4.3)	CLEC10A.10955.4.3	CLEC10A	True	CLEC10A
+GCST90240712	Clathrin interactor 1 levels (CLINT1.11659.31.3)	CLINT1.11659.31.3	CLINT1	True	CLINT1
+GCST90242371	Probable serine carboxypeptidase CPVL levels (CPVL.8891.7.3)	CPVL.8891.7.3	CPVL	True	CPVL
+GCST90240839	Cysteine-rich motor neuron 1 protein levels (CRIM1.8699.43.3)	CRIM1.8699.43.3	CRIM1	True	CRIM1
+GCST90240841	Cysteine-rich secretory protein 3 levels (CRISP3.3187.52.2)	CRISP3.3187.52.2	CRISP3	True	CRISP3
+GCST90240859	Cytokine receptor common subunit beta levels (CSF2RB.10512.13.3)	CSF2RB.10512.13.3	CSF2RB	True	CSF2RB
+GCST90240860	Cytokine receptor common subunit beta levels (CSF2RB.11137.43.3)	CSF2RB.11137.43.3	CSF2RB	True	CSF2RB
+GCST90240624	Cathepsin H levels (CTSH.8465.52.3)	CTSH.8465.52.3	CTSH	True	CTSH
+GCST90240625	Cathepsin H levels (CTSH.3737.6.3)	CTSH.3737.6.3	CTSH	True	CTSH
+GCST90240877	Death-associated protein kinase 2 levels (DAPK2.4355.13.1)	DAPK2.4355.13.1	DAPK2	True	DAPK2
+GCST90240963	Docking protein 2 levels (DOK2.14246.50.3)	DOK2.14246.50.3	DOK2	True	DOK2
+GCST90240913	Dipeptidase 2 levels (DPEP2.8327.26.3)	DPEP2.8327.26.3	DPEP2	True	DPEP2
+GCST90240897	Desmoglein-2 levels (DSG2.9484.75.3)	DSG2.9484.75.3	DSG2	True	DSG2
+GCST90240976	Dual specificity protein phosphatase 13 isoform A levels (DUSP13.6525.17.3)	DUSP13.6525.17.3	DUSP13	True	DUSP13
+GCST90242598	Receptor tyrosine-protein kinase erbB-2 levels (ERBB2.2616.23.18)	ERBB2.2616.23.18	ERBB2	True	ERBB2
+GCST90242599	Receptor tyrosine-protein kinase erbB-3 levels (ERBB3.2617.56.35)	ERBB3.2617.56.35	ERBB3	True	ERBB3
+GCST90242444	Protein EVI2B levels (EVI2B.13028.2.3)	EVI2B.13028.2.3	EVI2B	True	EVI2B
+GCST90241152	Fc receptor-like protein 3 levels (FCRL3.4440.15.2)	FCRL3.4440.15.2	FCRL3	True	FCRL3
+GCST90241176	Fibroblast growth factor receptor 2 levels (FGFR2.3808.76.2)	FGFR2.3808.76.2	FGFR2	True	FGFR2
+GCST90241247	GDNF family receptor alpha-2 levels (GFRA2.2515.14.3)	GFRA2.2515.14.3	GFRA2	True	GFRA2
+GCST90241324	Granzyme B levels (GZMB.4133.54.2)	GZMB.4133.54.2	GZMB	True	GZMB
+GCST90241325	Granzyme B levels (GZMB.14041.13.3)	GZMB.14041.13.3	GZMB	True	GZMB
+GCST90241394	Hepatitis A virus cellular receptor 1 levels (HAVCR1.9021.1.3)	HAVCR1.9021.1.3	HAVCR1	True	HAVCR1
+GCST90241397	Hepatocyte growth factor levels (HGF.2681.23.2)	HGF.2681.23.2	HGF	True	HGF
+GCST90241539	Intercellular adhesion molecule 3 levels (ICAM3.2649.77.2)	ICAM3.2649.77.2	ICAM3	True	ICAM3
+GCST90241556	Interferon gamma receptor 2 levels (IFNGR2.9180.6.3)	IFNGR2.9180.6.3	IFNGR2	True	IFNGR2
+GCST90241557	Interferon gamma receptor 2 levels (IFNGR2.8818.13.3)	IFNGR2.8818.13.3	IFNGR2	True	IFNGR2
+GCST90241558	Interferon gamma receptor 2 levels (IFNGR2.9305.89.3)	IFNGR2.9305.89.3	IFNGR2	True	IFNGR2
+GCST90241513	Insulin-like growth factor 1 receptor levels (IGF1R.4232.19.2)	IGF1R.4232.19.2	IGF1R	True	IGF1R
+GCST90240631	Cation-independent mannose-6-phosphate receptor levels (IGF2R.3676.15.3)	IGF2R.3676.15.3	IGF2R	True	IGF2R
+GCST90241583	Interleukin-10 levels (IL10.2773.50.2)	IL10.2773.50.2	IL10	True	IL10
+GCST90241590	Interleukin-12 receptor subunit beta-1 levels (IL12RB1.2632.5.2)	IL12RB1.2632.5.2	IL12RB1	True	IL12RB1
+GCST90241591	Interleukin-12 receptor subunit beta-2 levels (IL12RB2.3815.14.1)	IL12RB2.3815.14.1	IL12RB2	True	IL12RB2
+GCST90241607	Interleukin-18 receptor 1 levels (IL18R1.3446.7.2)	IL18R1.3446.7.2	IL18R1	True	IL18R1
+GCST90241608	Interleukin-18 receptor 1 levels (IL18R1.14079.14.3)	IL18R1.14079.14.3	IL18R1	True	IL18R1
+GCST90241578	Interleukin-1 receptor type 1 levels (IL1R1.2991.9.2)	IL1R1.2991.9.2	IL1R1	True	IL1R1
+GCST90241581	Interleukin-1 receptor-like 1 levels (IL1RL1.4234.8.2)	IL1RL1.4234.8.2	IL1RL1	True	IL1RL1
+GCST90241577	Interleukin-1 receptor antagonist protein levels (IL1RN.5353.89.2)	IL1RN.5353.89.2	IL1RN	True	IL1RN
+GCST90241624	Interleukin-24 levels (IL24.3321.2.2)	IL24.3321.2.2	IL24	True	IL24
+GCST90241612	Interleukin-2 receptor subunit alpha levels (IL2RA.3151.6.1)	IL2RA.3151.6.1	IL2RA	True	IL2RA
+GCST90241613	Interleukin-2 receptor subunit beta levels (IL2RB.9343.16.3)	IL2RB.9343.16.3	IL2RB	True	IL2RB
+GCST90241639	Interleukin-4 levels (IL4.2906.55.3)	IL4.2906.55.3	IL4	True	IL4
+GCST90241640	Interleukin-4 receptor subunit alpha levels (IL4R.3055.54.2)	IL4R.3055.54.2	IL4R	True	IL4R
+GCST90241645	Interleukin-6 levels (IL6.2573.20.15)	IL6.2573.20.15	IL6	True	IL6
+GCST90241646	Interleukin-6 levels (IL6.4673.13.2)	IL6.4673.13.2	IL6	True	IL6
+GCST90241649	Interleukin-6 receptor subunit beta levels (IL6ST.2620.4.2)	IL6ST.2620.4.2	IL6ST	True	IL6ST
+GCST90241651	Interleukin-7 receptor subunit alpha levels (IL7R.5089.11.3)	IL7R.5089.11.3	IL7R	True	IL7R
+GCST90240986	Dyslexia-associated protein KIAA0319 levels (KIAA0319.10013.34.3)	KIAA0319.10013.34.3	KIAA0319	True	KIAA0319
+GCST90241690	Keratin, type I cytoskeletal 18 levels (KRT18.5354.11.3)	KRT18.5354.11.3	KRT18	True	KRT18
+GCST90241741	Layilin levels (LAYN.2635.61.2)	LAYN.2635.61.2	LAYN	True	LAYN
+GCST90242101	Neutrophil gelatinase-associated lipocalin levels (LCN2.2836.68.2)	LCN2.2836.68.2	LCN2	True	LCN2
+GCST90241817	Low-density lipoprotein receptor levels (LDLR.13129.40.3)	LDLR.13129.40.3	LDLR	True	LDLR
+GCST90241786	Leukemia inhibitory factor levels (LIF.7790.21.3)	LIF.7790.21.3	LIF	True	LIF
+GCST90241794	Leukocyte immunoglobulin-like receptor subfamily B member 2 levels (LILRB2.5633.65.3)	LILRB2.5633.65.3	LILRB2	True	LILRB2
+GCST90241795	Leukocyte immunoglobulin-like receptor subfamily B member 2 levels (LILRB2.5091.28.3)	LILRB2.5091.28.3	LILRB2	True	LILRB2
+GCST90241818	Low-density lipoprotein receptor-related protein 1, soluble levels (LRP1.8601.167.3)	LRP1.8601.167.3	LRP1	True	LRP1
+GCST90241819	Low-density lipoprotein receptor-related protein 1, soluble levels (LRP1.9182.3.3)	LRP1.9182.3.3	LRP1	True	LRP1
+GCST90242394	Prolow-density lipoprotein receptor-related protein 1 levels (LRP1.10699.52.3)	LRP1.10699.52.3	LRP1	True	LRP1
+GCST90243176	Tumor necrosis factor receptor superfamily member 3 levels (LTBR.2636.10.2)	LTBR.2636.10.2	LTBR	True	LTBR
+GCST90241827	Ly6/PLAUR domain-containing protein 3 levels (LYPD3.13107.9.3)	LYPD3.13107.9.3	LYPD3	True	LYPD3
+GCST90241877	MAP kinase-activated protein kinase 2 levels (MAPKAPK2.3820.68.2)	MAPKAPK2.3820.68.2	MAPKAPK2	True	MAPKAPK2
+GCST90241896	Matrix-remodeling-associated protein 8 levels (MXRA8.10521.10.3)	MXRA8.10521.10.3	MXRA8	True	MXRA8
+GCST90241897	Matrix-remodeling-associated protein 8 levels (MXRA8.7002.1.3)	MXRA8.7002.1.3	MXRA8	True	MXRA8
+GCST90242482	Protein kinase C-binding protein NELL2 levels (NELL2.6022.57.3)	NELL2.6022.57.3	NELL2	True	NELL2
+GCST90243163	Tumor necrosis factor receptor superfamily member 16 levels (NGFR.8949.3.3)	NGFR.8949.3.3	NGFR	True	NGFR
+GCST90243164	Tumor necrosis factor receptor superfamily member 16 levels (NGFR.8374.5.3)	NGFR.8374.5.3	NGFR	True	NGFR
+GCST90242058	Neural proliferation differentiation and control protein 1 levels (NPDC1.10424.31.3)	NPDC1.10424.31.3	NPDC1	True	NPDC1
+GCST90240153	5'-Nucleotidase levels (NT5E.6993.8.3)	NT5E.6993.8.3	NT5E	True	NT5E
+GCST90242385	Programmed cell death protein 1 levels (PDCD1.9227.15.3)	PDCD1.9227.15.3	PDCD1	True	PDCD1
+GCST90242384	Programmed cell death 1 ligand 2 levels (PDCD1LG2.3004.67.2)	PDCD1LG2.3004.67.2	PDCD1LG2	True	PDCD1LG2
+GCST90242294	Platelet-derived growth factor subunit B levels (PDGFB.4149.8.2)	PDGFB.4149.8.2	PDGFB	True	PDGFB
+GCST90242192	Paired immunoglobulin-like type 2 receptor alpha levels (PILRA.8683.119.3)	PILRA.8683.119.3	PILRA	True	PILRA
+GCST90242193	Paired immunoglobulin-like type 2 receptor alpha levels (PILRA.8825.4.3)	PILRA.8825.4.3	PILRA	True	PILRA
+GCST90243298	Urokinase-type plasminogen activator levels (PLAU.4158.54.2)	PLAU.4158.54.2	PLAU	True	PLAU
+GCST90243297	Urokinase plasminogen activator surface receptor levels (PLAUR.2652.15.1)	PLAUR.2652.15.1	PLAUR	True	PLAUR
+GCST90240546	Calcineurin subunit B type 1 levels (PPP3R1.3657.74.3)	PPP3R1.3657.74.3	PPP3R1	True	PPP3R1
+GCST90240179	Activated Protein C levels (PROC.3758.63.3)	PROC.3758.63.3	PROC	True	PROC
+GCST90240180	Activated Protein C levels (PROC.3758.68.3)	PROC.3758.68.3	PROC	True	PROC
+GCST90241987	Myeloblastin levels (PRTN3.3514.49.2)	PRTN3.3514.49.2	PRTN3	True	PRTN3
+GCST90241988	Myeloblastin levels (PRTN3.13720.95.3)	PRTN3.13720.95.3	PRTN3	True	PRTN3
+GCST90242302	Poliovirus receptor levels (PVR.8064.125.3)	PVR.8064.125.3	PVR	True	PVR
+GCST90243044	Transcription factor RelB levels (RELB.11464.9.3)	RELB.11464.9.3	RELB	True	RELB
+GCST90242633	Reticulon-4 receptor levels (RTN4R.5105.2.3)	RTN4R.5105.2.3	RTN4R	True	RTN4R
+GCST90240942	DNA-binding protein SATB1 levels (SATB1.13511.29.3)	SATB1.13511.29.3	SATB1	True	SATB1
+GCST90242187	P-selectin levels (SELP.4154.57.2)	SELP.4154.57.2	SELP	True	SELP
+GCST90242274	Plasma protease C1 inhibitor levels (SERPING1.4479.14.2)	SERPING1.4479.14.2	SERPING1	True	SERPING1
+GCST90240258	Alpha-synuclein levels (SNCA.8458.111.3)	SNCA.8458.111.3	SNCA	True	SNCA
+GCST90240259	Alpha-synuclein levels (SNCA.8458.16.3)	SNCA.8458.16.3	SNCA	True	SNCA
+GCST90242862	Sortilin levels (SORT1.11300.32.3)	SORT1.11300.32.3	SORT1	True	SORT1
+GCST90242766	Serine protease inhibitor Kazal-type 8 levels (SPINK8.7962.11.3)	SPINK8.7962.11.3	SPINK8	True	SPINK8
+GCST90242931	Switch-associated protein 70 levels (SWAP70.13552.7.3)	SWAP70.13552.7.3	SWAP70	True	SWAP70
+GCST90243017	Thyroglobulin levels (TG.4165.2.1)	TG.4165.2.1	TG	True	TG
+GCST90243056	Transforming growth factor alpha levels (TGFA.9358.3.3)	TGFA.9358.3.3	TGFA	True	TGFA
+GCST90243060	Transforming growth factor beta-2 levels (TGFB2.4156.74.1)	TGFB2.4156.74.1	TGFB2	True	TGFB2
+GCST90243028	Toll-like receptor 1 levels (TLR1.11149.3.3)	TLR1.11149.3.3	TLR1	True	TLR1
+GCST90243030	Toll-like receptor 4 levels (TLR4.11101.18.3)	TLR4.11101.18.3	TLR4	True	TLR4
+GCST90243031	Toll-like receptor 4:Lymphocyte antigen 96 complex levels (TLR4.LY96.3647.49.4)	TLR4.LY96.3647.49.4	TLR4	True	TLR4
+GCST90243162	Tumor necrosis factor receptor superfamily member 14 levels (TNFRSF14.5352.11.3)	TNFRSF14.5352.11.3	TNFRSF14	True	TNFRSF14
+GCST90243170	Tumor necrosis factor receptor superfamily member 1A levels (TNFRSF1A.2654.19.1)	TNFRSF1A.2654.19.1	TNFRSF1A	True	TNFRSF1A
+GCST90243171	Tumor necrosis factor receptor superfamily member 1B levels (TNFRSF1B.8368.102.3)	TNFRSF1B.8368.102.3	TNFRSF1B	True	TNFRSF1B
+GCST90243172	Tumor necrosis factor receptor superfamily member 1B levels (TNFRSF1B.3152.57.1)	TNFRSF1B.3152.57.1	TNFRSF1B	True	TNFRSF1B
+GCST90243177	Tumor necrosis factor receptor superfamily member 4 levels (TNFRSF4.3730.81.2)	TNFRSF4.3730.81.2	TNFRSF4	True	TNFRSF4
+GCST90243141	Tumor necrosis factor ligand superfamily member 12 levels (TNFSF12.5939.42.3)	TNFSF12.5939.42.3	TNFSF12	True	TNFSF12
+GCST90243143	Tumor necrosis factor ligand superfamily member 14 levels (TNFSF14.5355.69.3)	TNFSF14.5355.69.3	TNFSF14	True	TNFSF14
+GCST90243234	Ubiquitin-conjugating enzyme E2 B levels (UBE2B.9865.40.3)	UBE2B.9865.40.3	UBE2B	True	UBE2B
+GCST90241835	Lymphotactin levels (XCL1.14078.69.3)	XCL1.14078.69.3	XCL1	True	XCL1
+GCST90241836	Lymphotactin levels (XCL1.4143.74.2)	XCL1.4143.74.2	XCL1	True	XCL1

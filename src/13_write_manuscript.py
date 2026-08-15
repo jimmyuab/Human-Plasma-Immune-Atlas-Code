@@ -374,6 +374,84 @@ if HAS_PHEN:
            "causal evidence landscape sized by druggability, and (b) priority scores separating "
            "novel colocalized targets from recovered controls and MHC-caution loci.")
 
+# ===== EVERY EVIDENCE LAYER EXTENDED TO THE WHOLE PHENOME =====
+all_mr   = _pl("cis_MR_ALL_finngen_results.tsv")
+all_col  = _pl("coloc_ALL_finngen_results.tsv")
+all_pmr  = _pl("pqtl_MR_ALL_finngen_results.tsv")
+all_pcol = _pl("pqtl_coloc_ALL_finngen_results.tsv")
+all_nov  = _pl("novelty_engine_ranked_ALL.tsv")
+all_il   = _pl("intelligence_layer_final_table_ALL.tsv")
+all_uk   = _pl("uk_panphenome_concordance_ALL.tsv")
+if all(x is not None for x in (all_mr, all_col, all_pmr, all_pcol, all_nov, all_il, all_uk)):
+    A_HIT   = all_mr[all_mr.FDR < 0.05]
+    A_NDIS  = int(A_HIT.phenotype.nunique())
+    A_NPAIR = int(len(A_HIT))
+    A_NGENE = int(A_HIT.gene_symbol.nunique())
+    A_COLD  = int(all_col.disease.nunique())
+    A_PMR   = int(len(all_pmr)); A_PMRS = int((all_pmr.FDR < 0.05).sum())
+    A_PMRD  = int(all_pmr.disease.nunique()); A_PMRG = int(all_pmr.gene.nunique())
+    A_PCOL  = int(len(all_pcol)); A_PCOLS = int((all_pcol.PP_H4 >= 0.8).sum())
+    A_PCOLD = int(all_pcol.disease.nunique())
+    A_PCONF = int((all_nov.category_label == "NOVEL protein-confirmed").sum())
+    A_T5    = int((all_il.Novelty_tier == 5).sum())
+    A_T4    = int((all_il.Novelty_tier == 4).sum())
+    A_UKP   = int(len(all_uk)); A_UKD = int(all_uk.phenocode.nunique())
+    A_UKG   = int(all_uk.gene_symbol.nunique())
+    A_UKC   = int(all_uk.concordant.astype(bool).sum())
+    A_UKV   = int(all_uk.two_population_validated.astype(bool).sum())
+    A_UKX   = int((all_uk.match_method == "exact-code").sum())
+
+    H("Every evidence layer is phenome-wide, not restricted to a curated disease list", 2, BLUE)
+    P(f"A resource that scans the phenome for discovery but validates only a hand-picked disease "
+      f"core is only as broad as its narrowest layer. We therefore extended every downstream layer "
+      f"to the same scale as the discovery scan. Colocalization now covers {A_COLD} diseases; the "
+      f"protein-level layer, previously computed only for the autoimmune core, now instruments "
+      f"every pan-phenome causal protein that has a public INTERVAL aptamer and gives {A_PMR} "
+      f"protein-level Wald-ratio tests across {A_PMRD} diseases and {A_PMRG} plasma proteins "
+      f"({A_PMRS} significant at FDR<5%), together with {A_PCOL} protein-level colocalization loci "
+      f"across {A_PCOLD} diseases of which {A_PCOLS} reach PP.H4\u22650.8; and the novelty engine and "
+      f"disease-intelligence layer now score all {A_NPAIR} causal pairs over {A_NDIS} diseases and "
+      f"{A_NGENE} proteins (Fig. 17).")
+    P(f"Running the protein layer phenome-wide changes what the atlas can conclude. {A_PCONF} "
+      f"gene\u2013disease pairs are now protein-confirmed\u2014transcript colocalization plus a "
+      f"direction-concordant plasma-protein MR\u2014and the highest evidence tier, which was empty "
+      f"when the protein layer stopped at the autoimmune core, is now occupied by {A_T5} targets "
+      f"(IL2RA in type-1 diabetes, ANXA2 in hypertension, PPP3R1 in venous disease) alongside "
+      f"{A_T4} tier-4 prioritized targets (Figs. 18\u201320). Strong protein-level colocalizations "
+      f"appear well outside the autoimmune arc\u2014CTSH in early-onset type-1 diabetes, LILRB2 and "
+      f"SERPING1 across obstructive airway disease, CFH in dry age-related macular degeneration\u2014"
+      f"while classic controls (CFH\u2192macular degeneration, CTLA4\u2192rheumatoid arthritis) are "
+      f"recovered blind (Figs. 21, 22). The residual boundary is biological rather than "
+      f"procedural: {A_NGENE - A_PMRG} causal proteins have no SomaScan aptamer, being largely "
+      f"intracellular or MHC-region, and cannot reach a protein tier from any login-free resource.")
+    P(f"The two-population arm was widened on the same principle. Beyond FinnGen endpoints with an "
+      f"identical Neale phenocode, FinnGen trait names were normalised and matched to independent UK "
+      f"Biobank GWAS, restricted to single-cohort UK Biobank datasets so that no comparison cohort "
+      f"silently contains FinnGen\u2014several large public meta-analyses of the same endpoints do, "
+      f"which would make replication circular\u2014and to datasets with at least 200 cases. This gives "
+      f"{A_UKP} Finland-versus-England causal-effect comparisons over {A_UKD} diseases and {A_UKG} "
+      f"proteins ({A_UKX} exact-phenocode, {A_UKP - A_UKX} name-matched, each pairing recorded in the "
+      f"released table), of which {A_UKC} ({100 * A_UKC / A_UKP:.0f}%) agree in direction and {A_UKV} "
+      f"replicate with a nominally significant same-direction effect in UK Biobank.")
+    figure("Figure17_layer_disease_coverage.png",
+           "Figure 17 | Disease coverage of every evidence layer before and after extension: "
+           "colocalization, protein-level pQTL MR and colocalization, novelty scoring and the "
+           "intelligence layer now all run across the FinnGen R12 phenome.")
+    figure("Figure18_panphenome_pqtl_volcano.png",
+           "Figure 18 | Pan-phenome protein-level Mendelian randomization using INTERVAL plasma "
+           "cis-pQTL instruments, with real effect sizes and standard errors on both sides.")
+    figure("Figure19_eqtl_pqtl_concordance_all.png",
+           "Figure 19 | Transcript-level versus protein-level causal effect direction for every "
+           "pair instrumented at both levels; discordance is retained and reported, not discarded.")
+    figure("Figure20_tiers_by_system_all.png",
+           "Figure 20 | Evidence-tier composition of all causal gene\u2013disease pairs by organ "
+           "system, from MHC-held nominations to protein-level targets.")
+    figure("Figure21_novelty_priority_all.png",
+           "Figure 21 | Top pan-phenome novelty-priority targets, with protein-confirmed targets "
+           "distinguished from transcript-colocalized nominations and recovered known axes.")
+    figure("Figure22_pqtl_coloc_all.png",
+           "Figure 22 | Strongest plasma-protein colocalizations across the phenome.")
+
 # ================= DISCUSSION =================
 H("Discussion", 1, BLUE)
 P("This atlas is deliberately calibrated rather than maximalist. Its central result is not a "

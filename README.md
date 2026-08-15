@@ -1,52 +1,67 @@
-# An open, genetics-anchored plasma immunome atlas
+# Human Plasma Immune Atlas
 
-**Recovers established therapeutic immune axes and nominates colocalized, replicated autoimmune targets — entirely from public data.**
+**An open, genetics-anchored causal map from the plasma immunome to the human disease phenome.**
 
 This repository is the fully reproducible, open resource behind the manuscript
-*"An open, genetics-anchored plasma immunome atlas recovers established therapeutic immune axes and nominates colocalized autoimmune targets."*
-It maps the Olink plasma immune proteome to disease through a calibrated, four-layer causal-evidence arc and a novelty/translation layer — with **no credentialed or individual-level data** required.
+*"Human Plasma Immune Atlas: an open, genetics-anchored causal map of the plasma immunome across the human disease phenome."*
+It maps the Olink plasma immune proteome to disease through a calibrated, **seven-layer** causal-evidence arc and a novelty/translation engine — with **no credentialed or individual-level data** required.
+
+👉 **Live interactive app — click and run, no login, no account, no upload:**
+https://huggingface.co/spaces/jianlizhao/Human-Plasma-Immune-Atlas
 
 ---
 
 ## Headline results
 
 - **1,007 plasma immune proteins** curated from the 2,923-analyte Olink Explore universe (HPA + MSigDB annotation).
-- **cis-eQTL Mendelian randomization** (eQTLGen → 13 FinnGen R12 immune diseases): 8,749 tests, **32 gene–disease hits at FDR < 0.05**.
-- Recovers **known drug-target biology from genetics alone**: IL6ST→RA (tocilizumab), CTLA4→autoimmune thyroid/RA (abatacept), TNFRSF1A→ankylosing spondylitis (etanercept), IL4→psoriasis (dupilumab) — and recovers the *correct pharmacological direction* of each.
-- **Transcript colocalization** (coloc.abf, per-SNP Wakefield ABF): 17 loci PP.H4 ≥ 0.8.
-- **Protein-level pQTL** validation (INTERVAL plasma cis-pQTLs): **2 tier-5 protein-level causal targets** — TNFSF14→multiple sclerosis and SWAP70→rheumatoid arthritis (colocalized at both transcript and protein).
-- **Independent replication** (OpenGWAS, non-FinnGen consortium GWAS): 19/19 covered hits directionally concordant, **17 replicated** (P < 0.05), incl. TNFSF14→MS P=1.5×10⁻¹².
-- **Novelty layer**: immune-class enrichment, cross-disease pleiotropy map, genetic support for therapeutic direction, and a novel-vs-known target prioritization.
-- **Pan-phenome expansion** (28 FinnGen R12 diseases across 5 categories — autoimmune, cardiovascular, metabolic, renal, neuro/aging): the same immune instruments yield **176 causal gene–disease pairs**, **52 pan-phenome loci colocalized** (PP.H4 ≥ 0.8), and a cross-category pleiotropy map exposing shared immune axes (IFNGR2, SWAP70, MERTK, PM20D1). An integrated **novelty-priority engine** ranks **45 novel colocalized targets** (e.g. ACE→dementia, IFNGR2→hypertension/psoriasis, ERBB3→type-1 diabetes, PLAUR→coronary heart disease) while down-weighting known-drug and MHC axes.
-
-- **Disease intelligence layer** (`src/31`): fuses the trained PIRS with the causal atlas into a single ranked discovery report — a **Final Required Output Table** (176 gene–disease pairs × 33 columns: plasma detectability, PIRS coefficient, MR/coloc/pQTL/replication support, a **Plasma Immune Novelty Score**, a 1–5 **novelty tier**, therapeutic direction, and the best next validation experiment), **6 figure panels**, and a manuscript-style narrative. Runs in **causal-atlas-only mode** with no fabrication when no PIRS is trained (predictive columns marked `NA (train PIRS)`): **45 Tier-4 prioritized targets**, **12 Tier-1 known-drug positive controls**, **6 protein-level causal pairs**.
+- **Phenome-wide cis-eQTL Mendelian randomization**: **672 instrumentable plasma immune proteins × 2,466 FinnGen R12 endpoints = 1,656,872 MR tests**, of which **1,016 gene–disease pairs are causal at FDR < 5 %** (220 proteins, 379 diseases). *No curated disease list is used anywhere — every layer runs across the whole phenome.*
+- **Bayesian colocalization** (`coloc.abf`, per-SNP Wakefield ABF): 900 loci tested, **417 colocalize at PP.H4 ≥ 0.8**.
+- **Protein-level pQTL validation** (INTERVAL plasma cis-pQTLs, Sun 2018): **473 protein-level MR tests across 219 diseases and 89 proteins, 149 significant at FDR < 5 %**, plus **595 protein colocalization loci**.
+- **Two-population replication (Finland → England)**: **189 like-for-like FinnGen-vs-UK-Biobank tests over 62 diseases and 90 genes; 162 (86 %) agree in causal direction and 89 replicate at P < 0.05** (133 exact-code + 56 name-matched endpoints). Only *single-cohort* UK Biobank datasets are eligible — several large public meta-analyses of the same endpoints silently include FinnGen, which would make "replication" circular.
+- **Immune-cell / inflammation layer**: the same instruments run against blood cell counts, CRP and cytokines, to show how each protein perturbs the immune system itself.
+- **Novelty & therapeutic-direction engine**: causal strength + coloc + pleiotropy + druggability + protein confirmation + replication, penalised for known drug axes and the MHC region. Classifies all 1,016 causal pairs into **329 NOVEL colocalized**, **35 NOVEL protein-confirmed**, **447 novel nominations**, **90 recovered known drug axes** and **115 MHC-caution**.
+- **Recovers known drug-target biology from genetics alone** — IL6ST→RA (tocilizumab), CTLA4→autoimmune thyroid/RA (abatacept), TNFRSF1A→ankylosing spondylitis (etanercept), IL4→psoriasis (dupilumab) — and recovers the *correct pharmacological direction* of each.
+- **Disease intelligence layer** (`src/31`, `src/50`): the **Final Required Output Table** (`results/genetic_causality/intelligence_layer_final_table_ALL.tsv`, **1,016 gene–disease pairs × 33 columns**): plasma detectability, PIRS coefficient, MR/coloc/pQTL/replication support, a Plasma Immune Novelty Score, a 1–5 novelty tier, therapeutic direction, and the best next validation experiment. Tier distribution: **5 protein-level novel targets, 359 prioritized transcript-level targets, 447 causal nominations, 115 MHC-held, 90 known-drug positive controls.**
 
 Every claim is bound to an explicit **evidence tier** (T2 MHC-caution → T5 protein-level causal); MHC signals are held at nomination.
 
 ---
 
-## The evidence arc
+## The seven evidence layers
 
 ```
-discovery              transcript            protein-level          independent           translation
-cis-eQTL MR    ─►      colocalization  ─►    pQTL (INTERVAL)  ─►    replication     ─►    novelty /
-(eQTLGen →              (coloc.abf,           MR + coloc            (OpenGWAS,            drug-direction
- FinnGen R12)           PP.H4 ≥ 0.8)                                non-FinnGen)          & prioritization
+1 cis-eQTL MR        2 colocalization    3 protein pQTL      4 independent
+(eQTLGen n≈31,684 ─► (coloc.abf,      ─► MR + coloc       ─► replication
+ → FinnGen R12,       PP.H4 ≥ 0.8)       (INTERVAL)          (OpenGWAS,
+ whole phenome)                                              non-FinnGen)
+        │
+        ▼
+5 two-population     6 immune-cell /     7 novelty &
+  replication     ─► inflammation     ─► therapeutic-direction
+  (Finland→England)  (counts, CRP,       engine (tiering,
+                      cytokines)          drug direction)
 ```
 
-A fifth, **pan-phenome** arc re-runs the same immune instruments across 28 diseases in 5 categories, adds cross-category pleiotropy + cell-source mapping, and an integrated novelty-priority engine (`src/24`–`src/29`).
+Every layer runs across the whole FinnGen R12 phenome — **none is restricted to a curated disease list.**
 
 ## Figures
 
-- `figures/main/` — 15 multi-panel main figures (Figure1–16): the calibrated autoimmune arc (1–9) plus the pan-phenome layer (11–16: pan-disease volcano, pleiotropy heatmap, cell-source map, direction map, novelty ranking, novelty evidence).
-- `figures/phenome/` — 34 per-disease / per-category pan-phenome figures.
+- `figures/main/` (= `figures/nature/`) — 21 manuscript main figures (Figure 1–22): the calibrated autoimmune arc (1–9), the pan-phenome layer (11–16), the layer-coverage / protein-level / novelty panels (17–22).
+- `figures/curation/` — 16 protein-universe curation and annotation panels (Fig01–Fig16).
+- `figures/paper_style/` — 32 deep-layer panels, including `DL2b_uk_replication_expanded.png` (the widened Finland→England arm).
+- `figures/heart/` — 4 cardiovascular-validation panels.
+- `figures/intelligence_layer/` — 13 disease-intelligence panels.
+- `figures/phenome/` — 34 per-disease / per-category phenome figures.
 - `figures/supplementary/` — 70 Extended Data / Supplementary figures (per-disease MR volcano, QQ + genomic inflation λ, forest plots, per-gene INTERVAL cis-pQTL regional plots, discovery-vs-replication).
 
-**119 figures total.**
+**211 figures total.**
 
-## Manuscript
+## Manuscript & methodology
 
-- `manuscript/Plasma_Immunome_Phenome_Atlas_Nature.docx` — **all 119 figures embedded** (15 main figures inline + Extended Data pan-phenome gallery + full Supplementary figure gallery), 8 results sections (incl. the pan-phenome causal map), evidence-tiered Table 1.
+- `manuscript/Plasma_Immunome_Phenome_Atlas_Nature.docx` — the manuscript with figures embedded.
+- `manuscript/PIRS_and_Atlas_Methodology.docx` — the complete step-by-step methodology, every parameter and every decision, with the figure that each step produces.
+- `manuscript/Heart_Cardiovascular_Validation_Methodology.docx` — the cardiovascular deep-dive validation.
+- `manuscript/Plasma_Immune_Discovery_Report_ALL.md` — the whole-phenome discovery report.
 
 ---
 
@@ -62,23 +77,32 @@ python src/11_run_coloc.py
 python src/12_claim_gate.py
 python src/16_run_pqtl_mr_coloc.py
 python src/17_integrate_pqtl_tiers.py
-python src/18_opengwas_replication.py      # needs a free OpenGWAS JWT (see below)
+python src/18_opengwas_replication.py       # needs a free OpenGWAS JWT (see below)
 python src/19_integrate_replication.py
-python src/20_supplementary_figures.py     # 70 supplementary figures
-python src/21_novelty_analysis.py          # novelty layer + Figure 9
-# --- pan-phenome expansion (5 disease categories, 28 GWAS) ---
-python src/23_download_finngen_phenome.py  # 15 extra FinnGen R12 endpoints
-python src/24_run_mr_phenome.py            # immune cis-MR across the full phenome
-python src/25_phenome_analysis.py          # pleiotropy + cell-source + direction map
-python src/27_coloc_phenome.py             # coloc on new pan-phenome hits
-python src/28_novelty_engine.py            # integrated novelty-priority score
-python src/26_phenome_figures.py           # Figures 11–14 + per-disease phenome figs
-python src/29_novelty_engine_figures.py    # Figures 15–16
-python src/31_disease_intelligence_layer.py # PIRS+causal intelligence layer: Final Table + 6 panels + report
-python src/13_write_manuscript.py          # assembles the .docx
+python src/20_supplementary_figures.py      # 70 supplementary figures
+python src/21_novelty_analysis.py
+# --- whole-phenome expansion (all 2,466 FinnGen R12 endpoints) ---
+python src/23_download_finngen_phenome.py
+python src/41_panphenome_mr.py              # immune cis-MR across the FULL phenome
+python src/43_panphenome_coloc.py           # coloc on every phenome-wide hit
+python src/48_expand_pqtl_all_phenome.py    # INTERVAL pQTL over the full phenome
+python src/49_pqtl_all_phenome_mr_coloc.py
+python src/44_uk_panphenome_replication.py  # two-population, exact endpoint codes
+python src/52_uk_replication_expanded.py    # two-population, + name-matched endpoints
+python src/45_extended_cell_crp_mr.py       # immune-cell / CRP / cytokine layer
+python src/50_novelty_engine_all_phenome.py # integrated novelty-priority engine
+python src/42_panphenome_figures.py
+python src/46_deep_layer_figures.py
+python src/51_all_phenome_protein_figures.py
+python src/31_disease_intelligence_layer.py # Final Required Output Table + panels
+python src/13_write_manuscript.py           # assembles the .docx
+python src/30_write_methodology.py          # assembles the methodology .docx
+python src/47_heart_methodology.py          # cardiovascular validation .docx
 ```
 
 Scripts expect the project root layout (`01_data_raw/`, `02_data_processed/`, `06_genetic_causality/`, `08_figures/`). The pre-computed **result tables are included** under `results/` so figures and the manuscript can be regenerated without re-downloading multi-GB sumstats.
+
+> **Note:** the full phenome-wide MR output `cis_MR_ALL_finngen_results.tsv` (1,656,872 rows, ~615 MB) exceeds GitHub's file-size limit and is **not** committed. Every downstream table derived from it *is* included, and `src/41_panphenome_mr.py` regenerates it.
 
 ## Train your own model (PIRS) — bring your own data
 
@@ -88,7 +112,6 @@ a clinical cohort, your own Olink/other proteomic run). `src/22_train_pirs.py` s
 individual-level data** and never fabricates any.
 
 ```bash
-pip install -r requirements.txt
 python src/22_train_pirs.py --write-templates           # blank input templates
 python src/22_train_pirs.py --npx npx.tsv --outcomes outcomes.tsv
 ```
@@ -113,27 +136,26 @@ how to score new individuals, and validation notes.
 |---|---|---|
 | Protein universe | Olink Explore (UKB coding 143) | public |
 | Annotation | Human Protein Atlas, MSigDB C7/C8 | public |
-| eQTL instruments | eQTLGen cis-eQTLs | public |
-| Disease GWAS (discovery) | FinnGen R12 | public |
+| eQTL instruments | eQTLGen cis-eQTLs (n ≈ 31,684) | public |
+| Disease GWAS (discovery) | FinnGen R12, all 2,466 endpoints | public |
 | Protein pQTL | INTERVAL (Sun 2018) via EBI GWAS Catalog FTP | public |
-| Replication GWAS | IMSGC, Okada, IGAS, Stuart, Fischer, Sakaue via **OpenGWAS** | free JWT token |
+| Replication GWAS | non-FinnGen consortium GWAS via **OpenGWAS** | free JWT token |
+| Two-population replication | UK Biobank single-cohort GWAS (`ukb-d/b/a/e-*`) | free JWT token |
 
-> **OpenGWAS token:** replication (`src/18`) needs a free personal JWT from https://api.opengwas.io — register, place the token in a local file, and never commit it. The included `results/genetic_causality/opengwas_replication.tsv` already contains the saved replication output, so re-running `src/18` is optional.
+> **OpenGWAS token:** replication (`src/18`, `src/44`, `src/52`) needs a free personal JWT from https://api.opengwas.io — register, place the token in a local file, and never commit it. The included replication tables already contain the saved output, so re-running those steps is optional.
+
+## Limits
+
+* MR estimates are **lifelong genetically-proxied** effects, not the effect of a drug course.
+* MHC/HLA-region hits are held at *nomination* — long-range LD defeats colocalisation there.
+* eQTL instruments proxy transcript, not always circulating protein; layer 3 is the arbiter.
+* 110 of the 220 causal proteins have no public SomaScan aptamer, so they cannot reach a protein-level tier from login-free data.
+* The two-population layer covers 62 diseases, not the full phenome, because it requires an independent single-cohort UK Biobank GWAS of the same endpoint to exist at all.
+* Research resource only — **not** clinical advice or a validated diagnostic.
 
 ## Not included (gated, by design)
 
 Individual-level UK Biobank Olink NPX + phenotypes (controlled access) and UKB-PPP / deCODE pQTL (Synapse / DUA-gated) are **not** in this repository and are **not required** — the atlas is built to be fully reproducible from open data.
-
----
-
-## One-click publish
-
-To publish this folder as a public GitHub repository and cut a release:
-
-- **Windows:** double-click `publish.bat`
-- **macOS/Linux:** `bash publish.sh`
-
-The script initializes git, commits, creates the GitHub repo, pushes, and tags a `v1.0.0` release. See the top of the script for the two variables (repo name / visibility) you can edit. Requires the [GitHub CLI](https://cli.github.com) (`gh`) authenticated, or an existing `origin` remote.
 
 ## License
 

@@ -27,6 +27,7 @@ Run:
 """
 
 import os
+import sys
 import glob
 import pickle
 import textwrap
@@ -52,6 +53,12 @@ os.makedirs(REP, exist_ok=True)
 
 PP_COLOC = 0.8          # colocalization promotion threshold
 FDR_SIG  = 0.05
+
+# --all : run the intelligence layer over the WHOLE FinnGen phenome
+#         (novelty_engine_ranked_ALL.tsv from src/50, 1,016 hits / 379 diseases)
+#         instead of the 28 deeply-annotated core diseases.
+ALLMODE = "--all" in sys.argv
+SUF = "_ALL" if ALLMODE else ""
 
 
 # --------------------------------------------------------------------------- #
@@ -253,7 +260,9 @@ def final_recommendation(tier, biomk, has_pqtl):
 # --------------------------------------------------------------------------- #
 def build_table():
     ann   = load_annotation()
-    nov   = pd.read_csv(os.path.join(GC, "novelty_engine_ranked.tsv"), sep="\t")
+    nov   = pd.read_csv(os.path.join(GC, f"novelty_engine_ranked{SUF}.tsv"), sep="\t")
+    if ALLMODE:
+        nov = nov.rename(columns={"disease_system": "disease_category"})
     final = _read(os.path.join(GC, "FINAL_evidence_tiers_repl.tsv"))
     coloc = _read(os.path.join(GC, "coloc_phenome_results.tsv"))
     pqtl  = _read(os.path.join(GC, "pqtl_MR_results.tsv"))
@@ -275,6 +284,18 @@ def build_table():
             k = (str(r["gene_symbol"]).upper(), str(r["disease"]).lower())
             pqtl_lu[k] = str(r.get("pQTL_concordant", "")).lower() in ("yes", "true", "1")
             rep_lu[k]  = str(r.get("rep_status", ""))
+    if ALLMODE:
+        # pan-phenome protein + two-population columns come straight from src/50
+        for _, r in nov.iterrows():
+            k = (str(r["gene_symbol"]).upper(), str(r["disease"]).lower())
+            if str(r.get("pqtl_concordant", "")).lower() in ("true", "1", "yes"):
+                pqtl_lu[k] = True
+            else:
+                pqtl_lu.setdefault(k, False)
+            if str(r.get("two_population_validated", "")).lower() in ("true", "1", "yes"):
+                rep_lu[k] = "replicated (FinnGen + UK Biobank)"
+            else:
+                rep_lu.setdefault(k, "not tested")
 
     ann_lu = {str(g).upper(): row for g, row in zip(ann["gene_symbol"], ann.to_dict("records"))}
 
@@ -422,7 +443,7 @@ def _panelB_performance(path, pirs_metrics, df):
     else:
         # causal-only: show causal 'discriminating' strength as -log10 FDR by disease
         agg = df.copy()
-        agg["nlfdr"] = agg["MR_FDR"].apply(lambda s: -np.log10(float(s)))
+        agg["nlfdr"] = agg["MR_FDR"].apply(lambda s: -np.log10(max(float(s), 1e-300)))
         top = agg.groupby("Disease")["nlfdr"].max().sort_values().tail(18)
         ax.barh(top.index, top.values, color="#b0b0b0", edgecolor="#222")
         ax.set_xlabel(r"Strongest causal signal per disease  ($-\log_{10}$ FDR)")
@@ -509,14 +530,14 @@ def _panelF_validation(path, df):
 
 def make_figures(df, has_pirs, pirs_metrics):
     paths = {}
-    _panelA_workflow(os.path.join(FIG, "IL_panelA_workflow.png"), has_pirs)
-    _panelB_performance(os.path.join(FIG, "IL_panelB_performance.png"), pirs_metrics, df)
-    _panelC_signature(os.path.join(FIG, "IL_panelC_signature.png"), df)
-    _panelD_concordance(os.path.join(FIG, "IL_panelD_concordance.png"), df)
-    _panelE_novelty_map(os.path.join(FIG, "IL_panelE_novelty_map.png"), df)
-    _panelF_validation(os.path.join(FIG, "IL_panelF_validation.png"), df)
+    _panelA_workflow(os.path.join(FIG, f"IL_panelA_workflow{SUF}.png"), has_pirs)
+    _panelB_performance(os.path.join(FIG, f"IL_panelB_performance{SUF}.png"), pirs_metrics, df)
+    _panelC_signature(os.path.join(FIG, f"IL_panelC_signature{SUF}.png"), df)
+    _panelD_concordance(os.path.join(FIG, f"IL_panelD_concordance{SUF}.png"), df)
+    _panelE_novelty_map(os.path.join(FIG, f"IL_panelE_novelty_map{SUF}.png"), df)
+    _panelF_validation(os.path.join(FIG, f"IL_panelF_validation{SUF}.png"), df)
     for k in "ABCDEF":
-        paths[k] = os.path.join(FIG, f"IL_panel{k}_*.png")
+        paths[k] = os.path.join(FIG, f"IL_panel{k}_*{SUF}.png")
     return paths
 
 
@@ -617,7 +638,7 @@ def write_report(df, has_pirs, pirs_metrics):
       "Causal-predictive concordance, Therapeutic direction, Biomarker-or-target, "
       "Best figure panel, Best validation experiment, Final recommendation.\n")
 
-    path = os.path.join(REP, "Plasma_Immune_Discovery_Report.md")
+    path = os.path.join(REP, f"Plasma_Immune_Discovery_Report{SUF}.md")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines))
     return path
@@ -630,10 +651,11 @@ def main():
     print("[31] Building disease-trained PIRS intelligence layer ...")
     df, has_pirs, pirs_metrics = build_table()
 
-    tsv = os.path.join(OUT, "intelligence_layer_final_table.tsv")
+    tsv = os.path.join(OUT, f"intelligence_layer_final_table{SUF}.tsv")
     df.to_csv(tsv, sep="\t", index=False)
     # also drop a copy into 09_tables as the headline deliverable
-    df.to_csv(os.path.join(TAB, "T6_disease_intelligence_final_table.tsv"), sep="\t", index=False)
+    df.to_csv(os.path.join(TAB, f"T6_disease_intelligence_final_table{SUF}.tsv"),
+              sep="\t", index=False)
     print(f"    Final Required Output Table  -> {tsv}  ({len(df)} rows x {df.shape[1]} cols)")
 
     make_figures(df, has_pirs, pirs_metrics)
