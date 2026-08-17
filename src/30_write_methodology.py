@@ -702,7 +702,7 @@ P("with components: s_causal = min(\u2212log10 FDR / 5, 2) rewards causal streng
 
 # ================= PART H: PIRS MODEL =================
 H1("PART H \u00b7 The Plasma Immune Risk Score (PIRS): from data to trained algorithm")
-IMG("08_figures/intelligence_layer/IL_panelA_workflow.png", width_in=6.7,
+IMG("08_figures/intelligence_layer/IL_panelA_workflow_ALL.png", width_in=6.7,
     caption="Figure H1. From plasma sample to decision \u2014 the predictive PIRS answers WHO is at "
             "risk and WHICH proteins carry the signal; the causal atlas answers WHETHER a protein "
             "is causal and druggable. The intelligence layer fuses both.")
@@ -1237,7 +1237,7 @@ P("The final component of the resource is an intelligence layer that sits on top
   "score or an unannotated protein list.")
 
 H2("M.1  Inputs and mode")
-IMG("08_figures/intelligence_layer/IL_panelB_performance.png", width_in=6.3,
+IMG("08_figures/intelligence_layer/IL_panelB_performance_ALL.png", width_in=6.3,
     caption="Panel B. Disease-specific strength \u2014 when a PIRS is trained this shows its "
             "prediction accuracy per disease; with no cohort supplied (the shipped state) it shows "
             "the causal-signal strength instead, and never invents accuracy numbers.")
@@ -1253,7 +1253,7 @@ P("The layer reads six real tables \u2014 the curated plasma-immune annotation, 
   "project.")
 
 H2("M.2  Causal\u2013predictive concordance")
-IMG("08_figures/intelligence_layer/IL_panelD_concordance.png", width_in=6.3,
+IMG("08_figures/intelligence_layer/IL_panelD_concordance_ALL.png", width_in=6.3,
     caption="Panel D. Concordance ladder \u2014 how many gene\u2013disease pairs survive each added layer "
             "of evidence: MR \u2192 colocalization \u2192 protein pQTL \u2192 replication. Fewer but stronger "
             "targets remain at each step.")
@@ -1265,7 +1265,7 @@ P("For each gene\u2013disease pair the layer classifies the agreement between th
   "model.")
 
 H2("M.3  The Plasma Immune Novelty Score and tiers")
-IMG("08_figures/intelligence_layer/IL_panelE_novelty_map.png", width_in=6.3,
+IMG("08_figures/intelligence_layer/IL_panelE_novelty_map_ALL.png", width_in=6.3,
     caption="Panel E. Novelty-priority map \u2014 each target plotted by colocalization strength "
             "(x) versus novelty score (y), coloured by tier. Top-right = strongly colocalized and "
             "highly novel: the priority corner.")
@@ -1279,10 +1279,11 @@ BUL("a causal nomination from cis-MR that has not yet colocalized.", bold_lead="
 BUL("a prioritised causal target \u2014 cis-MR plus colocalization \u2014 that is novel.", bold_lead="Tier 4  ")
 BUL("a novel plasma-immune target that reaches the full bar: prediction-ready, colocalized, protein-level "
     "pQTL-concordant, specific and druggable.", bold_lead="Tier 5  ")
-P("Only tiers 4 and 5 count as high-novelty. Applied to the 176 causal gene\u2013disease pairs across 25 "
-  "diseases, the layer returns 45 Tier-4 prioritised targets, 12 Tier-1 positive controls and 7 "
-  "MHC-held signals, with 6 pairs reaching protein-level causality (transcript colocalization plus a "
-  "direction-concordant INTERVAL plasma pQTL) and 17 independently replicated.")
+P("Only tiers 4 and 5 count as high-novelty. On the 176 causal gene\u2013disease pairs of the 25-disease "
+  "development subset the layer returned 45 Tier-4 prioritised targets, 12 Tier-1 positive controls and 7 "
+  "MHC-held signals, with 6 pairs reaching protein-level causality and 17 independently replicated; those "
+  "figures are recorded here only as the development check. The shipped intelligence layer, and every "
+  "panel reproduced in this PART, is the whole-phenome run over all 1,016 causal pairs \u2014 see M.4.")
 
 H2("M.4  Tier 5 after the protein layer was extended to the whole phenome")
 P("In the first release Tier 5 was empty, because the INTERVAL plasma pQTL had been colocalized only "
@@ -1301,10 +1302,10 @@ P("In the first release Tier 5 was empty, because the INTERVAL plasma pQTL had b
   "login-free resource.")
 
 H2("M.5  Therapeutic direction and the Final Required Output Table")
-IMG("08_figures/intelligence_layer/IL_panelC_signature.png", width_in=6.3,
+IMG("08_figures/intelligence_layer/IL_panelC_signature_ALL.png", width_in=6.3,
     caption="Panel C. Plasma immune signature \u2014 the high-novelty targets coloured by direction "
             "(red = block a risk protein, green = agonize/replace a protective one).")
-IMG("08_figures/intelligence_layer/IL_panelF_validation.png", width_in=6.3,
+IMG("08_figures/intelligence_layer/IL_panelF_validation_ALL.png", width_in=6.3,
     caption="Panel F. Validation plan \u2014 for the leading novel targets, the single best next "
             "experiment to run, so the report ends with actionable steps, not just a list.")
 P("Every causal target is assigned a therapeutic modality from its effect direction and localisation: a "
@@ -1581,9 +1582,11 @@ IMG("08_figures/paper_style/PP3_chapter_reach.png", width_in=6.2,
             "diseases with at least one causal immune protein (FDR<0.05) per ICD chapter. Musculoskeletal, "
             "circulatory, eye, neoplasm and skin chapters are the most immune-connected.")
 P("Full results are in 06_genetic_causality/cis_MR_ALL_finngen_results.tsv (per-disease files under "
-  "06_genetic_causality/panphenome/). This whole-phenome table is a superset of the 28-disease analysis; the "
-  "28-disease results remain the primary, most deeply annotated layer (adding colocalization, pQTL tiers and "
-  "two-population replication), while the pan-phenome scan provides unbiased breadth across all of FinnGen.")
+  "06_genetic_causality/panphenome/). This whole-phenome table is a superset of the 28-disease analysis. "
+  "The 28-disease set is no longer the primary layer: colocalization, protein-level pQTL MR and "
+  "colocalization, two-population replication, the novelty engine and the intelligence layer have each "
+  "been re-run at whole-phenome scale (O.13, M.4), so the released atlas is phenome-wide at every level "
+  "and the 28-disease core is retained only as the deeply hand-annotated benchmark that calibrated it.")
 
 H2("O.13  Deep validation layers over the whole phenome")
 P("The pan-phenome cis-MR (O.12) nominates causal immune\u2192disease effects across all of FinnGen, but a raw "
@@ -1805,7 +1808,7 @@ IMG("08_figures/heart/HEART4_cv_pirs_schematic.png", width_in=6.8,
     caption="HEART6. Design of the cardiovascular Plasma Immune Risk Score: two-population validated causal "
             "coronary proteins enter as interpretable, direction-signed features supporting risk "
             "stratification, target nomination, drug-direction assignment and mechanistic biomarker use.")
-IMG("08_figures/intelligence_layer/IL_panelB_performance.png", width_in=5.8,
+IMG("08_figures/intelligence_layer/IL_panelB_performance_ALL.png", width_in=5.8,
     caption="HEART6b. PIRS supervised-model performance panel (atlas intelligence layer): the trained score's "
             "discrimination, the framework instantiated for cardiovascular risk.")
 P("What the cardiovascular model delivers:")

@@ -1,0 +1,43 @@
+	tested	hits
+Alcohol related diseases	6720	2.0
+Asthma and related endpoints	10080	40.0
+COPD and related endpoints	4032	1.0
+Cardiometabolic endpoints	5374	26.0
+Comorbidities of Asthma	4032	16.0
+Comorbidities of COPD	2016	2.0
+Comorbidities of Diabetes	1343	2.0
+Comorbidities of Gastrointestinal endpoints	2015	5.0
+Comorbidities of Interstitial lung disease endpoints	672	2.0
+Comorbidities of Neurological endpoints	2015	0.0
+Diabetes endpoints	10079	48.0
+Diseases marked as autimmune origin	1343	20.0
+Drug purchase endpoints	6047	30.0
+Gastrointestinal endpoints	16797	16.0
+I Certain infectious and parasitic diseases (AB1_)	75251	8.0
+II Neoplasms from hospital discharges (CD2_)	116914	13.0
+II Neoplasms, from cancer register (ICD-O-3)	77934	33.0
+III Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism (D3_)	53749	17.0
+IV Endocrine, nutritional and metabolic diseases (E4_)	99441	73.0
+IX Diseases of the circulatory system (I9_)	73231	165.0
+Interstitial lung disease endpoints	8062	2.0
+Miscellaneous, not yet classified endpoints	4031	7.0
+Neurological endpoints	13438	8.0
+Other, not yet classified endpoints (same as #MISC)	3360	2.0
+Psychiatric endpoints from Katri Räikkönen	16799	6.0
+Rheuma endpoints	26205	30.0
+V Mental and behavioural disorders (F5_)	67186	21.0
+VI Diseases of the nervous system (G6_)	98094	32.0
+VII Diseases of the eye and adnexa (H7_)	128321	52.0
+VIII Diseases of the ear and mastoid process (H8_)	47707	10.0
+X Diseases of the respiratory system (J10_)	43670	78.0
+XI Diseases of the digestive system (K11_)	108171	48.0
+XII Diseases of the skin and subcutaneous tissue (L12_)	110193	61.0
+XIII Diseases of the musculoskeletal system and connective tissue (M13_)	157219	102.0
+XIV Diseases of the genitourinary system (N14_)	96752	22.0
+XIX Injury, poisoning and certain other consequences of external causes (ST19_)	8735	4.0
+XV Pregnancy, childbirth and the puerperium (O15_)	57117	11.0
+XVI Certain conditions originating in the perinatal period (P16_)	17470	0.0
+XVII Congenital malformations, deformations and chromosomal abnormalities (Q17)	67866	1.0
+XVIII Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R18_)	1344	0.0
+XXI Factors influencing health status and contact with health services (Z21_)	4704	0.0
+XXII Codes for special purposes (U22_)	1343	0.0

@@ -620,10 +620,14 @@ def _volcano_data():
                 pd.read_csv(meta2, sep="\t", index_col=0),
                 pd.read_csv(scan, sep="\t", index_col=0)["value"])
     src = os.path.join(GC, "cis_MR_ALL_finngen_results.tsv")
-    use = ["gene_symbol", "phenotype", "category", "OR", "MR_p", "FDR", "immune_class"]
+    use = ["gene_symbol", "phenotype", "phenocode", "category", "OR", "MR_p", "FDR",
+           "immune_class"]
     keep, ntot = [], 0
     tested, hits, ctested, chits = {}, {}, {}, {}
     genes, phenos = set(), set()
+    # counted on phenocode, not the display name: two FinnGen codes can share a name,
+    # which made the manuscript and the methodology quote 379 vs 381 for the same set
+    hgenes, hcodes, hchap = set(), set(), set()
     rng = np.random.default_rng(0)
 
     def bump(d, s):
@@ -637,6 +641,8 @@ def _volcano_data():
         bump(tested, ch["category"]); bump(ctested, ch["immune_class"])
         sig = ch[ch["FDR"] < 0.05]
         bump(hits, sig["category"]); bump(chits, sig["immune_class"])
+        hgenes.update(sig["gene_symbol"].unique()); hcodes.update(sig["phenocode"].unique())
+        hchap.update(sig["category"].dropna().unique())
         bg = ch[ch["FDR"] >= 0.05]
         bg = bg.iloc[rng.random(len(bg)) < 0.02]
         keep.append(pd.concat([sig, bg]))
@@ -647,7 +653,9 @@ def _volcano_data():
     ccnt = pd.DataFrame({"tested": pd.Series(ctested), "hits": pd.Series(chits)}).fillna(0)
     ccnt.to_csv(meta2, sep="\t")
     tot = pd.Series({"tests": ntot, "genes": len(genes), "endpoints": len(phenos),
-                     "hits": int(cnt["hits"].sum()), "chapters": len(tested)}, name="value")
+                     "hits": int(cnt["hits"].sum()), "chapters": len(tested),
+                     "hit_genes": len(hgenes), "hit_endpoints": len(hcodes),
+                     "hit_chapters": len(hchap)}, name="value")
     tot.to_frame().to_csv(scan, sep="\t")
     print(f"  scan cache built from {ntot:,} MR tests")
     return d, cnt, ccnt, tot

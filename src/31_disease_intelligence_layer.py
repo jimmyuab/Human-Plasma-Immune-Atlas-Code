@@ -474,7 +474,10 @@ def _panelD_concordance(path, df):
         "MR (causal)":      (df["MR_support"] == "yes").sum(),
         "+ Coloc":          df["Coloc_support"].str.startswith("yes").sum(),
         "+ pQTL (protein)": df["pQTL_support"].str.startswith("yes").sum(),
-        "+ Replicated":     (df["Replication"].astype(str).str.lower() == "replicated").sum(),
+        # the column stores the cohort pair too ("replicated (FinnGen + UK Biobank)"),
+        # so an exact == "replicated" match silently drops most of the replicated pairs
+        "+ Replicated":     df["Replication"].astype(str).str.lower()
+                              .str.startswith("replicated").sum(),
     }
     ax.bar(list(counts.keys()), list(counts.values()),
            color=["#8ecae6", "#219ebc", "#126782", "#023047"], edgecolor="#111")

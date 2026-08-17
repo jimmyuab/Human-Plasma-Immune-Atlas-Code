@@ -10,6 +10,7 @@ Rewrite the manuscript to Nature-family standard:
 Output: 10_manuscript/Plasma_Immunome_Phenome_Atlas_Nature.docx
 """
 import os
+import re
 import pandas as pd
 from docx import Document
 from docx.shared import Pt, Inches, RGBColor
@@ -86,6 +87,31 @@ if HAS_PHEN:
     PH_NOVNOM= int((nov_rank.category_label=="novel nomination").sum())
     PH_TOTAL = int(N_DIS + PH_DIS)  # combined disease breadth is described in text
 
+# ---- whole-phenome scan totals (src/54 caches these from the 615 MB cis_MR_ALL scan) ----
+# phenome_hits.tsv above is the intermediate 28-endpoint scan; the released atlas is the
+# full FinnGen R12 phenome, so the figures and numbers in that section must come from here.
+_DECK = os.path.join(ROOT, "08_figures", "deck")
+def _deck(f):
+    p = os.path.join(_DECK, f)
+    return pd.read_csv(p, sep="\t", index_col=0) if os.path.exists(p) else None
+_tot = _deck("_scan_totals.tsv")
+_ccat = _deck("_volcano_counts.tsv")
+_ccls = _deck("_volcano_counts_class.tsv")
+HAS_WHOLE = _tot is not None and _ccat is not None
+if HAS_WHOLE:
+    W_TESTS = int(_tot.loc["tests", "value"]);   W_GENES = int(_tot.loc["genes", "value"])
+    W_ENDP  = int(_tot.loc["endpoints", "value"]); W_CHAP = int(_tot.loc["chapters", "value"])
+    W_HITS  = int(_tot.loc["hits", "value"])
+    _sig = _ccat[_ccat["hits"] > 0].sort_values("hits", ascending=False)
+    W_HCHAP = int(len(_sig))
+    W_TOPCH = _sig.head(6)
+    W_TOPCLS = (_ccls[_ccls["hits"] > 0].sort_values("hits", ascending=False).head(5)
+                if _ccls is not None else None)
+    # counted on phenocode, not phenotype name: two FinnGen codes can share a display name
+    W_HGENE = int(_tot.loc["hit_genes", "value"])
+    W_HDIS  = int(_tot.loc["hit_endpoints", "value"])
+    W_HCHAP = int(_tot.loc["hit_chapters", "value"])
+
 # ---- doc styling ----
 doc = Document()
 st = doc.styles["Normal"]; st.font.name = "Calibri"; st.font.size = Pt(10.5)
@@ -101,7 +127,11 @@ def P(txt, italic=False, size=10.5, align=None, bold=False):
     if align: p.alignment = align
     return p
 def figure(fname, caption):
+    # figures live in 08_figures/nature by default, but the whole-phenome panels
+    # rebuilt for the slide deck live in 08_figures/deck, so allow a subfolder path
     fp = os.path.join(FIG, fname)
+    if not os.path.exists(fp):
+        fp = os.path.join(ROOT, "08_figures", fname)
     if os.path.exists(fp):
         doc.add_picture(fp, width=Inches(6.3))
         doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -313,69 +343,80 @@ figure("Figure9_novelty.png",
        "informative discordances. (d) Novel versus recovered-known target prioritization by "
        "cumulative orthogonal evidence.")
 
-# ================= PAN-PHENOME EXPANSION =================
-if HAS_PHEN:
-    H("Extending the atlas to a pan-phenome causal map exposes shared immune axes beyond autoimmunity", 2)
-    _cc = ", ".join(f"{k} ({v})" for k,v in sorted(PH_CATCOUNTS.items(), key=lambda x:-x[1]))
-    P(f"To test whether the immune proteome acts causally beyond classical autoimmunity, we "
-      f"re-instrumented the same {N_INST} immune genes against an expanded {PH_DIS}-disease "
-      f"phenome spanning five categories\u2014autoimmune, cardiovascular, metabolic, renal and "
-      f"neurodegenerative/aging\u2014assembled from FinnGen R12 (cardiometabolic, dementia, "
-      f"Alzheimer's disease, epilepsy, glaucoma, chronic kidney disease, osteoporosis and "
-      f"others). The identical cis-MR and colocalization machinery, held to the same FDR<5% "
-      f"gate, yields {PH_HITS} significant gene\u2013disease pairs over {PH_GENE} genes and "
-      f"{PH_NCAT} disease categories ({_cc}), materially broadening the atlas from an "
-      f"autoimmune resource into a multi-system causal map (Fig. 11). Colocalization promotes "
-      f"{PH_COLOC} of these pan-phenome loci to a shared causal variant (PP.H4\u22650.8), "
-      f"including cardiometabolic and neurodegenerative signals that were invisible to the "
-      f"autoimmune-only analysis: ACE and IFNGR2 in hypertension, PSRC1 and PLAUR in coronary "
-      f"heart disease, PROCR in venous thromboembolism, and ACE colocalizing with dementia and "
-      f"Alzheimer's disease (PP.H4>0.97).")
-    P(f"The pan-phenome view makes the atlas's central novelty engine possible: {PH_PLEIO} "
-      f"immune genes are causal across two or more disease CATEGORIES, resolving pleiotropic "
-      f"control points that link immune and cardiometabolic disease. IFNGR2 (autoimmune + "
-      f"cardiovascular), SWAP70 (autoimmune + cardiovascular), MERTK, MPO, SPINK8 and PIK3IP1 "
-      f"(cardiovascular + metabolic) act on multiple systems with internally consistent "
-      f"direction, and PM20D1 spans three categories (Fig. 12). Mapping causal targets back to "
-      f"their blood-cell lineage of origin shows granulocyte-sourced immune proteins carry the "
-      f"strongest causal enrichment across the phenome (Fig. 13), and a direction-aware "
-      f"therapeutic map partitions all {PH_HITS} signals into block-versus-agonise strategies "
-      f"with MHC/LD-confounded loci held separately (Fig. 14).")
+# ================= WHOLE-PHENOME SCAN =================
+# NOTE: phenome_hits.tsv (src/24-29) is the 28-endpoint five-category PILOT, not the
+# released scan. Figures and counts here therefore come from the full FinnGen R12 sweep
+# cached by src/54 (08_figures/deck), and the pilot is described as a pilot.
+if HAS_WHOLE:
+    H("The causal map is whole-phenome: every immune gene against every FinnGen R12 endpoint", 2, BLUE)
+    _CHAPTAG = re.compile(r"\s*\([A-Z0-9_]+\)$")          # drop the "(I9_)" code suffix
+    _cc = ", ".join("{} ({})".format(_CHAPTAG.sub("", str(k)).strip(), int(v))
+                    for k, v in W_TOPCH["hits"].items())
+    P(f"A causal atlas that scans a hand-picked disease list can only be as broad as that list. "
+      f"We therefore ran the identical cis-MR machinery over the ENTIRE FinnGen R12 phenome: "
+      f"{W_GENES} instrumented immune genes \u00d7 {W_ENDP:,} endpoints spanning all {W_CHAP} "
+      f"FinnGen chapters, {W_TESTS:,} Wald-ratio tests, with Benjamini\u2013Hochberg FDR applied "
+      f"once across the whole scan rather than within any curated subset. This yields "
+      f"{W_HITS:,} causal gene\u2013disease pairs at FDR<5%, over {W_HGENE} distinct proteins and "
+      f"{W_HDIS} distinct endpoints in {W_HCHAP} chapters (Fig. 11). The burden is not where an "
+      f"autoimmune-only reading would predict: the largest yields fall in {_cc}\u2014"
+      f"circulatory, musculoskeletal, respiratory, skin, endocrine and digestive disease "
+      f"carry more phenome-wide causal immune signal than the classical autoimmune chapter, "
+      f"which is exactly the conclusion a curated 13- or 28-disease scan cannot reach.")
+    P(f"Because the scan is unrestricted, pleiotropy can be measured rather than assumed: "
+      f"immune proteins recur as causal across multiple organ systems, and the genes with the "
+      f"widest reach are shared control points rather than disease-specific effectors "
+      f"(Fig. 12). Mapping every causal protein back to the blood-cell lineage in which it is "
+      f"enriched shows which arms of the immune system carry causal weight across the phenome "
+      f"(Fig. 13), and encoding each effect as protein-raising-risk (argues for blockade) "
+      f"versus protein-lowering-protective (argues for agonism or replacement) partitions all "
+      f"{W_HITS:,} signals into a direction-aware therapeutic map, with MHC/LD-confounded loci "
+      f"held separately rather than promoted (Fig. 14).")
+    if HAS_PHEN:
+        P(f"An earlier five-category pilot over {PH_DIS} FinnGen endpoints ({PH_HITS} hits, "
+          f"{PH_GENE} genes) was used to develop and sanity-check the scoring machinery before "
+          f"the full sweep; it is retained in the released tables for provenance, but every "
+          f"claim, figure and ranking in this manuscript is computed from the whole-phenome "
+          f"scan above, not from that pilot.")
     P(f"Integrating every real-data evidence layer\u2014causal strength, transcript "
-      f"colocalization, cross-category pleiotropy, HPA-derived druggability and cell-source "
+      f"colocalization, cross-system pleiotropy, HPA-derived druggability and cell-source "
       f"specificity, minus explicit penalties for known-drug axes and MHC LD\u2014into a single "
-      f"auditable novelty-priority score ranks the phenome-wide targets and separates "
-      f"{PH_NOVCOL} novel colocalized targets and {PH_NOVNOM} further novel nominations from "
-      f"recovered positive controls (Figs. 15, 16). The top novel colocalized nominations "
-      f"lacking an approved drug for their indication\u2014ACE\u2192dementia, IFNGR2\u2192hypertension "
-      f"and psoriasis, ERBB3\u2192type-1 diabetes, PLAUR\u2192coronary heart disease and SPINK8\u2192"
-      f"type-2 diabetes\u2014are each supported by colocalization (PP.H4\u22650.9) and, for the "
-      f"pleiotropic ones, by causal action in more than one disease category. As throughout, "
-      f"the engine down-weights internal positive controls (CTLA4, IL6ST, IL2RA) so that the "
-      f"ranking surfaces genuinely new biology rather than re-discovering approved drugs.")
-    figure("Figure11_phenome_volcano.png",
-           f"Figure 11 | Pan-phenome cis-MR across {PH_DIS} diseases in five categories: "
-           f"effect-size volcano coloured by disease category, with {PH_HITS} FDR<5% causal "
-           f"gene\u2013disease pairs.")
-    figure("Figure12_pleiotropy_heatmap.png",
-           "Figure 12 | Cross-category pleiotropic immune axes. Genes causal in \u22652 disease "
-           "categories (e.g. IFNGR2, SWAP70, MERTK, PM20D1), with direction of effect per disease.")
-    figure("Figure13_cellsource_map.png",
-           "Figure 13 | Causal-target enrichment by blood-cell source of origin across the "
-           "phenome (granulocyte-sourced proteins carry the strongest causal signal).")
-    figure("Figure14_direction_map.png",
-           "Figure 14 | Direction-aware therapeutic map of all pan-phenome causal signals, "
-           "partitioned into block/neutralise versus agonise/replace with MHC-caution loci flagged.")
-    figure("Figure15_novelty_ranking.png",
+      f"auditable novelty-priority score ranks the whole-phenome targets and separates novel "
+      f"colocalized targets and further novel nominations from recovered positive controls "
+      f"(Figs. 15, 16). As throughout, the engine down-weights internal positive controls "
+      f"(CTLA4, IL6ST, IL2RA) so that the ranking surfaces genuinely new biology rather than "
+      f"re-discovering approved drugs.")
+    figure(os.path.join("deck", "DECK_phenome_volcano.png"),
+           f"Figure 11 | Whole-phenome cis-MR. Effect-size volcano over all {W_TESTS:,} "
+           f"gene\u00d7endpoint tests ({W_GENES} immune genes \u00d7 {W_ENDP:,} FinnGen R12 endpoints, "
+           f"{W_CHAP} chapters), with the {W_HITS:,} FDR<5% causal pairs highlighted, and the "
+           f"per-chapter yield of significant pairs.")
+    figure(os.path.join("deck", "DECK_pleiotropy.png"),
+           "Figure 12 | Cross-system pleiotropic immune axes measured on the whole-phenome scan: "
+           "immune genes causal in more than one FinnGen chapter, with the direction of effect "
+           "per system.")
+    figure(os.path.join("deck", "DECK_cellsource.png"),
+           "Figure 13 | Causal-target enrichment by blood-cell source of origin across the whole "
+           "phenome, computed from all FDR<5% pairs rather than a curated disease subset.")
+    figure(os.path.join("deck", "DECK_direction_summary.png"),
+           f"Figure 14 | Direction-aware therapeutic map of all {W_HITS:,} whole-phenome causal "
+           f"signals, partitioned into block/neutralise versus agonise/replace, with MHC-caution "
+           f"loci flagged rather than promoted.")
+    figure(os.path.join("deck", "DECK_novelty_engine.png"),
            "Figure 15 | Integrated novelty-priority ranking of causal immune targets across the "
-           "phenome, showing the stacked evidence components and known-drug/MHC penalties per target.")
-    figure("Figure16_novelty_evidence.png",
-           "Figure 16 | Evidence composition and novel-versus-known separation: (a) the coloc\u2013"
-           "causal evidence landscape sized by druggability, and (b) priority scores separating "
-           "novel colocalized targets from recovered controls and MHC-caution loci.")
+           "whole phenome, showing the stacked evidence components and the known-drug and MHC "
+           "penalties applied to each target.")
+    figure(os.path.join("deck", "DECK_novel_nominations.png"),
+           "Figure 16 | Novel-versus-known separation across the whole phenome: the top novel "
+           "nominations lacking an approved drug for their indication, set against the recovered "
+           "known axes and MHC-caution loci that the engine deliberately down-weights.")
 
 # ===== EVERY EVIDENCE LAYER EXTENDED TO THE WHOLE PHENOME =====
-all_mr   = _pl("cis_MR_ALL_finngen_results.tsv")
+# the FDR<5% subset of the 615 MB cis_MR_ALL scan; src/54 already streamed and cached it,
+# so read the cache rather than pulling the whole scan into memory to build a document
+_vcp = os.path.join(_DECK, "_volcano_cache.parquet")
+all_mr   = (pd.read_parquet(_vcp) if os.path.exists(_vcp)
+            else _pl("cis_MR_ALL_finngen_results.tsv"))
 all_col  = _pl("coloc_ALL_finngen_results.tsv")
 all_pmr  = _pl("pqtl_MR_ALL_finngen_results.tsv")
 all_pcol = _pl("pqtl_coloc_ALL_finngen_results.tsv")
